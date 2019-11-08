@@ -1,16 +1,61 @@
 body {
     padding:30px;
-}
+    background-color: #4F2F4F;  
+    background-image: url("../img/test.png");
+    background-size: cover;
+    background-repeat: repeat;
+    background-position: bottom;
+    opacity: .8 ;
+    font-family:courier,arial,helvetica;
 
-h1 {
-    color:red;
 }
 
 .fancy-header {
     color: purple; /* single line comment */
     text-decoration: underline;
+    text-align: center;
     
 }
+
+h2 {
+    color:purple;
+    text-decoration: underline;
+}
+
+ul li {
+    list-style-type: square;
+  }
+
+  ol li {
+      list-style-type: upper-roman;
+  }
+
+  table, th, td {
+      border: 1px; 
+      border-style: solid;
+      color: purple;
+  }
+
+ table tr th {
+      width: 200px;
+      height: 50px;
+      background-color: #D3D3D3	;
+  }
+
+
+a:link {
+    color: purple;
+}
+
+a:visited {
+    color: black;
+}
+
+a:hover {
+    color: red;
+}
+
+
 
 
 /*
