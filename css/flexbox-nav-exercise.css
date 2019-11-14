@@ -6,35 +6,39 @@ body {
     font-family: 'Montserrat', sans-serif;
 }
 nav {
-    background: grey;
+    background: lightgrey;
+    height: 4.25em;
+
 }
+
 ul {
+    height: inherit;
     list-style: none;
     padding: 0;
     margin: 0;
-    display: flex; /* made unordered list a flex container */
-}
+    display: flex; 
+    align-items: center;
+    justify-content: center;
+
+    }
 
 nav a {
     text-decoration: none;
     color: black;
-    font-family: Verdana;
+    font-family: 'Montserrat', sans-serif;
     display: inline-block; /* inline-block to increase clickable area beyond the text */
-    padding: 1em; /* increases clickable area of anchor tags on all sides by 1em */
+    padding: 1em; 
 }
 nav a:hover {
     color: blue;
 }
 nav ul li:nth-child(5) {
     position: absolute;
-    margin-left: 50%;
-    padding: .2em;
-}
+    justify-content: center;
+    align-content: center;
+    font-size: 3em;
+  }
 
 nav ul li:nth-child(6) {
-    /* 
-        this allows the last flex item to be right justified 
-        by filling remaining space to the left of the flex item with margin 
-    */
     margin-left: auto;
 }

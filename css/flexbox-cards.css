@@ -68,14 +68,10 @@ a {
 .container {
     /* This is a flex container */
     display: flex;
-    
-
 }
 
 .card {
     /* This is a flex item */
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-self: center;  
+    align-self: center; 
+    flex-basis: 40%;
 }
