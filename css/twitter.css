@@ -111,8 +111,7 @@ a {
 .who-to-follow {
     width: calc(25% - 1em);
     margin: 0.5em;
-    float: left;
-   
+    float: left;   
 }
 
 .media-image {
@@ -142,9 +141,9 @@ a {
     overflow: auto;
 }
 
-
 .profile-items {
     list-style: none;
+    /* padding: 0; */
 }
 .profile-entry {
     margin: .5em;

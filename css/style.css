@@ -11,13 +11,13 @@ body {
 }
 
 .fancy-header {
-    color: purple; /* single line comment */
+    color: #4B0082; /* single line comment */
     text-decoration: underline;
     text-align: center;
     
 }
 
-h2 {
+h1, h2, h3, h4, h5, h6 {
     color:purple;
     text-decoration: underline;
 }
@@ -30,29 +30,43 @@ ul li {
       list-style-type: upper-roman;
   }
 
-  table, th, td {
+table {
+    background-image: url("../img/test.png") ;
+    background-position: center;
+}
+
+  table, tr, th, td {
+      padding: 5px;
       border: 1px; 
       border-style: solid;
-      color: purple;
+      border-color: purple;
+      text-align: center;
   }
 
  table tr th {
       width: 200px;
       height: 50px;
-      background-color: #D3D3D3	;
+      background-color: purple;
+      color: white;
   }
 
 
 a:link {
-    color: purple;
+    color: blue;
 }
 
 a:visited {
-    color: black;
+    color: purple;
 }
 
 a:hover {
-    color: red;
+    color: grey;
+}
+
+img{
+    border: 5px;
+    border-style: solid;
+    border-color: purple;
 }
 
 

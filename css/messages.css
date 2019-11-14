@@ -16,12 +16,12 @@ body, html {
 
 .message{
  /*   overflow: auto; */
-    margin: 5px;
-    padding: 5px;
+    padding: .75em;
     border: solid 1px lightgrey;
-    border-radius:  3px;
+    margin: .5em auto;
+    border-radius:  4px;
     font-size: 15px;
-    
+    width: 80%;   
 }
 
 .message-info{
