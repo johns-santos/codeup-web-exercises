@@ -50,8 +50,8 @@ Write a javascript function named helloWorld that returns a string saying “hel
         // Write a js functoin called calculateRectableArea that
         // takes in length and width and returns the are of a rectangle
         function calculateRectangleArea(width, length){
-            var recArea = width * length;
-            return recArea
+            var rectangleArea = width * length;
+            return rectangleArea
         }
         console.log(calculateRectangleArea(5, 2));
 
@@ -75,7 +75,12 @@ Write a javascript function named helloWorld that returns a string saying “hel
         }
             console.log(arrayLength1(["dog", "cat", "hamster"]));
 
-        
+        // write a js function called lastItem that takes in an array and returned the last item
+        var lastItem = function(inputArray) {
+            return inputArray[inputArray.length - 1];
+        }
+        console.log(lastItem(["test1", "test2", "test3"]));
+
 
 
     </script>
