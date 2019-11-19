@@ -1,3 +1,5 @@
+/* MEDIA QUERY CAN USE  =  @media all and (mim-width: 1200px)  */
+
 @media(min-width:468px){
     .container-1{
       display:flex;
