@@ -1,4 +1,5 @@
 
+
 * {
     box-sizing: border-box;
 }
@@ -11,8 +12,6 @@ body {
     padding: 1em;
     font-family: sans-serif;
 }
-
-
 
 /* Small devices (tablets, 768px and up) */
 @media screen and (max-width:768px) {
@@ -76,16 +75,7 @@ body {
     }
 }
 
-
-
-
-
-
-
-
-
 /* Medium devices (desktops, 992px and up) */
-
 @media screen and (min-width:992px) {
 
     body {
@@ -126,9 +116,13 @@ body {
     }
 
     footer p{
+        flex-flow: ;
+        /*
         flex-direction: row;
         width: 100%;
         text-align: center;
-}
+        */
+
+    }
 }
 
