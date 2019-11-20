@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Pizza World</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 <style>
@@ -24,6 +25,7 @@
 </style>
 
 <body>
+
 <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-light bg-light mb-4" >
         <a class="navbar-brand" href="#">Pizza World</a>
@@ -39,19 +41,26 @@
                 <li class="nav-item">
                     <a class="nav-link" href="#">Menu</a>
                 </li>
+
+                <li class="nav-item">
                 <form class="form-inline my-2 my-sm-0">
                     <input class="form-control mr-sm-2" type="search" placeholder="Zip Code" aria-label="Search">
-                    <button class="btn btn-outline-secondary my-2 my-sm-0" type="submit">Search store near you!</button>
+                    <button class="btn btn-outline-secondary my-2 my-sm-0" type="submit">Search store near you!
+                    </button>
                 </form>
+                </li>
             </ul>
         </div>
     </nav>
 
-
+<!-- Main Container -->
 <div class="container">
+
+<!-- Jumbtron Hero -->
     <div class="jumbotron jumbotron-fluid mb-4" id="main-container">
         <h1 class="display-4">Welcome To Pizza World</h1>
     </div>
+
     <div>
         <h1 class="display-6 mb-2">Build your own pizza!</h1>
     </div>
@@ -67,10 +76,16 @@
             </li>
         </ul>
 
+ <!-- Form Element -->
     <form>
+        <!--
+        ==========================================================================
+        1st Form - Size/Crust
+        ==========================================================================
+        -->
         <div class="form-group">
              <div class="card mb-3"  id="card01">
-                <div class="card-header">
+                <div class="card-header" style="background: rgb(0, 123, 255); color:white;">
                     Choose size and crust
                 </div>
 
@@ -124,115 +139,159 @@
         </div>
         </div>
 
+        <!--
+        ==========================================================================
+        2d Form - Cheese and Topping
+        ==========================================================================
+        -->
+
         <div class="form-group">
             <div class="card mb-3"  id="card01">
-                <div class="card-header">
-                    Choose size and crust
+                <div class="card-header" style="background: rgb(0, 123, 255); color:white">
+                    Choose cheese and toppings
                 </div>
 
                 <div class="card m-3">
-                    <div class="card-header">
-                        Hand Tossed
+                    <div class="card-header" >
+                        Cheese
                     </div>
 
-                    <ul class="list-group list-group-flush">
-                        <li class="list-group-item">Garlic seasoned crust with a rich, buttery taste.
-                        </li>
-                        <li class="list-group-item">
-                            <div class="custom-control custom-radio">
-                                <input type="radio" id="customRadio1" name="customRadio" class="custom-control-input">
-                                <label class="custom-control-label" for="customRadio1">Small (10")</label>
-                            </div>
-                        </li>
-                        <li class="list-group-item">
-                            <div class="custom-control custom-radio">
-                                <input type="radio" id="customRadio2" name="customRadio" class="custom-control-input">
-                                <label class="custom-control-label" for="customRadio2">Medium (12")</label>
-                            </div>
-                        </li>
-                    </ul>
+                    <div class="container m-3">
+                        <div class="form-group m-3">
+                            <label for="exampleFormControlSelect1">How Much?</label>
+                            <select class="form-control" id="exampleFormControlSelect1">
+                                <option>Light</option>
+                                <option>Standard</option>
+                                <option>Extra Cheese</option>
+                            </select>
+                        </div>
+                    </div>
                 </div>
+
 
                 <div class="card m-3">
                     <div class="card-header">
-                        Crispy Thin
+                        Sauce
                     </div>
-                    <ul class="list-group list-group-flush">
-                        <li class="list-group-item">Thin enough for optimum crispy to crunchy ratio</li>
-                        <li class="list-group-item">
-                            <div class="custom-control custom-radio">
-                                <input type="radio" id="customRadio3" name="customRadio" class="custom-control-input">
-                                <label class="custom-control-label" for="customRadio3">Medium (12")</label>
-                            </div>
-                        </li>
-                        <li class="list-group-item">
-                            <div class="custom-control custom-radio">
-                                <input type="radio" id="customRadio4" name="customRadio" class="custom-control-input">
-                                <label class="custom-control-label" for="customRadio4">Large (14")</label>
-                            </div>
-                        </li>
-                    </ul>
+
+                    <div class="container m-3">
+                        <div class="form-group m-3">
+                            <label for="exampleFormControlSelect1">What type?</label>
+                            <select class="form-control" id="exampleFormControlSelect1">
+                                <option>Tomato Sauce</option>
+                                <option>Pesto</option>
+                                <option>Hummus</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="container m-3">
+                        <div class="form-group m-3">
+                            <label for="exampleFormControlSelect1">How Much?</label>
+                            <select class="form-control" id="exampleFormControlSelect1">
+                                <option>Light</option>
+                                <option>Standard</option>
+                                <option>Extra Cheese</option>
+                            </select>
+                        </div>
+                    </div>
                 </div>
+
+
 
                 <div class="card-footer" style="height: 3rem border-box">
-                    <a class="btn btn-primary btn-sm float-right" href="#" role="button">Next Step ></a>
+                    <div class="btn-group float-right" role="group" aria-label="Basic example">
+                        <button type="button" class="btn btn-primary"> < Prev Step </button>
+                        <button type="button" class="btn btn-primary">Next Step ></button>
+                    </div>
                 </div>
             </div>
         </div>
 
 
+    <!--
+    ==========================================================================
+    3d Form - Toppings
+    ==========================================================================
+    -->
         <div class="form-group">
             <div class="card mb-3"  id="card01">
-                <div class="card-header">
-                    Choose size and crust
+                <div class="card-header" style="background: rgb(0, 123, 255); color:white">
+                    Choose topping
                 </div>
 
                 <div class="card m-3">
                     <div class="card-header">
-                        Hand Tossed
+                        Choose Meats
                     </div>
 
                     <ul class="list-group list-group-flush">
-                        <li class="list-group-item">Garlic seasoned crust with a rich, buttery taste.
-                        </li>
                         <li class="list-group-item">
                             <div class="custom-control custom-radio">
-                                <input type="radio" id="customRadio1" name="customRadio" class="custom-control-input">
-                                <label class="custom-control-label" for="customRadio1">Small (10")</label>
+                                <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+                                <label class="form-check-label" for="inlineCheckbox1">Beef</label>
                             </div>
                         </li>
                         <li class="list-group-item">
                             <div class="custom-control custom-radio">
-                                <input type="radio" id="customRadio2" name="customRadio" class="custom-control-input">
-                                <label class="custom-control-label" for="customRadio2">Medium (12")</label>
+                                <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+                                <label class="form-check-label" for="inlineCheckbox1">Ham</label>
                             </div>
                         </li>
+                        <li class="list-group-item">
+                            <div class="custom-control custom-radio">
+                                <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+                                <label class="form-check-label" for="inlineCheckbox1">Philly Steak</label>
+                            </div>
+                        </li>
+                        <li class="list-group-item">
+                            <div class="custom-control custom-radio">
+                                <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+                                <label class="form-check-label" for="inlineCheckbox1">Bacon</label>
+                            </div>
+                        </li>
+
                     </ul>
                 </div>
 
                 <div class="card m-3">
                     <div class="card-header">
-                        Crispy Thin
+                        Chooes Non-Meats
                     </div>
                     <ul class="list-group list-group-flush">
-                        <li class="list-group-item">Thin enough for optimum crispy to crunchy ratio</li>
                         <li class="list-group-item">
                             <div class="custom-control custom-radio">
-                                <input type="radio" id="customRadio3" name="customRadio" class="custom-control-input">
-                                <label class="custom-control-label" for="customRadio3">Medium (12")</label>
+                                <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+                                <label class="form-check-label" for="inlineCheckbox1">Green Peppers</label>
                             </div>
                         </li>
+
                         <li class="list-group-item">
                             <div class="custom-control custom-radio">
-                                <input type="radio" id="customRadio4" name="customRadio" class="custom-control-input">
-                                <label class="custom-control-label" for="customRadio4">Large (14")</label>
+                                <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+                                <label class="form-check-label" for="inlineCheckbox1">Mushrooms</label>
+                            </div>
+                        </li>
+
+                        <li class="list-group-item">
+                            <div class="custom-control custom-radio">
+                                <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+                                <label class="form-check-label" for="inlineCheckbox1">Onions</label>
+                            </div>
+                        </li>
+
+
+
+                        <li class="list-group-item">
+                            <div class="custom-control custom-radio">
+                                <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+                                <label class="form-check-label" for="inlineCheckbox1">Jalepeno Peppers</label>
                             </div>
                         </li>
                     </ul>
                 </div>
 
                 <div class="card-footer" style="height: 3rem border-box">
-                    <a class="btn btn-primary btn-sm float-right" href="#" role="button">Next Step ></a>
+                    <a class="btn btn-primary btn-sm float-right" href="#" role="button">Check Out <i class="fa fa-shopping-cart"></i></a>
                 </div>
             </div>
         </div>
