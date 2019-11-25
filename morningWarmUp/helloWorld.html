@@ -98,6 +98,29 @@ Write a javascript function named helloWorld that returns a string saying “hel
             }
             console.log(getInput2(50));
 
+        // JS function that takes an array and puts 2 into
+        var put2 = function(inputArray) {
+            inputArray.push(2);
+            return inputArray;
+        }
+
+        var  testArray = ["test1", "test2", "test3", "test4"]
+        var nameArray = ["john", "bella", "doni", "dar", "mon"]
+        console.log(put2(testArray));
+        console.log(put2(nameArray));
+
+        // === CONDITIONAL (IF)
+        // JS function that returns true if num is greater than 10
+        console.log(17 > 10);
+        console.log(8 > 10);
+
+        function greaterThan(num) {
+            return num > 10;
+        }
+        console.log(greaterThan(9))
+
+
+
 
 
     </script>
