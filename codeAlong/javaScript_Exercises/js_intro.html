@@ -1,0 +1,248 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<script>
+
+    // ============== COMMENTS  ====================================
+    /** ============== COMMENTS **  HOW-TO  ====================================
+     (//) This is used for a single line comment   -          console.log(17 > 10);
+     */
+    console.log(17 > 10);
+
+
+
+    //  ============== DATA TYPES ====================================
+    /** ============== DATA TYPES ====================================
+     PRIMATIVE DATA TYPES ---
+     - Strings = "ANY characters inside of quotes"
+     - Numbers = Numbers (can not be inside quotes).
+     - boolean = True or false
+     - Null
+     - Symbol
+     - Undefined
+
+
+     OBJECTS -
+     - Complex data types that have properties
+     -- EXAMPLE JIM {name;"jim", age: 44; breathing: true}
+     */
+
+        //Ths following turns a var into a num
+    var howManyCookies = 10;
+    console.log(typeof(howManyCookies));
+
+
+
+
+    // ================ CONCATENATION ==========================
+    /**
+     * String Concatenation - puts together, two strings with the + operator.
+     */
+    var student = "tim";
+    console.log("Hello " + student);
+
+
+
+    // ================= VARIABLES ======================
+    /**
+     var - The value of a variable can be re-assigned.
+     const - The value can not be re-assigned.
+     */
+        // variables can also be used to establish new variables.
+    var one = 1, two = 2, three = 3;
+    var age = one + two + three;
+    console.log(age);
+
+
+    // =================================================
+    // ===Converting Between Strings and Numbers==
+    // =================================================
+
+    /**
+     - NaN - built-in function to determine whether a value is NaN, or to
+     determine whether a string can be converted to a number:
+     -- isNaN('123') // false
+     -- isNaN('abc') // true
+     -- isNaN(42) // false
+
+     //// =============================================///
+     - parse - parse removes all non-numeric characters
+
+     EXAMPLE = without parse NaN (NOT A NUMBER IS RETURNED)
+     Number('123abc') // NaN
+     parseInt('123abc') // 123
+     */
+
+    console.log(parseInt("23 apples"));
+
+
+    //=========================================
+    //Exercise 1
+    //=========================================
+    var a = 1; // 1
+    var b = a++; // 1
+    var c = ++a; // 3
+
+    var d = "hello"; // hello
+    var e = false; // false
+
+    d++; // NaN -  (can be added)
+    e++; // false = 0
+
+    var perplexed; // undefined
+    perplexed + 2; // NaN ( Can not be added)
+
+
+    var price = 2.7;
+    price.toFixed(2); // 2.70
+
+    isNaN(0) // false
+
+    isNaN(1) // false
+
+    isNaN("") // false
+
+    isNaN("string") // true
+
+    isNaN("0") // false
+
+    isNaN("1") // false
+
+    isNaN("3.145") // false
+
+    isNaN(Number.MAX_VALUE) // false
+
+    isNaN(Infinity) // false
+
+    isNaN("true") // true
+
+    isNaN(true) // false
+
+    isNaN("false") // true
+
+    isNaN(false) // false
+
+    // to illustrate why the isNaN() function is needed:
+    NaN == NaN // false -
+
+
+
+
+    !true // false
+
+    !false // true
+
+    !!true // true
+
+    !!false // false
+
+    !!0 // false
+
+    !!-0 // false
+
+    !!1 // true
+
+    !!-1 // true
+
+    !!0.1 // true
+
+    !!"hello" // true
+
+    !!"" // false
+
+    !!'' // false
+
+    !!"false" // true
+
+    !!"0" // true
+
+    //=========================================
+    //Exercise 2
+    //=========================================
+    //Use .length to find the number of characters in the string.
+    var sample = 'Hello Codeup';
+    console.log(sample.length);
+
+    // Try to make the sample string all upper or all lower case.
+    console.log(sample.toUpperCase());
+
+    //Update the variable sample via concatenation so that it contains "Hello Codeup Students".
+    var sample0 = ' student';
+    var sample1 = sample +  sample0;
+    console.log(sample1);
+
+    //Replace "Students" with "Class".
+    console.log(sample1.replace('student', 'class'));
+
+    // Find the index of "c" using .indexOf(). What do you observe?
+    console.log(sample1.indexOf('c')); // -1
+
+    // Find the index of "C" using .indexOf().
+    console.log(sample1.indexOf('C')); // 6
+
+    //Retrieve a substring that contains only the word "Codeup" by using indexOf() and substring().
+    console.log(sample1.substring('6', '12')); // Codeup
+
+
+    //=========================================
+    //Exercise 3
+    //=========================================
+    // You have rented some movies for your kids: The little mermaid (for 3 days), Brother Bear (for 5 days, they love it), and Hercules (1 day, you don't know yet if they're going to like it). If price for a movie per day is $3, how much will you have to pay?//
+    var litMer = 3;
+    var broBear = 5;
+    var her = 1;
+    var costPerDay = 3.00;
+    total = (litMer + broBear + her) * 3.00;
+    console.log("$" + total.toFixed(2)); // $27.00
+
+    // Suppose you're working as a contractor for 3 companies: Google, Amazon and Facebook, they pay you a different rate per hour. Google pays $400, Amazon $380, and Facebook $350. How much will you receive in payment for this week? You worked 10 hours for Facebook, 6 hours for Google and 4 hours for Amazon.
+    var googlePay = 400;
+    var googleHrs = 6;
+    var amazonPay = 380;
+    var amazonHrs = 4;
+    var facebookPay = 350;
+    var facebookHrs = 10;
+
+    var totalPay = ((googlePay * googleHrs) + (amazonPay * amazonHrs) + (facebookPay * facebookHrs));
+    console.log("$" + totalPay.toFixed(2)); //$7420.00
+
+
+    // A student can be enrolled in a class only if the class is not full and the class
+    // schedule does not conflict with her current schedule.
+
+
+    // A product offer can be applied only if a person buys more than 2 items, and the offer has not expired. Premium members do not need to buy a specific amount of products.
+
+
+    //=========================================
+    //Exercise 4
+    //=========================================
+    // Use the following code to follow the instructions below:
+    var username = 'codeup';
+    var password = 'notastrongpassword';
+
+    // Create a variable that holds a boolean value for each of the following conditions:
+    var atLeastFivePass = password.length >= 5;
+
+    // The password must be at least 5 characters
+    var usernamedNotInPass = password.indexOf(username);
+
+    // The password must not include the username
+    usernamedNotInPass = password.indexOf(username) === -1;
+    // The username must be no more than 20 characters
+    var usernamedNotInPass  =username.length <= 20;
+
+    // Neither the username or password can start or end with whitespace
+    var nowhiteSpace = username.trim() === username && password.trim() === password;
+
+
+    </script>
+</body>
+</html>
