@@ -10,12 +10,14 @@ Write a javascript function named helloWorld that returns a string saying “hel
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <script>
+        //=======================================================================================
 
         // Write a function that returns string "hello world"
         function helloWorld() {
             return "Hello World";
         } console.log(helloWorld());
 
+        //=======================================================================================
 
         // Write a js function that, when sent a name like "Daniel",
         // returns a string "Hello Daniel"
@@ -23,6 +25,7 @@ Write a javascript function named helloWorld that returns a string saying “hel
             return "Hello " + name +"!";
         }
         console.log(helloName("John"));
+        //=======================================================================================
 
         // Write a js function called add(x,y)
         // that takes two numbers and trutned the sum
@@ -31,6 +34,7 @@ Write a javascript function named helloWorld that returns a string saying “hel
         }
         console.log(add(2,3));
 
+        //=======================================================================================
 
         // write a js function callled addFour(w,x,y,z)
         // that takes in four numbers and returns the sum
@@ -46,6 +50,7 @@ Write a javascript function named helloWorld that returns a string saying “hel
         }
         console.log(addFour2(2,2,2,2));
 
+        //=======================================================================================
 
         // Write a js functoin called calculateRectableArea that
         // takes in length and width and returns the are of a rectangle
@@ -61,6 +66,7 @@ Write a javascript function named helloWorld that returns a string saying “hel
         }
             console.log(firstItem(["dog", "cat", "hamster"]));
 
+        //=======================================================================================
 
         // write a js function callled arrayLength that takes in an array and returns the length of that array
         function arrayLength(namelist){
@@ -73,12 +79,15 @@ Write a javascript function named helloWorld that returns a string saying “hel
             return namelist1.length;
         }
             console.log(arrayLength1(["dog", "cat", "hamster"]));
+        //=======================================================================================
 
         // write a js function called lastItem that takes in an array and returned the last item
         var lastItem = function(inputArray) {
             return inputArray[inputArray.length - 1];
         }
         console.log(lastItem(["test1", "test2", "test3"]));
+
+        //=======================================================================================
 
         //write a JS function called nthItem that takes in an array and a number returns the nth item from the array
 
@@ -98,18 +107,20 @@ Write a javascript function named helloWorld that returns a string saying “hel
             }
             console.log(getInput2(50));
 
-
+ //=======================================================================================
         // JS function that takes an array and puts 2 into
         var put2 = function(inputArray) {
             inputArray.push(2);
             return inputArray;
         }
 
-
         var  testArray = ["test1", "test2", "test3", "test4"]
         var nameArray = ["john", "bella", "doni", "dar", "mon"]
         console.log(put2(testArray));
         console.log(put2(nameArray));
+
+
+        //=======================================================================================
 
         // === CONDITIONAL (IF)
         // JS function that returns true if num is greater than 10
@@ -119,8 +130,48 @@ Write a javascript function named helloWorld that returns a string saying “hel
         function greaterThan(num) {
             return num > 10;
         }
-        console.log(greaterThan(9))
+        console.log(greaterThan(9));
+ //=======================================================================================
 
+
+ //=======================================================================================
+        // JS function called youMayEnter that accepts a number that is an age. If age is 13 or greater, return "You may enter", else return "Sorry, you need a parent or guardian to enter."
+
+      //1. Write a function named youMayEnter that takes a variable
+      //2. parameter is a number (age)
+        var youMayEnter = function(age) {
+            //3. conditional -> age > 13 "You May Enter"
+            if (age >= 13) {
+                return "You May Enter";
+                //4. If they are not 13 or older - return "You Need a Guardian"
+            } else {
+                return "Sorry, you need a parent or guardian to enter.";
+            }
+        }
+        console.log(youMayEnter(13));
+        console.log(youMayEnter(8));
+//=======================================================================================
+
+        //=======================================================================================
+        //Write a js function called seeYouLater, that accepts a strings.
+        // IF string is alligator, return "See you later alligator".
+        // IF string is crocodile, return "after while crocodile".
+        // ELSE return "so long"
+
+        var seeYouLater = function(words) {
+            if (words === 'alligator'){
+                return 'See you later alligator';
+            }
+            else if (words === 'crocodile'){
+                return 'after while crocodile';
+            } else {
+                return 'so long';
+            }
+        }
+        console.log(seeYouLater('alligator'));
+        console.log(seeYouLater('crocodile'));
+        console.log(seeYouLater('pizza'));
+        //=======================================================================================
 
 
 
