@@ -43,8 +43,7 @@ console.log(random);
 /**
  * TODO:
  * Create a function called 'isTwo' that takes a number as a parameter.
- * The function should return a boolean value based on whether or not the passed
- * number is the number 2.
+ * The function should return a8888888
  *
  * Example
  * > isTwo(1) // returns false
