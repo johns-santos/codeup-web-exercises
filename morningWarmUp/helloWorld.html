@@ -158,24 +158,40 @@ Write a javascript function named helloWorld that returns a string saying “hel
         // IF string is crocodile, return "after while crocodile".
         // ELSE return "so long"
 
-        var seeYouLater = function(words) {
-            if (words === 'alligator'){
-                return 'See you later alligator';
-            }
-            else if (words === 'crocodile'){
-                return 'after while crocodile';
+        // var seeYouLater = function(words) {
+        //     if (words === 'alligator'){
+        //         return 'See you later alligator';
+        //     }
+        //     else if (words === 'crocodile'){
+        //         return 'after while crocodile';
+        //     } else {
+        //         return 'so long';
+        //     }
+        // }
+
+        function seeYouLater(inputString) {
+            if(inputString === "alligator"){
+                return "See you later alligator!";
+            } else if (inputString === "crocodile"){
+                return "After a while, crocodile!";
             } else {
-                return 'so long';
+                return "So long!";
             }
         }
+
         console.log(seeYouLater('alligator'));
         console.log(seeYouLater('crocodile'));
         console.log(seeYouLater('pizza'));
         //=======================================================================================
 
-
-
-
+//============================================
+        // write a function that test another function
+        function functionA(callBackFunction) {
+            callBackFunction();
+        }
+        functionA(function() {
+            alert("It Works");
+        });
     </script>
 
 
