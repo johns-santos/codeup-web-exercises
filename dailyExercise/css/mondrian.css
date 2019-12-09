@@ -2,7 +2,8 @@
     box-sizing: border-box;
 }
 body {
-    margin:1em 30em;
+    margin:0;
+    /*margin:1em 30em;*/
 }
 
 main {

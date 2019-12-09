@@ -34,7 +34,7 @@ a {
     position: fixed;
     width: 100%;
     z-index: 1000;
-    border-top:  1px solid grey;
+    /*border-top:  1px solid grey;*/
 }
 .nav {
     list-style-type: none;
@@ -46,17 +46,15 @@ a {
     color: var(--main-link-color);
     font-weight: bold;
     text-decoration: none;
-    color: grey;
+    /*color: grey;*/
 }
-.nav-link:hover {
-    color: var(--link-color);
-}
-
 .nav-item {
     display: inline-block;
     padding: 1.5em;
 }
-
+.nav-link:hover {
+    color: var(--link-color);
+}
 .profile {
     background: var(--light-bg);
     height: 80px;
@@ -83,24 +81,28 @@ a {
 .text-muted {
     color: var(--main-link-color);
 }
-
 .profile-image {
     position: absolute;
-    float: left;
-    top: 235px;
+   /* float: left; */
+    top: 240px;
 }
-
-
 .profile-form {
     float: right;
     line-height: 80px;
+    margin-right: 1em;
+
 }
 
 .profile-details {
-    width: calc(25% - 1em);
-    margin: 0 .5em;
     float: left;
+    margin: 0 .5em;
+    width: calc(25% - 1em);
+    /*margin-right: 0 .5em;*/
 }
+.container {
+    margin: 2em;
+}
+
 .timeline {
     width: calc(50% - 1em);
     margin: 0.5em;
@@ -125,7 +127,10 @@ a {
     width: calc(100% - 50px);  
     float: left;
 }
-
+.profile-items {
+    padding: 0;
+    list-style: none;
+}
 .profile-entry {
     margin: .5em;
 }

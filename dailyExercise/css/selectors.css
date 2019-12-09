@@ -1,5 +1,5 @@
 /* selector for id="container" */
-#conainer{
+#container {
     margin: 50px auto;
     width: 500px;
     padding: 10px;
@@ -33,6 +33,6 @@ em {
 
 /*  selector for all "anchor" elements
     that are a direct child of an element with class="article" */
-#container .article a {
+ .article a {
     float:right;
 }
