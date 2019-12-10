@@ -1,0 +1,49 @@
+:root {
+    --bg-info:  lightblue;
+    --text-info: lightgreen;
+    --bg-success: lightyellow;
+    --text-success: lightpink;
+}
+
+
+body, html {
+    height: 100%;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    font-family: Arial, Ubuntu, sans-serif;
+}
+
+.message{
+ /*   overflow: auto; */
+    padding: .75em;
+    border: solid 1px lightgrey;
+    margin: .5em auto;
+    border-radius:  4px;
+    font-size: 15px;
+    width: 80%;   
+}
+
+.message-info{
+    background-color: var(--bg-info);
+    color:darkblue;
+
+}
+
+.message-success {
+    background-color: var(--text-info);
+    color: darkgreen;
+ 
+}
+
+.message-warning {
+    background-color: var(--bg-success);
+    color: gold;
+}
+
+
+.message-error{
+    background-color: var(--text-success);
+    color: darkred;
+
+}

@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Register With Us</title>
+    <style>
+        input, #bio-input{
+            background-color: white;
+            color: teal;
+        }
+
+        .heading {
+            text-align: center;
+        }
+
+        .heading:hover{ 
+            color:tomato;
+            text-shadow: 3px 3px;
+            font-size: 40px;
+
+
+        }
+
+
+        h1, h2 {
+            text-shadow: 2px;
+            color: teal;
+        }
+
+        .radio-select {
+            box-shadow: -4px 0 0 teal; 
+            border-radius: 10px;
+
+        }
+        
+        #web-browser-input {
+            background: white;
+            color: teal;
+        }
+    </style>
+</head>
+<body>
+
+    <h1 class="heading">Register With US</h1>
+    <form method="POST"  action="https://hookb.in/XkxQKqM0r1fKnqojMWYb">
+
+        <label for="email">Email</label>
+        <input id="email" name="email" type="email" placeholder="email@somewhere.com">
+            <br><br>
+
+        <label for="password-input">Password</label>
+        <input id="password-input" name="password" type="password" placeholder="password">
+
+        <br><br>
+
+        <h2>Bio</h2>
+
+        <textarea name="bio" id="bio-input" cols="30" rows="10" placeholder="Tell Us About Yourself!"></textarea>
+
+        <br>
+
+        <h2>How Did You Hear About Us?</h2>
+
+        <label for="radio-billboard">Billboard</label>
+        <input type="radio" class="radio-select" id="radio-billboard" value="billboard-advert" name="radio-group-billboard">
+
+        <label for="radio-advertisement">Radio</label>
+        <input type="radio" class="radio-select" id="radio-advertisement" value="radio-advert" name="radio-group-radio">
+
+        <label for="radio-internet">Internet</label>
+        <input type="radio"  class="radio-select" id="radio-internet" value="internet-advert" name="radio-group-internet">
+
+        <label for="radio-other">Other</label>
+        <input type="radio" class="radio-select" id="radio-other" value="other" name="radio-group-other">
+
+        <br>
+
+        <h2>Which Web Browser Are You Using?</h2>
+
+        <select name="web-browser" id="web-browser-input">
+            <option value="chrome">Chrome</option>
+            <option value="edge">Edge</option>
+            <option value="firefox">Firefox</option>
+        </select>
+
+
+        <br><br>
+
+        <button type="submit">Submit</button>
+    </form>
+
+<!--    <hr>-->
+
+<!--    <h1>Another Email Form</h1>-->
+<!--    <form action="https://www.elformo.com/forms/abcdefgh-ijkl-mnop-qrst-uvwxyz" method="post">-->
+<!--        <input id="elformo_honeypot" name="elformo_honeypot" placeholder="Enter name here" />-->
+<!--        <input id="email" name="email" type="email" placeholder="email@somewhere.com" />-->
+<!--        <br>-->
+<!--        <textarea id="comment" name="comment" placeholder="Enter message here"></textarea>-->
+<!--        <br>-->
+<!--        <input id="submit" name="submit" type="Submit" />-->
+<!--    </form>-->
+
+</body>
+</html>
