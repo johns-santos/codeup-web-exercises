@@ -192,6 +192,38 @@ Write a javascript function named helloWorld that returns a string saying “hel
         functionA(function() {
             alert("It Works");
         });
+
+        // Write a function called 'contains' that receives an array and another param and
+        // returns true if the paraam is found in the array
+
+        function contains(arr, x) {
+            // initialize index at 0; while index is less
+            // than length of array; add 1 to index and loop
+            for (var i = 0; i < arr.length; i++) {
+                // if value of index equals x return true
+                if (arr[i] === x) return true;
+            }
+            return false;
+        }
+        console.log(contains(['sunday', 'monday', 'airplane'], 'monday'));
+
+// ========================== SOLUTION 2 ==========================//
+        var contains1 = function(arr, param) {
+            return arr.includes(param);
+        }
+        console.log(contains1([1,2,3,4], 4));
+
+// ========================= Instructor Solution ====================/
+        var contains2 = function (arr, param) {
+            for (var i = 0; i < arr.length; i++) {
+                console.log(i);
+                if (arr[i] === param)
+                    return true;
+            }
+            return false;
+        }
+        console.log(contains2([1,2,3,4], 4));
+
     </script>
 
 
