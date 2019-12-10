@@ -1,0 +1,86 @@
+body {
+    padding:30px;
+    background-color: #4F2F4F;  
+    background-image: url("../img/test.png");
+    background-size: cover;
+    background-repeat: repeat;
+    background-position: bottom;
+    opacity: .8 ;
+    font-family:courier,arial,helvetica;
+
+}
+
+.fancy-header {
+    color: #4B0082; /* single line comment */
+    text-decoration: underline;
+    text-align: center;
+    
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color:purple;
+    text-decoration: underline;
+}
+
+ul li {
+    list-style-type: square;
+  }
+
+  ol li {
+      list-style-type: upper-roman;
+  }
+
+table {
+    background-image: url("../img/test.png") ;
+    background-position: center;
+}
+
+  table, tr, th, td {
+      padding: 5px;
+      border: 1px; 
+      border-style: solid;
+      border-color: purple;
+      text-align: center;
+  }
+
+ table tr th {
+      width: 200px;
+      height: 50px;
+      background-color: purple;
+      color: white;
+  }
+
+
+a:link {
+    color: blue;
+}
+
+a:visited {
+    color: purple;
+}
+
+a:hover {
+    color: grey;
+}
+
+img{
+    border: 5px;
+    border-style: solid;
+    border-color: purple;
+}
+
+
+
+
+/*
+1. Use a style attribute to set the font color of the h1 element to red.
+        - Done: h1 turned red
+
+2. Add a class of "fancy-header" to your h1 element, and create an embedded stylesheet and based on the example above. What color is the h1 after creating the embedded stylesheet? Remove the style attribute from your h1 and view the page again.
+        - DOne: h1 class style overides element(h1)
+        
+3. Create a directory named css in your project. Within this directory, create a file named style.css, and include a link to it in your html document.
+4. Inside of style.css, copy the above css, but change to font color to purple. What color is the h1 after making this change? Remove your embedded stylesheet and view the page again.
+5. What do the above exercises tell you about the precedence of style attributes and embedded and external stylesheets?
+6. Remove any style attributes and embedded stylesheets. From this point 
+*/
