@@ -1,6 +1,11 @@
-//Define a function named isTrue that takes in any input and returns true if the input provided is exactly equal to true in value and data type.
-function isTrue(input){
-    return input === true;
+//Define a function named isTrue that takes in any input and returns true if the input provided is exactly
+// equal to true in value and data type.
+// function isTrue(input){
+//     return input === true;
+// }
+
+function isTrue(inputA, inputB) {
+    return inputA === inputB;
 }
 // isTrue(true)             // true
 // isTrue(false)            // false
@@ -10,12 +15,16 @@ function isTrue(input){
 // isTrue("Banana")         // false
 // isTrue([1, 2])           // false
 
-// Define a function named isFalse that takes in a value and returns a true if and only if the provided input is equal to false in both type and value.
+// Define a function named isFalse that takes in a value and returns a true if and only
+// if the provided input is equal to false in both type and value.
+function isFalse(input) {
+    return input == false;
+}
 
 // === TRIPLE equal compare type and value
-function isFalse(input){
-    return input === false;
-}
+// function isFalse(input){
+//     return input === false;
+// }
 // isFalse(false)             // true
 // isFalse(true)              // false
 // isFalse(0)                 // false
@@ -89,7 +98,8 @@ function isIdentical(inputA, inputB){
 
 
 
-// Define a function named isEqual that takes in two input arguments. If each argument is equal only in value, then return true. Otherwise return false.
+// Define a function named isEqual that takes in two input arguments.
+// If each argument is equal only in value, then return true. Otherwise return false.
 function isEqual(inputA, inputB){
     return inputA == inputB;
 }
