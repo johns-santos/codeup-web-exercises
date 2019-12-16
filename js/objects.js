@@ -46,7 +46,6 @@
     console.log(person.sayHello());
 
 
-
     /** TODO:
      * HEB has an offer for the shoppers that buy products amounting to
      * more than $200. If a shopper spends more than $200, they get a 12%
@@ -86,9 +85,8 @@
         if (shopper.amount > 200)
             discount = shopper.amount * .12;
         var total = shopper.amount - discount;
-        console.log(shopper.name + "'s bill was $" +  shopper.amount + ". " + "They received a discount of $" + discount + ". And their total was $" + total);
+        console.log(shopper.name + "'s bill was $" + shopper.amount + ". " + "They received a discount of $" + discount + ". And their total was $" + total);
     });
-
 
 
     /** TODO:
@@ -111,7 +109,7 @@
         {
             title: 'Cather in the Rye',
             author: {
-                firstName: "J. D.",
+                firstName: "J.D.",
                 lastName: "Salinger"
             }
         },
@@ -123,19 +121,18 @@
             }
         },
         {
-            title: 'The Salmon of Doubt',
+            title: 'Nine Stories',
             author: {
-                firstName: "Douglas",
-                lastName: "Adams"
+                firstName: "J.D.",
+                lastName: "Salinger"
             }
         },
     ];
 
 
-console.log(books[2].title); // "The Salmon of Doubt"
-console.log(books[2].author.firstName); // "Douglas"
-console.log(books[2].author.lastName); // "Adams"
-
+    console.log(books[2].title); // "The Salmon of Doubt"
+    console.log(books[2].author.firstName); // "Douglas"
+    console.log(books[2].author.lastName); // "Adams"
 
 
     /**
@@ -168,15 +165,10 @@ console.log(books[2].author.lastName); // "Adams"
 
 
     books.forEach(function (book) {
-            console.log('-----');
-            console.log('Book #' + (books.indexOf(book) +1));
-            console.log('Tile: ' + book.title);
-            console.log('Author: ' + book.author.firstName + " " + book.author.lastName);
-
-
-
-
-
+        console.log('-----');
+        console.log('Book #' + (books.indexOf(book) + 1));
+        console.log('Tile: ' + book.title);
+        console.log('Author: ' + book.author.firstName + " " + book.author.lastName);
 
 
     });
@@ -191,5 +183,29 @@ console.log(books[2].author.lastName); // "Adams"
      *   outputs the information described above. Refactor your loop to use your
      *   `showBookInfo` function.
      */
+
+
+    console.log('=================== Adding New Book To List==============');
+
+    var title = "Hello";
+    var createBook = function (title, authorFirstName, authorLastName) {
+        var book = {};
+        book.title = title;
+        book.author = {};
+        book.author.firstName = authorFirstName;
+        book.author.lastName = authorLastName;
+        return book;
+    }
+
+    books.push(createBook("Leviathan", "Scott", "Westfield"));
+
+    var showBookInfo = function (book, i) {
+        console.log('-----');
+        console.log('Book #' + (books.indexOf(book) + 1));
+        console.log('Tile: ' + book.title);
+        console.log('Author: ' + book.author.firstName + " " + book.author.lastName);
+
+    }
+    books.forEach(showBookInfo);
 
 })();
