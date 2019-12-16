@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document Object Model</title>
+</head>
+<body>
+
+<h1 id="header">Happy Holidays</h1>
+<h3 id="wishList">Wish List</h3>
+<ul>
+    <li>Great Career</li>
+    <li class="even"> 2 Front Teeth</li>
+    <li>Oculus Quest</li>
+    <li class="even">Nintendo</li>
+    <li>Macbook Pro 16</li>
+    <li class="even">Car</li>
+</ul>
+
+
+<div class="orderList">
+    <ol>
+        <li class="important">Beetroot</li>
+        <li >Ginger</li>
+        <li class="important">Potato</li>
+        <li>Radish</li>
+    </ol>
+</div>
+
+
+
+
+    <script>
+        console.log(document);
+
+        // ============ Get Element By ID Name ==============
+
+        var header = document.getElementById("header");
+        console.log(header);
+
+        var wishList = document.getElementById("wishList");
+        console.log(wishList);
+
+
+        // ==========================================================
+        // ============ Get Element By Class Name ==============
+        var evens =  document.getElementsByClassName("even");
+        console.log("evens:"+evens);
+        for(var i = 0; i < evens.length; i++){
+            console.log(evens[i]);
+            evens[i].style.color = 'red';
+            evens[i].style['background-color'] = 'green';
+        }
+        // ============ Get Element By Class Name  and MODIFY HTML==============
+        var importants = document.getElementsByClassName("important");
+        console.log("importants:"+importants);
+
+        setTimeout(function() {
+        for(var i = 0; i < importants.length; i++){
+           // console.log(importants[i]);
+            evens[i].innerHTML = "<em>Money</em>";
+            console.log(evens[i].innerHTML); //innerText - will display entire as a string
+        }}, 7000);
+
+        // ============ Get Element By Tag Name ==============
+        var lis = document.getElementsByTagName("li");
+        console.log(lis);
+        for (var i = 0; i < lis.length; i++){
+            console.log(lis[i]);
+        }
+
+        var ols = document.getElementsByTagName("ol");
+        console.log(ols);
+
+
+
+
+    </script>
+</body>
+</html>
