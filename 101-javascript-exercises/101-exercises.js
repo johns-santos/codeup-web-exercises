@@ -1394,7 +1394,11 @@ addToDone("Exercise 82 is correct.");
 // Exercise 83
 // Write a function definition named getUniqueValues that takes in an array and returns an with only the unique values from that array.
 
-/*
+function getUniqueValues(arr) {
+    arr => [...new Set(arr)];
+    return [...new Set(arr)];
+}
+
 assert(
   getUniqueValues(["ant", "ant", "mosquito", "mosquito", "ladybug"]),
   ["ant", "mosquito", "ladybug"],
@@ -1425,6 +1429,14 @@ addToDone("Exercise 83 is correct.");
 // Exercise 84
 // Write a function definition named elementsTimesTwo that takes in an array of numbers and returns an array with each value multiplied by 2.
 
+unction elementsTimesTwo(arr) {
+    var newArray = []
+    for (var i = 0; i < arr.length; i++) {
+        newArray.push(arr[i] * 2);
+    }
+    return newArray;
+}
+
 assert(elementsTimesTwo([1, 2, 3]), [2, 4, 6], "Exercise 84");
 assert(elementsTimesTwo([0, 0, 0]), [0, 0, 0], "Exercise 84");
 assert(elementsTimesTwo([5, 10, 15]), [10, 20, 30], "Exercise 84");
@@ -1433,6 +1445,7 @@ addToDone("Exercise 84 is correct.");
 // Exercise 85
 // Write a function named flatten that takes in an array of arrays. Return the flattened array.
 
+/*
 assert(flatten([[1, 2], [3, 4], [5, 6]]), [1, 2, 3, 4, 5, 6], "Exercise 85");
 assert(
   flatten([[1, 2, 3], [1, 2, 3], [1, 2, 3]]),
