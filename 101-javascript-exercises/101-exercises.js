@@ -1429,13 +1429,14 @@ addToDone("Exercise 83 is correct.");
 // Exercise 84
 // Write a function definition named elementsTimesTwo that takes in an array of numbers and returns an array with each value multiplied by 2.
 
-unction elementsTimesTwo(arr) {
+function elementsTimesTwo(arr){
     var newArray = []
     for (var i = 0; i < arr.length; i++) {
         newArray.push(arr[i] * 2);
     }
     return newArray;
 }
+
 
 assert(elementsTimesTwo([1, 2, 3]), [2, 4, 6], "Exercise 84");
 assert(elementsTimesTwo([0, 0, 0]), [0, 0, 0], "Exercise 84");
