@@ -1446,7 +1446,16 @@ addToDone("Exercise 84 is correct.");
 // Exercise 85
 // Write a function named flatten that takes in an array of arrays. Return the flattened array.
 
-/*
+function flatten(arr) {
+    var newArray = [];
+    for(var i = 0; i < arr.length; i++){
+        for(var j = 0; j<arr[i].length; j++)
+            newArray.push(arr[i][j]);
+    }
+    return newArray;
+}
+
+
 assert(flatten([[1, 2], [3, 4], [5, 6]]), [1, 2, 3, 4, 5, 6], "Exercise 85");
 assert(
   flatten([[1, 2, 3], [1, 2, 3], [1, 2, 3]]),
@@ -1462,6 +1471,16 @@ addToDone("Exercise 85 is correct.");
 
 // Exercise 86
 // Write a function definition named addOneToArray that adds one to every number in an array
+
+
+function addOneToArray(arr){
+    var newArray = [];
+    for(var i=0;i < arr.length; i++){
+        newArray.push(arr[i]+1);
+    }
+    return newArray;
+}
+
 
 assert(addOneToArray([1, 2, 3]), [2, 3, 4], "Exercise 86");
 assert(addOneToArray([4, 4, 4]), [5, 5, 5], "Exercise 86");
@@ -1488,6 +1507,11 @@ const thomasPaper = {
 // Exercise 87
 // Write a function named getPaperTitle that takes in a object and returns the title property
 
+
+function getPaperTitle(book){
+    return book.title;
+}
+
 assert(getPaperTitle(tukeyPaper), "The Future of Data Analysis", "Exercise 87");
 assert(
   getPaperTitle(thomasPaper),
@@ -1498,6 +1522,10 @@ addToDone("Exercise 87 is correct.");
 
 // Exercise 88
 // Write a function named getYearPublished that takes in an objects and returns the value behind the "year_published" key.
+
+function getYearPublished(book){
+    return book.year_published;
+}
 
 assert(getYearPublished(tukeyPaper), 1962, "Exercise 88");
 assert(getYearPublished(thomasPaper), 2008, "Exercise 88");
@@ -1513,11 +1541,20 @@ const book = {
 // Exercise 89
 // Write a function named getPrice that takes in a object and returns the price
 
+function getPrice(book){
+    return book.price;
+}
+
 assert(getPrice(book), 36.99, "Exercise 89");
 addToDone("Exercise 89 is complete.");
 
 // Exercise 90
 // Write a function named getBookAuthor that takes in a object (the above declared book variable) and returns the author's name
+
+function getBookAuthor(book){
+    return book.author;
+}
+
 
 assert(getBookAuthor(book), "Frances Buontempo", "Exercise 90");
 addToDone("Exercise 90 is complete.");
@@ -1550,6 +1587,11 @@ const books = [
 
 // Exercise 91
 // Write a function named getNumberOfBooks that takes in a array of objects and returns the number of objects in that array.
+
+function getNumberOfBooks(book){
+    return Object.keys(book).length;
+}
+
 
 assert(getNumberOfBooks(books), 4, "Exercise 91");
 addToDone("Exercise 91 is complete.");
