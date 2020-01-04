@@ -1596,14 +1596,24 @@ function getNumberOfBooks(book){
 assert(getNumberOfBooks(books), 4, "Exercise 91");
 addToDone("Exercise 91 is complete.");
 
+
 // Exercise 92
 // Write a function named totalOfBookPrices that takes in a array of objects and returns the sum total of all the book prices added together
-/*
+function totalOfBookPrices(books) {
+    const sumTotal = books.reduce((prev, cur) => prev + cur.price, 0);
+    return sumTotal;
+}
+
 assert(totalOfBookPrices(books), 122.9, "Exercise 92");
 addToDone("Exercise 92 is complete.");
 
 // Exercise 93
 // Write a function named getAverageBookPrice that takes in a array of objects and returns the average book price.
+
+const getAverageBookPrice = arr => {
+    let reduce = arr.reduce((a, {price})=> a + price, 0)
+    return reduce / arr.length
+}
 
 assert(getAverageBookPrice(books), 30.725, "Exercise 93");
 addToDone("Exercise 93 is complete.");
@@ -1612,14 +1622,26 @@ addToDone("Exercise 93 is complete.");
 // Write a function called highestPriceBook that takes in the above defined array of objects "books" and returns the object containing the title, price, and author of the book with the highest priced book.
 // Hint: Much like sometimes start functions with a variable set to zero, you may want to create a object with the price set to zero to compare to each object's price in the array
 
+const highestPriceBook = arr => {
+    let startPrice = 0;
+    let index;
+    arr.forEach((b, i) => {
+        if (b.price > startPrice) {
+            startPrice = b.price
+            index = i
+        }
+    })
+    return arr[index]
+}
+
 assert(
-  highestPriceBook(books),
-  {
-    title: "The Visual Display of Quantitative Information",
-    price: 38.0,
-    author: "Edward Tufte"
-  },
-  "Exercise 94"
+    highestPriceBook(books),
+    {
+        title: "The Visual Display of Quantitative Information",
+        price: 38.0,
+        author: "Edward Tufte"
+    },
+    "Exercise 94"
 );
 
 addToDone("Exercise 94 is complete");
@@ -1628,51 +1650,66 @@ addToDone("Exercise 94 is complete");
 // Write a function called lowestPriceBook that takes in the above defined array of objects "books" and returns the object containing the title, price, and author of the book with the lowest priced book.
 // Hint: Much like sometimes start functions with a variable set to zero or float('inf'), you may want to create a object with the price set to float('inf') to compare to each object in the array
 
+const lowestPriceBook = arr => {
+    let startPrice = Number.MAX_SAFE_INTEGER;
+    let index;
+    arr.forEach((b, i) => {
+        if (b.price < startPrice) {
+            startPrice = b.price
+            index = i
+        }
+    })
+    return arr[index]
+}
+
+
 assert(
-  lowestPriceBook(books),
-  {
-    title: "Weapons of Math Destruction",
-    author: "Cathy O'Neil",
-    price: 17.44
-  },
-  "Exercise 95"
+    lowestPriceBook(books),
+    {
+        title: "Weapons of Math Destruction",
+        author: "Cathy O'Neil",
+        price: 17.44
+    },
+    "Exercise 95"
 );
 addToDone("Exercise 95 is complete.");
 
 const shoppingCart = {
-  tax: 0.08,
-  items: [
-    {
-      title: "orange juice",
-      price: 3.99,
-      quantity: 1
-    },
-    {
-      title: "rice",
-      price: 1.99,
-      quantity: 3
-    },
-    {
-      title: "beans",
-      price: 0.99,
-      quantity: 3
-    },
-    {
-      title: "chili sauce",
-      price: 2.99,
-      quantity: 1
-    },
-    {
-      title: "chocolate",
-      price: 0.75,
-      quantity: 9
-    }
-  ]
+    tax: 0.08,
+    items: [
+        {
+            title: "orange juice",
+            price: 3.99,
+            quantity: 1
+        },
+        {
+            title: "rice",
+            price: 1.99,
+            quantity: 3
+        },
+        {
+            title: "beans",
+            price: 0.99,
+            quantity: 3
+        },
+        {
+            title: "chili sauce",
+            price: 2.99,
+            quantity: 1
+        },
+        {
+            title: "chocolate",
+            price: 0.75,
+            quantity: 9
+        }
+    ]
 };
 
 // Exercise 96
 // Write a function named getTaxRate that takes in the above shopping cart as input and returns the tax rate.
 // Hint: How do you access a key's value on a object? The tax rate is one key of the entire shoppingCart object.
+const getTaxRate = obj => obj.tax;
+
 
 assert(getTaxRate(shoppingCart), 0.08, "Exercise 96");
 addToDone("Exercise 96 is complete");
@@ -1680,6 +1717,8 @@ addToDone("Exercise 96 is complete");
 // Exercise 97
 // Write a function named numberOfItemTypes that takes in the shopping cart as input and returns the number of unique item types in the shopping cart.
 // We're not yet using the quantity of each item, but rather focusing on determining how many different types of items are in the cart.
+const numberOfItemTypes  = obj => obj.items.length
+
 
 assert(numberOfItemTypes(shoppingCart), 5, "Exercise 97");
 addToDone("Exercise 97 is complete.");
@@ -1687,6 +1726,7 @@ addToDone("Exercise 97 is complete.");
 // Exercise 98
 // Write a function named totalNumberOfItems that takes in the shopping cart as input and returns the total number all item quantities.
 // This should return the sum of all of the quantities from each item type
+const totalNumberOfItems = obj => obj.items.reduce((a, {quantity})=> a + quantity, 0)
 
 assert(totalNumberOfItems(shoppingCart), 17, "Exercise 98");
 addToDone("Exercise 98 is complete.");
@@ -1694,6 +1734,10 @@ addToDone("Exercise 98 is complete.");
 // Exercise 99
 // Write a function named getAverageItemPrice that takes in the shopping cart as an input and returns the average of all the item prices.
 // Hint - This should determine the total price divided by the number of types of items. This does not account for each item type's quantity.\
+const getAverageItemPrice = obj => {
+    let reduce = obj.items.reduce((a, {price}) => a + price, 0)
+    return reduce / obj.items.length
+}
 
 assert(getAverageItemPrice(shoppingCart), 2.1420000000000003, "Exercise 99");
 addToDone("Exercise 99 is complete.");
@@ -1701,6 +1745,15 @@ addToDone("Exercise 99 is complete.");
 // Exercise 100
 // Write a function named getAverageSpentPerItem that takes in the shopping cart and returns the average of summing each item's quanties times that item's price.
 // Hint: You may need to set an initial total price and total total quantity to zero, then sum up and divide that total price by the total quantity
+const getAverageSpentPerItem = obj => {
+    let answer = []
+    obj.items.forEach(i => {
+        answer.push(i.quantity * i.price)
+    })
+    let totalPrice = answer.reduce((a,b)=> a+b)
+    let totalItems = obj.items.reduce((a, {quantity})=> a + quantity, 0)
+    return totalPrice / totalItems
+}
 
 assert(getAverageSpentPerItem(shoppingCart), 1.333529411764706, "Exercise 100");
 addToDone("Exercise 100 is complete.");
@@ -1710,17 +1763,26 @@ addToDone("Exercise 100 is complete.");
 // Be sure to do this as programmatically as possible.
 // Hint: Similarly to how we sometimes begin a function with setting a variable to zero, we need a starting place:
 // Hint: Consider creating a variable that is a object with the keys "price" and "quantity" both set to 0. You can then compare each item's price and quantity total to the one from "most"
+const mostSpentOnItem = obj => {
+    let most = 0
+    let index;
+    obj.items.forEach((e,i)=> {
+        if(e.price * e.quantity > most){
+            most = e.price * e.quantity;
+            index = i
+        }
+    })
+    return obj.items[index]
+}
 
 assert(
-  mostSpentOnItem(shoppingCart),
-  {
-    title: "chocolate",
-    price: 0.75,
-    quantity: 9
-  },
-  "Exercise 101"
+    mostSpentOnItem(shoppingCart),
+    {
+        title: "chocolate",
+        price: 0.75,
+        quantity: 9
+    },
+    "Exercise 101"
 );
 addToDone("Exercise 101 is complete.");
 
-
-*/
