@@ -16,7 +16,9 @@
     }
 </style>
 <body>
-<h1>New Years Resolution List</h1>
+<h1 id="greeting" class="am">Happy New Year</h1>
+
+<h2>New Years Resolution List</h2>
 <ul>
     <li class='odd'>This and that</li>
     <li>That and this</li>
@@ -28,13 +30,90 @@
     <li>That and this</li>
 </ul>
 
+<hr>
+
+<div id="jquery_selectors">
+    <h1 class="am">Test 1</h1>
+    <h3 class="codeup">Sub Title</h3>
+    <p><span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi autem deleniti dolorem dolores doloribus fugit ipsum, laboriosam magnam natus, odio odit praesentium quia, sed sunt tenetur unde velit! Illo, voluptatum?</span><span>A adipisci aliquid asperiores aspernatur assumenda, at debitis deserunt earum enim ex excepturi, expedita natus nobis numquam obcaecati, officia optio pariatur perferendis perspiciatis quam quia quisquam reprehenderit saepe sed sit!</span>
+    </p>
+    <br>
+    <h1 class="am">Test 2</h1>
+    <h3 class="codeup">Sub Title</h3>
+    <p><span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi autem deleniti dolorem dolores doloribus fugit ipsum, laboriosam magnam natus, odio odit praesentium quia, sed sunt tenetur unde velit! Illo, voluptatum?</span><span>A adipisci aliquid asperiores aspernatur assumenda, at debitis deserunt earum enim ex excepturi, expedita natus nobis numquam obcaecati, officia optio pariatur perferendis perspiciatis quam quia quisquam reprehenderit saepe sed sit!</span>
+    </p>
+    <br>
+    <h1 class="am">Test 3</h1>
+    <h3 class="codeup">Sub Title</h3>
+    <p><span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi autem deleniti dolorem dolores doloribus fugit ipsum, laboriosam magnam natus, odio odit praesentium quia, sed sunt tenetur unde velit! Illo, voluptatum?</span><span>A adipisci aliquid asperiores aspernatur assumenda, at debitis deserunt earum enim ex excepturi, expedita natus nobis numquam obcaecati, officia optio pariatur perferendis perspiciatis quam quia quisquam reprehenderit saepe sed sit!</span>
+    </p>
+    <br>
+
+    <h1 class="codeup am" id="closing">Have a awesome year!!!!</h1>
+
+</div>
+
 
 <script src="https://code.jquery.com/jquery-2.2.4.js"></script>
 <script>
     "use strict";
     $(document).ready(function() {
-        $(".odd").addClass('important');
-        })
+
+        // // $(".odd").addClass('important');
+        //
+        // alert($('#greeting').html());
+        //
+        // $('.codeup').css('border', '3px solid red');
+        //
+        // $('li').css('font-size', '20px');
+        //
+        // // CRAFT selectors that highlight all the h1, p, and li elements.
+        // $('h1, p, li').css('background-color', 'yellow');
+        //
+        // // CRAFT selector to alert content of all h1 elements.
+        // var all = document.getElementsByTagName("h1");
+        // for (var i = 0, max = all.length; i < max; i++) {
+        //     alert(all[i].innerHTML);
+        // }
+        // // THE following will grab all "h1" but will only alert the first one.
+        // //alert($('h1').html());
+
+
+
+        $('h1').mouseenter(function(){
+            $(this).css('background', 'white');
+            $(this).css('color', 'red');
+        });
+
+        // $('h1').mouseleave(function(){
+        //     $(this).css('background', 'red');
+        //     $(this).css('color', 'black');
+        // });
+
+        $('h1').click(function(){
+            $(this).css('background', 'yellow');
+            $(this).css('color', 'green');
+
+        });
+
+
+        $('p').click(function(){
+            $(this).css('font-size', '18px');
+        });
+
+        $('li').hover(function(e) {
+            e.preventDefault();
+            $(this).css('color', 'red');
+        },
+            function() {
+                $(this).css('color', 'black');
+            }
+        );
+
+
+
+    })();
+
 </script>
 
 </body>
