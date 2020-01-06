@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>JQuery</title>
+</head>
+
+<style>
+    .important{
+        background: lightgreen;
+        color: lightyellow;
+        font-family: fantasy;
+    }
+</style>
+<body>
+<h1>New Years Resolution List</h1>
+<ul>
+    <li class='odd'>This and that</li>
+    <li>That and this</li>
+    <li class='odd'>This and that</li>
+    <li>That and this</li>
+    <li class='odd'>This and that</li>
+    <li>That and this</li>
+    <li class='odd'>This and that</li>
+    <li>That and this</li>
+</ul>
+
+
+<script src="https://code.jquery.com/jquery-2.2.4.js"></script>
+<script>
+    "use strict";
+    $(document).ready(function() {
+        $(".odd").addClass('important');
+        })
+</script>
+
+</body>
+</html>
