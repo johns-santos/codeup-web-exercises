@@ -80,10 +80,10 @@
 
 
 
-        $('h1').mouseenter(function(){
-            $(this).css('background', 'white');
-            $(this).css('color', 'red');
-        });
+        // $('h1').mouseenter(function(){
+        //     $(this).css('background', 'white');
+        //     $(this).css('color', 'red');
+        // });
 
         // $('h1').mouseleave(function(){
         //     $(this).css('background', 'red');
@@ -91,9 +91,7 @@
         // });
 
         $('h1').click(function(){
-            $(this).css('background', 'yellow');
-            $(this).css('color', 'green');
-
+            $(this).css('background-color', 'pink');
         });
 
 
@@ -101,12 +99,15 @@
             $(this).css('font-size', '18px');
         });
 
+
         $('li').hover(function(e) {
             e.preventDefault();
             $(this).css('color', 'red');
+                $(this).css('font-size', '40px');
         },
             function() {
                 $(this).css('color', 'black');
+                $(this).css('font-size', '16px');
             }
         );
 
