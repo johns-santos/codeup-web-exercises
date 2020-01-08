@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Curriculum Code Sample</title>
+</head>
+
+<style>
+    .yellow {
+        background: lightgreen;
+        color: yellow;
+        font-family: fantasy;
+    }
+    .critical {
+        background: red;
+        color: yellow;
+
+    }
+</style>
+<body>
+<h1>JQuery</h1>
+
+<!-- INSERT HTML CODE SAMPLE HERE -->
+
+<h1>New Year's Resolution</h1>
+
+<ul>
+    <li class="even">Wake Up At 5:30 Mon-Friday</li>
+    <li>Exercise 60 min a day, three times a week.</li>
+    <li class="even">Walk 10,000 steps a day, five days a week </li>
+    <li>Exercise 60 min a day, three times a week.</li>
+    <li class="even">Exercise 60 min a day, three times a week.</li>
+    <li>Exercise 60 min a day, three times a week.</li>
+    <li class="even">Wake Up At 5:30 Mon-Friday</li>
+    <li>Exercise 60 min a day, three times a week.</li>
+    <li class="even" id="important">Got to bed by 10:00 PM, Mon-Friday</li>
+
+</ul>
+
+<!-- END OF HTML -->
+<script src="https://code.jquery.com/jquery-2.2.4.js"></script>
+<script>
+    (function () {
+        "use strict";
+        $(document).ready(function () {
+            // INSERT JAVASCRIPT CODE SAMPLE HERE
+            //alert("look, we are using JQuery!!!");
+            //console.log($); // $ indicates JQuery - $(document) is a jQuery object
+        $(".even").addClass("yellow");
+        $("#important").addClass("critical");
+
+        })
+    })();
+</script>
+</body>
+</html>
