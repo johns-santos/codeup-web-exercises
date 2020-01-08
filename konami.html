@@ -1,9 +1,14 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="en">
+
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Konami Code</title>
     <style>
-        body{
+        body {
             background: black;
             color: white;
         }
@@ -12,53 +17,68 @@
             color: white;
             background-size: cover;
         }
-
-        img {
-            opacity: 0.5;
-            filter: alpha(opacity=50);
+        .googleFont {
+            font-family: fantasy, Orbitron;
+            color: red;
         }
-
     </style>
+    <link href="https://fonts.googleapis.com/css?family=Orbitron&display=swap" rel="stylesheet">
 </head>
-<body class="test">
 
+
+<body>
 <div class="main">
     <h1>Konami Code</h1>
-
 
     <p>Enter the Konami Code and be immortal:
         <br> <strong> Up, Up, Down, Down, Left, Right, Left, Right, B, A, ENTER</strong></p>
 
 
-    <script src="https://code.jquery.com/jquery-2.2.4.js"></script>
+    <script src='https://code.jquery.com/jquery-2.2.4.js'></script>
     <script>
         // "use strict";
 
-        var kkeys = [], konami = "38,38,40,40,37,39,37,39,66,65,13";
-        $(document).keydown(function (e) {
-            kkeys.push(e.keyCode);
+        var konamiKeys = [];
+        var konami = '38,38,40,40,37,39,37,39,66,65,13';
+        var sound = new Audio('http://codeskulptor-demos.commondatastorage.googleapis.com/GalaxyInvaders/explosion_02.wav');
 
+        $(document).keydown(function (e) {
+            konamiKeys.push(e.keyCode);
             //console.log(event.keyCode);
             // left = 37
             // up = 38
             // right = 39
             // down = 40
-
-            if (kkeys.toString().indexOf(konami) >= 0) {
+            if (konamiKeys.toString().indexOf(konami) >= 0) {
                 $(document).unbind('keydown', arguments.callee);
-                // do something awesome
-                $("body").addClass("konami");
 
-                var sound = new Audio('http://codeskulptor-demos.commondatastorage.googleapis.com/GalaxyInvaders/explosion_02.wav');
+                // play sound effect
                 sound.onended = function () {
-                    alert("You have added 30 lives!");
                 };
                 sound.play();
-            }
 
+                // alert
+                alert("You have added 30 lives!");
+                // modify background
+                $("body").addClass('konami');
+                // modify html
+                $('h1').addClass('googleFont');
+                $('h1').html('Prepare to slay aliens');
+                $('p').html('');
+            }
         });
 
+        $(document).keydown(function (event) {
+            $('h1').css('color', 'red');
+            $('p').css('color', 'red');
+            //console.log(event.keyCode);
+        });
 
+        $(document).keyup(function (event) {
+            $('h1').css('color', 'darkred');
+            $('p').css('color', 'darkred');
+            //console.log(event.keyCode);
+        });
     </script>
 </body>
 </html>

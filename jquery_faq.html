@@ -90,7 +90,7 @@
 <div>
     <a href="#" id="makeVisible">Click to view FAQ answers.</a>
     <br>
-    <a href="#" id="highlight">Click to highlight FAQs</a>
+    <a href="#" id="highlight">Click to highlight all FAQs</a>
 </div>
 
 
@@ -98,26 +98,21 @@
 
 <script>
     "use strict";
-
-
     // TODO: Update the page with jQuery to add a link that toggles the class invisible on and off for all dd elements.
-    $(document).ready(function () {
-        $('#makeVisible').click(function (event) {
-            event.preventDefault();
+        $('#makeVisible').click(function () {
             $('.invisible').toggleClass('visible');
         });
 
-        $('#highlight').click(function (event) {
-            event.preventDefault();
+        $('#highlight').click(function () {
             $('dt').toggleClass('hl');
         });
 
-        // TODO: ** BONUS**  When any one dt is clicked, the element that was clicked should be highlighted.
 
-        $('dt').click(function (event){
-            event.preventDefault();
+        // TODO: ** BONUS**  When any one dt is clicked, the element that was clicked should be highlighted.
+        $('dt').click(function (){
             $(this).toggleClass('hl');
         });
+
 
         // TODO: BONUS requirement using .mouseenter/mouseleave
         // $('dt').mouseenter(function (event) {
@@ -129,11 +124,6 @@
         //     event.preventDefault();
         //     $(this).removeClass('hl');
         // });
-
-
-
-
-    });
 
 </script>
 
