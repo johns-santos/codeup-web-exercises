@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>JQuery FAQ</title>
+</head>
+
+<style>
+    dt{
+        font-weight: bold;
+    }
+
+    .invisible {
+        visibility: hidden;
+    }
+
+    .visible {
+        visibility: visible;
+        color: gray;
+    }
+
+    .hl{
+        background-color: yellow;
+     }
+
+</style>
+
+
+<body>
+
+<h1 class="test">Frequently Asked Questions</h1>
+
+
+<dl class="faq ">
+    <dt class="test2"> What is jQuery?</dt>
+
+    <dd class="invisible">
+        <p>jQuery is an awesome JavaScript library</p>
+    </dd>
+
+    <dt> Why should I use jQuery?</dt>
+    <dd class="invisible">
+        <p>Because it's awesome and it makes writing JavaScript faster and easier</p>
+    </dd>
+
+    <dt> Why would I want to hide the answers to my questions?</dt>
+    <dd class="invisible">
+        <p>To make it easier to peruse the list of available questions - then you simply click to see the answer you're interested in reading</p>
+    </dd>
+
+    <dt> What is jQuery?</dt>
+    <dd class="invisible">
+        <p>jQuery is an awesome JavaScript library</p>
+    </dd>
+
+    <dt> Why should I use jQuery?</dt>
+    <dd class="invisible">
+        <p>Because it's awesome and it makes writing JavaScript faster and easier</p>
+    </dd>
+
+    <dt> Why would I want to hide the answers to my questions?</dt>
+    <dd class="invisible">
+        <p>To make it easier to peruse the list of available questions - then you simply click to see the answer you're interested in reading</p>
+    </dd>
+
+    <dt> What is jQuery?</dt>
+    <dd class="invisible">
+        <p>jQuery is an awesome JavaScript library</p>
+    </dd>
+
+    <dt> Why should I use jQuery?</dt>
+    <dd class="invisible">
+        <p>Because it's awesome and it makes writing JavaScript faster and easier</p>
+    </dd>
+
+    <dt> Why would I want to hide the answers to my questions?</dt>
+    <dd class="invisible">
+        <p>To make it easier to peruse the list of available questions - then you simply click to see the answer you're interested in reading</p>
+    </dd>
+
+    <dt> What is jQuery?</dt>
+    <dd class="invisible">
+        <p>jQuery is an awesome JavaScript library</p>
+    </dd>
+</dl>
+
+<div>
+    <a href="#" id="makeVisible">Click to view FAQ answers.</a>
+    <br>
+    <a href="#" id="highlight">Click to highlight FAQs</a>
+</div>
+
+
+<script src='https://code.jquery.com/jquery-2.2.4.js'></script>
+
+<script>
+    "use strict";
+
+
+    // TODO: Update the page with jQuery to add a link that toggles the class invisible on and off for all dd elements.
+    $(document).ready(function () {
+        $('#makeVisible').click(function (event) {
+            event.preventDefault();
+            $('.invisible').toggleClass('visible');
+        });
+
+        $('#highlight').click(function (event) {
+            event.preventDefault();
+            $('dt').toggleClass('hl');
+        });
+
+        // TODO: ** BONUS**  When any one dt is clicked, the element that was clicked should be highlighted.
+
+        $('dt').click(function (event){
+            event.preventDefault();
+            $(this).toggleClass('hl');
+        });
+
+        // TODO: BONUS requirement using .mouseenter/mouseleave
+        // $('dt').mouseenter(function (event) {
+        //     event.preventDefault();
+        //     $(this).addClass('hl');
+        // });
+        //
+        // $('dt').mouseleave(function (event) {
+        //     event.preventDefault();
+        //     $(this).removeClass('hl');
+        // });
+
+
+
+
+    });
+
+</script>
+
+
+</body>
+</html>
