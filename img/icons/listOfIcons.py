@@ -1,0 +1,74 @@
+1445 Cloud-Download.svg
+1531 Cloud-Drizzle-Alt.svg
+2015 Cloud-Drizzle-Moon-Alt.svg
+2271 Cloud-Drizzle-Moon.svg
+2529 Cloud-Drizzle-Sun-Alt.svg
+2674 Cloud-Drizzle-Sun.svg
+1798 Cloud-Drizzle.svg
+1396 Cloud-Fog-Alt.svg
+1811 Cloud-Fog-Moon-Alt.svg
+1737 Cloud-Fog-Moon.svg
+2270 Cloud-Fog-Sun-Alt.svg
+2219 Cloud-Fog-Sun.svg
+1257 Cloud-Fog.svg
+1824 Cloud-Hail-Alt.svg
+2435 Cloud-Hail-Moon-Alt.svg
+2179 Cloud-Hail-Moon.svg
+2831 Cloud-Hail-Sun-Alt.svg
+2737 Cloud-Hail-Sun.svg
+1713 Cloud-Hail.svg
+1755 Cloud-Lightning-Moon.svg
+2186 Cloud-Lightning-Sun.svg
+1106 Cloud-Lightning.svg
+1581 Cloud-Moon.svg
+1217 Cloud-Rain-Alt.svg
+1872 Cloud-Rain-Moon-Alt.svg
+1917 Cloud-Rain-Moon.svg
+2250 Cloud-Rain-Sun-Alt.svg
+2317 Cloud-Rain-Sun.svg
+1380 Cloud-Rain.svg
+1573 Cloud-Refresh.svg
+1598 Cloud-Snow-Alt.svg
+2131 Cloud-Snow-Moon-Alt.svg
+2166 Cloud-Snow-Moon.svg
+2537 Cloud-Snow-Sun-Alt.svg
+2694 Cloud-Snow-Sun.svg
+1763 Cloud-Snow.svg
+2014 Cloud-Sun.svg
+1461 Cloud-Upload.svg
+2405 Cloud-Wind-Moon.svg
+2845 Cloud-Wind-Sun.svg
+1851 Cloud-Wind.svg
+1053 Cloud.svg
+1066 Compass-East.svg
+1061 Compass-North.svg
+1086 Compass-South.svg
+1094 Compass-West.svg
+1389 Compass.svg
+ 999 Degrees-Celcius.svg
+ 879 Degrees-Fahrenheit.svg
+ 770 Moon-First-Quarter.svg
+ 805 Moon-Full.svg
+ 757 Moon-Last-Quarter.svg
+ 695 Moon-New.svg
+ 865 Moon-Waning-Crescent.svg
+ 780 Moon-Waning-Gibbous.svg
+ 905 Moon-Waxing-Crescent.svg
+ 825 Moon-Waxing-Gibbous.svg
+ 993 Moon.svg
+1461 Shades.svg
+1454 Snowflake.svg
+1683 Sun-Low.svg
+1277 Sun-Lower.svg
+2032 Sun.svg
+2059 Sunrise.svg
+1938 Sunset.svg
+1103 Thermometer-100.svg
+1109 Thermometer-25.svg
+1061 Thermometer-50.svg
+1084 Thermometer-75.svg
+1066 Thermometer-Zero.svg
+ 986 Thermometer.svg
+1272 Tornado.svg
+1040 Umbrella.svg
+1395 Wind.svg

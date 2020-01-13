@@ -11,18 +11,13 @@
 // garcias.setPopUp(marker);
 
 
-
-mapboxgl.accessToken = mapboxToken;
+mapboxgl.accessToken = mapToken;
 var map = new mapboxgl.Map({
     container: 'map',
     style: 'mapbox://styles/mapbox/streets-v9',
-    zoom: 10,
-//    zoom: 10,
-//    zoom: 20,
-    center: [-98.4951, 29.4246]
+    zoom: 12,
+    center: [-98.4936, 29.4241],
 });
-
-
 
 var favoriteRestaurants = [
     {
@@ -66,10 +61,9 @@ var favoriteRestaurants = [
 
 // FOREACH - ITERATE THROUGH RESTAURANT ARRAY
 favoriteRestaurants.forEach(function(restaurant) {
-   //console.log(restaurant);
 
     // CONVERT STREET RESTAURANT & RETURN GEOGRAPHIC COORDINATES
-    geocode(restaurant.address, mapboxToken).then(function (result) {
+    geocode(restaurant.address, mapToken).then(function (result) {
        // console.log(result); // VERIFY COORDINATES ARE RETURNED
 
         //POPUP FOR RESTAURANT NAME TEL & EXTRA DETAILS //
@@ -87,7 +81,7 @@ favoriteRestaurants.forEach(function(restaurant) {
 
 
     // MARKER FOR RESTAURANTS
-    var marker = new mapboxgl.Marker(markerOptions)
+    var marker = new mapboxgl.Marker(markerOptions )
         .setLngLat(result)
         .addTo(map)
         .setPopup(popup) // sets a popup on this marker
@@ -99,7 +93,7 @@ favoriteRestaurants.forEach(function(restaurant) {
 
 // Add Markers for Favorite Restaurant
 var markerOptions = {
-    color: "Red",
+    color: "Red"
 };
 
 // Add zoom and rotation controls to the map.

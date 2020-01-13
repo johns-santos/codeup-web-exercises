@@ -1,0 +1,296 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Weather Map</title>
+    <!--    bootstrap cdn-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <!--    mapbox CS-->
+    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.css' rel='stylesheet'/>
+    <link rel="stylesheet" href="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.4.2/mapbox-gl-geocoder.css" type="text/css"/>
+    <!-- w3css for blue color template -->
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-blue.css">
+    <!--    custom CSS-->
+    <link rel="stylesheet" href="css/weather-map.css">
+</head>
+<body class="w3-theme-d5">
+
+<!-- Heading -->
+<h1 class="text-center" id="mainHeader">Weather Application</h1>
+<h1 class="text-center">Three Day Forecast</h1>
+
+
+<!-- Weather Report Summary Cards -->
+<div class="justify-content-center w3-theme-l4" id="main">
+    <ul style="display: flex; list-style-type: none" id="card-list">
+        <li>
+            <div class="card-header w3-theme-l4">
+                <h4>Today</h4>
+            </div>
+            <div class="w3-theme-l4" id="todayWeather"></div>
+        </li>
+
+        <li>
+            <div class="card-header w3-theme-l4">
+                <h4>Tomorrow</h4>
+            </div>
+            <div class="w3-theme-l4" id="tmrwWeather"></div>
+        </li>
+
+        <li>
+            <div class="card-header w3-theme-l4">
+                <h4>Day After Tomorrow</h4>
+            </div>
+            <div class="w3-theme-l4" id="dayAfterWeather"></div>
+        </li>
+    </ul>
+</div>
+<!-- Weather Report Summary Cards -->
+
+
+<!-- Map Area -->
+<div class="container-fluid w3-theme-l1" id="map">
+</div>
+<!-- Map Area -->
+
+
+<!-- Map Search Flex box Form -->
+<div class="form-row justify-content-center">
+    <div class="form-group col-md-3">
+        <div class="input-group mx-auto mb-3">
+            <div class="input-group-prepend">
+                <div class="button">
+                    <input type="text" placeholder="Check the weather">
+                    <button type="submit">Enter City</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Map Search Form -->
+
+<!-- Footer -->
+<footer class="page-footer font-small blue">
+    <div class="footer-copyright text-center py-3">© 2020 Copyright:
+        <a href="#"> WeatherApp.com</a>
+    </div>
+</footer>
+<!-- Footer -->
+
+
+<!--Script src & Keys -->
+<script src="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.4.2/mapbox-gl-geocoder.min.js"></script>
+<script src='https://code.jquery.com/jquery-2.2.4.js'></script>
+<script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.js'></script>
+<!--API Keys-->
+<script src="js/keys.js"></script>
+<!--Script src & Keys -->
+
+<!-- JQuery/AJAX  -->
+<script>
+
+    // <!-- Weather Icons-->
+    var icons = [
+        {
+            summary: "clear-day",
+            image: 'icons/Sun.svg'
+        },
+        {
+            summary: "clear-night",
+            image: 'icons/Moon-Full.svg'
+        },
+        {
+            summary: "rain",
+            image: 'icons/Umbrella.svg'
+        },
+        {
+            summary: "snow",
+            image: 'icons/Cloud-Snow-Sun.svg'
+        },
+        {
+            summary: "sleet",
+            image: 'icons/Snowflake.svg'
+        },
+        {
+            summary: "wind",
+            image: 'icons/Wind.svg'
+        },
+        {
+            summary: "fog",
+            image: 'icons/Cloud-Fog.svg'
+        },
+        {
+            summary: "cloudy",
+            image: 'icons/Cloud.svg'
+        },
+        {
+            summary: "partly-cloudy-day",
+            image: 'icons/Cloud-Sun.svg'
+        },
+        {
+            summary: "partly-cloudy-night",
+            image: 'icons/Cloud-Moon.svg'
+        }
+
+    ];
+
+    // map centering on San antonio
+    mapboxgl.accessToken = mapToken;
+    var map = new mapboxgl.Map({
+        container: 'map',
+        style: 'mapbox://styles/mapbox/streets-v9',
+        zoom: 6,
+        center: [-98.4936, 29.4241],
+    });
+    //Marker
+    var markerOptions = {
+        // color: "#27468f",
+        color: "red",
+        draggable: true
+    };
+
+    var marker = new mapboxgl.Marker(markerOptions)
+        .setLngLat([-98.4936, 29.4241])
+        .addTo(map);
+
+    var coordinates = $('#coordinates');
+
+
+    function onDragEnd() {
+        var lngLat = marker.getLngLat();
+
+    }
+
+    marker.on('dragend', function () {
+        var lngLat = marker.getLngLat();
+        $('#todayWeather').html("");
+        $('#tmrwWeather').html("");
+        $('#dayAfterWeather').html("");
+        getWeather();
+    });
+
+    marker.on('dragend', onDragEnd);
+
+
+    function getWeather() {
+        marker.on('dragend', onDragEnd);
+
+        var lngLat = marker.getLngLat();
+        var long = lngLat.lng;
+        var lat = lngLat.lat;
+
+
+        var darkSky = $.get("https://cors-anywhere.herokuapp.com/https://api.darksky.net/forecast/" + dsKey + "/" + lat + "," +
+            long).done(function (data) {
+
+                console.log(data);
+
+            $('#todayWeather').html("");
+            $('#tmrwWeather').html("");
+            $('#dayAfterWeather').html("");
+
+            var todaySummary = data.daily.data[0].summary;
+            var todayTempHi = parseInt(data.daily.data[0].temperatureHigh);
+            var todayTempLo = parseInt(data.daily.data[0].temperatureLow);
+            var todayHumidity = data.daily.data[0].humidity;
+            var todayWind = data.daily.data[0].windSpeed;
+
+            var tmrwSummary = data.daily.data[1].summary;
+            var tmrwTempHi = data.daily.data[1].temperatureHigh;
+            var tmrwTempLo = data.daily.data[1].temperatureLow;
+            var tmrwHumidity = data.daily.data[1].humidity;
+            var tmrwWind = data.daily.data[1].windSpeed;
+
+            var dayAfterSummary = data.daily.data[2].summary;
+            var dayAfterTempHi = data.daily.data[2].temperatureHigh;
+            var dayAfterTempLo = data.daily.data[2].temperatureLow;
+            var dayAfterHumidity = data.daily.data[2].humidity;
+            var dayAfterWind = data.daily.data[2].windSpeed;
+
+            var weatherCard = "";
+            weatherCard += "<div class='card d-inline-block'>";
+            weatherCard += '<div class="card-title"></div>';
+            weatherCard += '<img class="icon1"><br>';
+            weatherCard += '<strong>High:</strong> ' + todayTempHi + '°F<br>';
+            weatherCard += '<strong>Low:</strong> ' + todayTempLo + '°F<br>';
+            weatherCard += '<strong>Humidity:</strong> ' + todayHumidity + '%<br>'
+                + '<strong>Wind Speed:</strong> ' + todayWind + '<br>'
+                + '<strong>Expect:</strong> ' + todaySummary +'';
+            $("#todayWeather").append(weatherCard);
+
+            var weatherCard2 = "";
+            weatherCard2 += "<div class='card d-inline-block'>";
+            weatherCard2 += '<div class="card-title"></div>';
+            weatherCard2 += '<img class="icon2"><br>';
+            weatherCard2 += '<strong>High</strong> ' + tmrwTempHi + '°F<br>';
+            weatherCard2 += '<strong>Low</strong> ' + tmrwTempLo + '°F<br>';
+            weatherCard2 += '<strong>Humidity:</strong> ' + tmrwHumidity + '%<br>'
+                + '<strong>Wind Speed:</strong> ' + tmrwWind + '<br>'
+                + '<strong>Expect: </strong> ' + tmrwSummary +'';
+            $("#tmrwWeather").append(weatherCard2);
+
+            var weatherCard3 = "";
+            weatherCard3 += "<div class='card d-inline-block'>";
+            weatherCard3 += '<div class="card-title"></div>';
+            weatherCard3 += '<img class="icon3"><br>';
+            weatherCard3 += '<strong>High: </strong> ' + dayAfterTempHi + '°F<br>';
+            weatherCard3 += '<strong>Low: </strong> ' + dayAfterTempLo + '°F<br>';
+            weatherCard3 += '<strong>Humidity:</strong> ' + dayAfterHumidity + '%<br>'
+                + '<strong>Wind Speed:</strong> ' + dayAfterWind + '<br>'
+                + '<strong>Expect:</strong> ' + dayAfterSummary +'';
+            $("#dayAfterWeather").append(weatherCard3);
+
+            icons.forEach(function (type) {
+                if (data.currently.icon === type.summary) {
+                    $('.icon1').attr('src', type.image);
+                }
+            });
+            icons.forEach(function (type) {
+                if (data.daily.data[1].icon === type.summary) {
+                    $('.icon2').attr('src', type.image);
+                }
+            });
+            icons.forEach(function (type) {
+                if (data.daily.data[2].icon === type.summary) {
+                    $('.icon3').attr('src', type.image);
+                }
+            });
+        });
+
+        function geocode(search, token) {
+            var baseUrl = 'https://api.mapbox.com';
+            var endPoint = '/geocoding/v5/mapbox.places/';
+            return fetch(baseUrl + endPoint + encodeURIComponent(search) + '.json' + "?" + 'access_token=' + token)
+                .then(function (res) {
+                    return res.json();
+                    // to get all the data from the request, comment out the following three lines...
+                }).then(function (data) {
+                    return data.features[0].center;
+                })
+        }
+
+
+        $("button").click(function () {
+            var userInput = $("input").val();
+            console.log(userInput);
+            geocode(userInput, mapToken)
+                .then(function (result) {
+                    console.log(result);
+                    marker.setLngLat(result);
+                    map.flyTo({center: result,
+                        speed: 1 // make the flying slow
+                    });
+                    getWeather();
+                });
+        });
+
+    }
+
+    getWeather();
+</script>
+<!-- JQuery/AJAX  -->
+
+
+</body>
+</html>

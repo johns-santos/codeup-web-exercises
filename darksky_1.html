@@ -1,0 +1,215 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-blue.css">
+
+    <style>
+        body {
+            background: lightblue;
+            background-size: cover;
+        }
+
+        #threeDayView {
+            margin-top: 1em;
+            float: none;
+        }
+
+        #mapArea {
+            min-height: 60vh;
+        }
+
+        .col {
+            border: solid black 2px;
+            height: 100%;
+
+        }
+    </style>
+    <title>Weather Application</title>
+</head>
+<body class="w3-theme-d5">
+
+<!-- Main Header -->
+<div class="container-fluid" id="main">
+    <div class="header">Weather Application</div>
+    <div class="subHeader">Three Day Overview</div>
+
+    <!-- Three Day Weather View -->
+    <div class="container-fluid" id="threeDayView">
+        <div class="row  justify-content-center w3-theme-l4">
+            <div class="col">
+                <div class="dailyReport1 getIcon">
+
+                </div>
+            </div>
+            <div class="col">
+                <div class="dailyReport2">
+
+                </div>
+            </div>
+            <div class="col">
+                <div class="dailyReport3">
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Map Area -->
+    <div class="container-fluid w3-theme-l1" id="mapArea">
+        <div class="row justify-content-center">
+            Map Area
+        </div>
+    </div>
+    <!-- Map Area -->
+
+
+    <!-- Footer -->
+    <footer class="page-footer font-small blue">
+        <div class="footer-copyright text-center py-3">© 2020 Copyright:
+            <a href="#"> WeatherApp.com</a>
+        </div>
+    </footer>
+    <!-- Footer -->
+</div>
+
+<!-- Javascript Area -->
+<script src='https://code.jquery.com/jquery-2.2.4.js'></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+<!--DarkSky API Key -->
+<script src="js/keys.js"></script>
+<!--DarkSky API Key -->
+
+
+<!--API Calls -->
+<script>
+    "use strict";
+     $(document).ready(function () {
+         $.ajax("https://cors-anywhere.herokuapp.com/https://api.darksky.net/forecast/" + dsKey + "/29.7604,-95.3698",
+             {}).done(function (data) {
+
+             $(".dailyReport1").append(
+                 // "<img src="+data.daily.data[0].icon +">" +
+
+                 "<p>" + "High/Low" + "</p>" +
+                 "<h3>" + Math.ceil(data.daily.data[0].temperatureLow) + "" + "/" + Math.ceil(data.daily.data[0].temperatureHigh) + "</h3>" +
+                 "<h2>" + data.currently.humidity + "</h2>" +
+                 "<p>" + data.currently.windSpeed + "</p>" +
+                 "<div>" + data.currently.pressure + "</div>"
+             );
+
+
+             $(".dailyReport2").append(
+                 // "<img src=" + data.daily.data[1].icon + ">" +
+                 "<p>" + "High/Low" + "</p>" +
+                 "<h3>" + Math.ceil(data.daily.data[0].temperatureLow) + "" + "/" + Math.ceil(data.daily.data[1].temperatureHigh) + "</h3>" +
+                 "<h2>" + data.currently.humidity + "</h2>" +
+                 "<p>" + data.currently.windSpeed + "</p>" +
+                 "<div>" + data.currently.pressure + "</div>"
+             );
+
+
+             $(".dailyReport3").append(
+                 // "<img src=" + data.daily.data[2].icon + ">" +
+                 "<p>" + "High/Low" + "</p>" +
+                 "<h3>" + Math.ceil(data.daily.data[0].temperatureLow) + "" + "/" + Math.ceil(data.daily.data[2].temperatureHigh) + "</h3>" +
+                 "<h2>" + data.currently.humidity + "</h2>" +
+                 "<p>" + data.currently.windSpeed + "</p>" +
+                 "<div>" + data.currently.pressure + "</div>"
+             );
+
+         });
+     }());
+
+         //
+         // var icons = [
+         //     {
+         //         summary: "clear-day",
+         //         image: 'icons/animated/day.svg'
+         //     },
+         //     {
+         //         summary: "clear-night",
+         //         image: 'icons/animated/night.svg'
+         //     },
+         //     {
+         //         summary: "rain",
+         //         image: 'icons/animated/rainy-6.svg'
+         //     },
+         //     {
+         //         summary: "snow",
+         //         image: 'icons/animated/snowy-6.svg'
+         //     },
+         //     {
+         //         summary: "sleet",
+         //         image: 'icons/animated/rainy-7.svg'
+         //     },
+         //     {
+         //         summary: "wind",
+         //         image: 'icons/animated/windy.png'
+         //     },
+         //     {
+         //         summary: "fog",
+         //         image: 'icons/animated/cloudy.svg'
+         //     },
+         //     {
+         //         summary: "cloudy",
+         //         image: 'icons/animated/cloudy-day-3.svg'
+         //     },
+         //     {
+         //         summary: "partly-cloudy-day",
+         //         image: 'icons/animated/cloudy-day-1.svg'
+         //     },
+         //     {
+         //         summary: "partly-cloudy-night",
+         //         image: 'icons/animated/cloudy-night-1.svg'
+         //     }
+         //
+         // ];
+         //
+         //
+         // icons.forEach(function (type) {
+         //     if (data.currently.icon === type.summary) {
+         //         $('.icon1').attr('src', type.image);
+         //     }
+         // });
+         // icons.forEach(function (type) {
+         //     if (data.daily.data[1].icon === type.summary) {
+         //         $('.icon2').attr('src', type.image);
+         //     }
+         // });
+         // icons.forEach(function (type) {
+         //     if (data.daily.data[2].icon === type.summary) {
+         //         $('.icon3').attr('src', type.image);
+         //     }
+         //
+         // for(var i = 0; i < 30; i++){
+         //     icon[i] = new Image();
+         //
+         //     if(i < 10){
+         //         icon[i].src = `${i}`;
+         //     }
+         //
+         //     if(i >= 10){
+         //         icon[i].src = `${i}`;
+         //     }
+         // }
+
+
+
+
+
+
+</script>
+<!-- Javascript Area -->
+
+
+</body>
+</html>
