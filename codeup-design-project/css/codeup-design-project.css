@@ -1,0 +1,164 @@
+:root {
+    --red: #E6563B;
+    --orange: #EB9D3A;
+    --light-green: #7CB06C;
+    --blue: #00ABA9;
+    --white: #F0F0F0;
+    --gray: #E6E6E6;
+}
+
+.red {
+    background: var(--red);
+}
+
+.orange {
+    background: var(--orange);
+}
+
+.light-green {
+    background: var(--light-green);
+}
+
+.blue {
+    background: var(--blue);
+}
+
+body {
+    background-color: var(--gray);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Anton', sans-serif;
+}
+
+h1 {
+    font-size: 64px;
+}
+
+h2 {
+    font-size: 48px;
+}
+
+h3 {
+    font-size: 40px;
+}
+
+h4 {
+    font-size: 32px;
+}
+
+h5 {
+    font-size: 28px;
+}
+
+h6 {
+    font-size: 20px;
+}
+
+p {
+    font-family: 'Abel', sans-serif;
+}
+
+a {
+    color: black;
+}
+
+#mobile-logo {
+    height: 215px;
+    width: 215px;
+}
+
+#small-logo {
+    height: 105px;
+    width: 105px;
+}
+
+#medium-up-logo {
+    height: 105px;
+    width: 105px;
+    margin-left: 1em;
+}
+
+.logo-background {
+    margin: 1em 0 0 0;
+    height: 100%;
+    width: 100%;
+    background-image: linear-gradient(
+                        var(--gray) 0%,
+                        var(--gray) 25%,
+                        var(--white) 25%,
+                        var(--white) 75%,
+                        var(--gray) 75%,
+                        var(--gray) 100%);
+}
+
+.codeup-design-mobile {
+    font-size:50px;
+    font-family: 'Abel', sans-serif;
+}
+
+.codeup-design-small {
+    font-size:35px;
+    font-family: 'Abel', sans-serif;
+}
+
+.codeup-design-medium {
+    font-size:30px;
+    font-family: 'Abel', sans-serif;
+}
+
+.mobile-header-circles {
+    height: 175px;
+    width: 175px;
+    border: 5px solid white;
+    color: white;
+}
+
+.header-circles {
+    height: 110px;
+    width: 110px;
+    border: 5px solid white;
+    color: white;
+}
+
+.mobile-h5 {
+    margin-top: 1.75em;
+    font-size: 36px;
+}
+
+.small-up-h5 {
+    margin-top: 1.5em;
+    font-size: 24px;
+}
+
+.sm-circle-pos {
+    margin-bottom: 2em;
+}
+
+.subtitle {
+    padding-left: .5em;
+    padding-top: .2em;
+}
+
+.btn-sm {
+    width: 18px;
+    height: 18px;
+    margin-top: .5em;
+    margin-right: .5em;
+    padding: 6px 0;
+    border-radius: 15px;
+    font-size: 8px;
+    text-align: center;
+    line-height: 50%;
+}
+
+.custom {
+    padding-bottom: .25em;
+    margin-bottom: 1em;
+    background: var(--gray);
+    border: none;
+}
+
+.last-tweet {
+    font-size: 28px;
+}
