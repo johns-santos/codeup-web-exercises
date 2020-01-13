@@ -5,6 +5,8 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
     <title>JQuery FAQ</title>
 </head>
 
@@ -14,17 +16,38 @@
     }
 
     .invisible {
+        display: none;
         visibility: hidden;
     }
 
     .visible {
         visibility: visible;
+        display: block;
         color: gray;
+
     }
 
     .hl{
         background-color: yellow;
      }
+
+    /*dd{*/
+    /*    display: none;*/
+    /*}*/
+
+    ul{
+        display: none;
+    }
+
+    h2{
+        display: none;
+        color: red;
+    }
+
+    .alert{
+        display: none;
+    }
+
 
 
     /*li{*/
@@ -35,6 +58,88 @@
 
 
 <body>
+<!-- Bootstrap Alert -->
+<div class="alert alert-warning alert-dismissible" role="alert">
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+    <strong>Warning!</strong> Better check yourself, you're not looking too good.
+</div>
+
+
+<div id="fadeInHeader">
+    <h2>Don't Forget To Register Today!!!!!</h2>
+</div>
+
+
+<div class="modal " tabindex="-1" role="dialog" id="myModal">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title">Register Today and Save!!!!</h4>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label for="inputEmail4">Email</label>
+                            <input type="email" class="form-control" id="inputEmail4" placeholder="Email">
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="inputPassword4">Password</label>
+                            <input type="password" class="form-control" id="inputPassword4" placeholder="Password">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="inputAddress">Address</label>
+                        <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
+                    </div>
+                    <div class="form-group">
+                        <label for="inputAddress2">Address 2</label>
+                        <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor">
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label for="inputCity">City</label>
+                            <input type="text" class="form-control" id="inputCity">
+                        </div>
+                        <div class="form-group col-md-4">
+                            <label for="inputState">State</label>
+                            <select id="inputState" class="form-control">
+                                <option selected>Choose...</option>
+                                <option>...</option>
+                            </select>
+                        </div>
+                        <div class="form-group col-md-2">
+                            <label for="inputZip">Zip</label>
+                            <input type="text" class="form-control" id="inputZip">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="gridCheck">
+                            <label class="form-check-label" for="gridCheck">
+                                Check me out
+                            </label>
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Sign in</button>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Save changes</button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+
+
+<div class="prompt">
+    <h1>Would you like to sign up for a newsletter?</h1>
+    <span id="xBtn">X</span>
+</div>
+
 
 <h1 class="test">Frequently Asked Questions</h1>
 
@@ -117,7 +222,7 @@
         <li>Enchanted Rock</li>
     </ul>
     <h3 id="city-parks-heading">San Antonio City Parks</h3>
-    <ul id="state-parks-texas">
+    <ul id="city-parks-texas">
         <li>San Pedro</li>
         <li>Woodlawn</li>
         <li>Braundera</li>
@@ -126,24 +231,27 @@
     </ul>
 </div>
 
+
 <a href="#" id="yellowBackground">Click to high light last li.</a>
 
 <script src='https://code.jquery.com/jquery-2.2.4.js'></script>
-
+<script src='https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js'></script>
 <script>
     "use strict";
-    // TODO: Update the page with jQuery to add a link that toggles the class invisible on and off for all dd elements.
+    $(document).ready(function() {
+
+        // TODO: Update the page with jQuery to add a link that toggles the class invisible on and off for all dd elements.
         $('#makeVisible').click(function () {
-            $('.invisible').toggleClass('visible');
+            $('dd').toggleClass('visible');
+            $('dd').toggleClass('invisible');
         });
 
         $('#highlight').click(function () {
             $('dt').toggleClass('hl');
         });
 
-
         // TODO: ** BONUS**  When any one dt is clicked, the element that was clicked should be highlighted.
-        $('dt').click(function (){
+        $('dt').click(function () {
             $(this).toggleClass('hl');
         });
 
@@ -159,22 +267,53 @@
         // });
 
 
-    //TODO: Create a button that, when clicked, makes the last li in each ul have a yellow background.
-    $('#yellowBackground').click(function () {
-        $('ul').each(function() {
-            $(this).children().last().toggleClass('hl');
-        })
+        // //TODO: Create a button that, when clicked, makes the last li in each ul have a yellow background.
+        $('#yellowBackground').click(function () {
+            $('ul').each(function () {
+                $(this).children().last().toggleClass('hl');
+            })
+        });
+
+        // // TODO: When any h3 is clicked, the lis underneath it should be bolded. Use font-weight: bold to achieve this.
+        $('h3').click(function () {
+            $(this).next().children().css('font-weight', 'bold');
+        });
+
+        // // TODO: When any list item is clicked, first li of the parent ul should have a font color of blue.
+        $('li').click(function () {
+            $(this).parent().children().first().css('color', 'blue')
+        });
+
+        //TODO: At the top of the page, add a div with two elements, an h1 that reads "Would you like to sign up for our newsletter?" and a span that has an 'x' in it. When the 'x' is clicked, hide the entire div element.
+        $('span').click(function () {
+            $(this).parent().first().hide();
+        });
+
+        //TODO: The uls next to each h3 that contain facts about each park should start out hidden, and when the corresponding h3 is clicked, the display of the ul should be toggled with a sliding effect.
+        $('h3').click(function () {
+            $(this).next().slideToggle("slow");
+            $(this).next().removeClass(ul);
+        });
+
+        $('h2').delay(8000).fadeIn('slow');
+
+        $('h2').click(function() {
+            $('h2').fadeOut('slow');
+        });
+
+
+        //TODO:
+        $('.alert').fadeIn(4000);
+
+
+        setTimeout(function() {
+            $('#myModal').modal();
+        }, 20000);
+
     });
 
-    // TODO: When any h3 is clicked, the lis underneath it should be bolded. Use font-weight: bold to achieve this.
-    $('h3').click(function (){
-        $(this).next().children().css('font-weight', 'bold');
-    });
 
-    // TODO: When any list item is clicked, first li of the parent ul should have a font color of blue.
-    $('li').click(function(){
-        $(this).parent().children().first().css('color', 'blue')
-    });
+
 
 
 
