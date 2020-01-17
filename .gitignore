@@ -2,3 +2,4 @@
 *.iml
 .DB_STORE
 js/keys.js
+img/*
