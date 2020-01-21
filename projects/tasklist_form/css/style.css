@@ -1,0 +1,100 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background: #17252a;
+    color: #feffff;
+    height: 100%;
+    margin: 0;
+    font-family: "Segeo UI", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.5;
+}
+
+body#bg-img {
+    background: url(https://cdn-images-1.medium.com/max/2560/1*sjpeJdx9jGWr9MPEfZIZJg.jpeg);
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+body#bg-img:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background: rgba(23, 37, 42, 0.9);
+    /*background: #17252a;*/
+}
+
+h1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-shadow: 1px 1px   #87979c;
+}
+h3{
+    text-shadow: 1px 1px   #87979c;
+}
+
+label{
+    margin-top: 3em;
+    text-shadow: 1px 1px   #87979c ;
+}
+
+.success, .error {
+    color: white;
+    padding: 3px;
+    margin: 5px 0 15px 0;
+}
+
+.success {
+    background: green;
+}
+
+.error {
+    background: red;
+}
+
+/*th, tr, td, table{*/
+/*    border-color: #33C3F0;*/
+/*}*/
+th, td{
+    border-color: #87979c ;
+}
+th{
+    color:  #87979c ;
+}
+
+#delete{
+    font-family: "Brush Script MT";
+    color: #33C3F0 ;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.removeBtn{
+    color: #33C3F0 ;
+}
+
+#subButton {
+    border-color: white;
+    color:white ;
+    margin-top: 3em;
+}
+
+#deliveryDate, #assignedTo,#description {
+    border: solid#33C3F0 2px;
+}
+
+
+
+
+
+
+
+
+

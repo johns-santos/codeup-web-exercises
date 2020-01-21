@@ -433,6 +433,14 @@ Write a javascript function named helloWorld that returns a string saying “hel
             return total/arr.length; // divide total  height value by length of array
         }
 
+        // write a function that compares two functions and returns true if strings are a
+        // anagram "word constructed of the same letters"
+        let isAnagram = (a, b) =>{
+            return (a.toLowerCase().split('').sort().join() === b.toLowerCase().split('').sort().join());
+        };
+        console.log(isAnagram('listen', 'silent'));
+        console.log(isAnagram('test', 'no'));
+
 
     </script>
 
