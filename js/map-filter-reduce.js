@@ -70,3 +70,28 @@ let greeting = users5.reduce((runningGreeting, user) => {
 }, "Your Instructors are: ");
 greeting = greeting.substring(0,greeting.length-2) + ".";
 console.log(greeting);
+
+
+
+
+
+
+// TODO: Bonus - Use .reduce to get the unique list of languages from the list of users.
+let knownLanguages = users.reduce((knownLanguages, user) => {
+    // filter the user.languages for the ones not included in languages list
+    // for (let lang in languages) {
+    //     console.log(lang);
+    //     if (!languages.includes(lang))  languages.push(lang);\
+    // }
+    user.languages.forEach( (language) => {
+        if (knownLanguages.includes(language)){
+        } else {
+            knownLanguages.push(language);
+        }
+    });
+// languages.push(user.languages.filter((lang) => {
+//     return !languages.includes(lang)
+// }))
+
+    return knownLanguages;
+}, []);
