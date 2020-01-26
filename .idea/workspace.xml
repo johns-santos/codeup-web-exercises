@@ -1,7 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a2ed1085-6235-4db7-aa7a-0a1c09f1b8ff" name="Default Changelist" comment="" />
+    <list default="true" id="a2ed1085-6235-4db7-aa7a-0a1c09f1b8ff" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/js/nodeImportRequire/data.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/js/nodeImportRequire/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/js/nodeImportRequire/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/js/nodeTest.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/morningWarmUp/db.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/morningWarmUp/morningWarmup.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/movies-application/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/movies-application/db.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/movies-application/install.sh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/movies-application/package-lock.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/movies-application/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/movies-application/public/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/movies-application/public/image/popcorn-and-film.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/movies-application/public/image/popcorn.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/movies-application/public/image/popcorn.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/movies-application/public/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/movies-application/public/popcorn.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/movies-application/public/style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/movies-application/server.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/movies-application/src/api.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/movies-application/src/hello.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/movies-application/src/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/movies-application/webpack.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/10.10.27.239" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/tasklist_form/js/tasklist_form.js" beforeDir="false" afterPath="$PROJECT_DIR$/projects/tasklist_form/js/tasklist_form.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/promoises.html" beforeDir="false" afterPath="$PROJECT_DIR$/promises.html" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -180,7 +208,7 @@
       <workItem from="1579791888035" duration="501000" />
       <workItem from="1579878343419" duration="3760000" />
       <workItem from="1579899847962" duration="399000" />
-      <workItem from="1580000923743" duration="1576000" />
+      <workItem from="1580000923743" duration="1839000" />
     </task>
     <servers />
   </component>

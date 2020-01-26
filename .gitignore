@@ -1,0 +1,17 @@
+.idea/*
+*.iml
+.DB_STORE
+js/keys.js
+img/*
+node_modules/*
+*/node_modules/
+./*/node_modules/
+*node_modules*
+main.js
+*.map
+*/keys.js
+*keys.js
+node_modules/
+/projects/movies-application/node_modules
+/projects/movies-application/public/main.js
+/projects/movies-application/public/*.map
