@@ -1,4 +1,4 @@
-// Book Constructor
+// Task Constructor
 function Task(description, assignedTo, deliveryDate) {
     this.description = description;
     this.assignedTo = assignedTo;
@@ -9,7 +9,7 @@ function Task(description, assignedTo, deliveryDate) {
 function UI() {}
 
 
-// Add Book To List FUNC
+// Add Task To List FUNC
 UI.prototype.addTaskToList = function(task) {
     // console.log(book);
     const list = document.getElementById('task-list');
@@ -69,7 +69,7 @@ document.getElementById('task-form').addEventListener('submit',
 
 /*======================= INSTANTIATE BOOK ======================== */
         const task = new Task(description, assignedTo,deliveryDate );
-         // console.log(book); // book object is expected to be returned
+         // console.log(task); // task object is expected to be returned
 
 
         /*======================= INSTANTIATE UI - BOOK LIST =============== */
@@ -85,18 +85,16 @@ document.getElementById('task-form').addEventListener('submit',
             ui.showAlert("Please fill in all fields on form", "error");
         } else {
 
-            // ADD BOOK to UI list
+            // ADD TASK to UI list
             ui.addTaskToList(task);
             ui.showAlert("Task has been successfully added", "success")
 
 
             // Clear Fields - After Submit
             ui.clearFields();
-
-
         }
 
-        // Using simple JQuery click funtion to remove closest tr
+        // Using simple JQuery click function to remove closest tr
         $(".removeBtn").click(function() {
             $(this).closest('tr').remove();
         });

@@ -3,3 +3,11 @@
 .DB_STORE
 js/keys.js
 img/*
+node_modules/*
+*/node_modules/
+./*/node_modules/
+*node_modules*
+movies-application/node_modules/
+main.js
+*.map
+

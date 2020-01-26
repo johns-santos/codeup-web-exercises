@@ -1,0 +1,19 @@
+{
+  "movies": [
+    {
+      "title": "Star Trek",
+      "rating": "2",
+      "id": 21
+    },
+    {
+      "title": "The Race",
+      "rating": "3",
+      "id": 22
+    },
+    {
+      "title": "Rush Hour",
+      "rating": "3",
+      "id": 23
+    }
+  ]
+}
