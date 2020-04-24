@@ -185,7 +185,7 @@ for (var i = 0; i <= 100; i++) {
 //  If divisible by 3 and 5, log "FizzBuzz"
 //  All other cases, just log the number.
 
-for (var i=1; i < 101; i++){
+for (var i = 1; i < 101; i++) {
     if (i % 15 == 0) console.log("FizzBuzz");
     else if (i % 3 == 0) console.log("Fizz");
     else if (i % 5 == 0) console.log("Buzz");
@@ -201,25 +201,25 @@ for (var i=1; i < 101; i++){
 var numberToStopAt = 5;
 
 for (var i = 1; i < 100; i++) {
-	console.log('Loop counter is: ' + i);
-	if (i === numberToStopAt) {
-		console.log('We have reached the stopping point: break!');
-		// use the break keyword to exit from the while loop
-		break;
-		// nothing after the break will get processed
-		console.log('You will never see this line.');
-	}
+    console.log('Loop counter is: ' + i);
+    if (i === numberToStopAt) {
+        console.log('We have reached the stopping point: break!');
+        // use the break keyword to exit from the while loop
+        break;
+        // nothing after the break will get processed
+        console.log('You will never see this line.');
+    }
 }
 
 
 // We can get an iteration to skip using continue;
 for (var i = 1; i < 100; i++) {
 
-	if (i % 2 !== 0) {
-		// skipping all odd numbers;
-		continue;
-	}
+    if (i % 2 !== 0) {
+        // skipping all odd numbers;
+        continue;
+    }
 
-	console.log('Here is a lovely even number: ' + i);
+    console.log('Here is a lovely even number: ' + i);
 }
 

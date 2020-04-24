@@ -1,5 +1,5 @@
 //Immediately Invoked Function Expression
-(function() {
+(function () {
     "use strict";
 
     /**

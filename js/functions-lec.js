@@ -1,5 +1,4 @@
-
-(function(){
+(function () {
     "use strict";
 // alert("Hello"); // just to make sure things are connected
     console.log("Let's learn about JavaScript Functions!!");
@@ -26,6 +25,7 @@
         console.log(typeof something);
         something();
     }
+
     function f() {
         console.log("Do di doo!")
     }

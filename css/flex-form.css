@@ -9,15 +9,15 @@ html {
 body {
     font-family: sans-serif;
     margin: 0;
-    overflow: hidden;    
+    overflow: hidden;
 }
 
 .puppiness {
     height: 100%;
     position: absolute;
-    top: 0; 
+    top: 0;
     width: 100%;
-    object-fit:cover;
+    object-fit: cover;
 }
 
 .cover {
@@ -28,10 +28,10 @@ body {
 }
 
 .flex-form {
-    z-index:10;
+    z-index: 10;
     position: relative;
-    border:20px solid rgba(0,0,0,0.3);
-    border-radius:5px;
+    border: 20px solid rgba(0, 0, 0, 0.3);
+    border-radius: 5px;
 }
 
 .flex-form > * {
@@ -64,10 +64,10 @@ body {
     /* flex items */
     display: flex;
     margin: 25% auto;
- }
+}
 
 
 .destination {
     /* bigger item */
-    flex-basis:15em;
+    flex-basis: 15em;
 }

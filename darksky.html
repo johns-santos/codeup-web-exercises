@@ -4,10 +4,13 @@
     <meta charset="UTF-8">
     <title>Weather Map</title>
     <!--    bootstrap cdn-->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+          integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
     <!--    mapbox CS-->
     <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.css' rel='stylesheet'/>
-    <link rel="stylesheet" href="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.4.2/mapbox-gl-geocoder.css" type="text/css"/>
+    <link rel="stylesheet"
+          href="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.4.2/mapbox-gl-geocoder.css"
+          type="text/css"/>
     <!-- w3css for blue color template -->
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-blue.css">
@@ -184,7 +187,7 @@
         var darkSky = $.get("https://cors-anywhere.herokuapp.com/https://api.darksky.net/forecast/" + dsKey + "/" + lat + "," +
             long).done(function (data) {
 
-                console.log(data);
+            console.log(data);
 
             $('#todayWeather').html("");
             $('#tmrwWeather').html("");
@@ -216,7 +219,7 @@
             weatherCard += '<strong>Low:</strong> ' + todayTempLo + '°F<br>';
             weatherCard += '<strong>Humidity:</strong> ' + todayHumidity + '%<br>'
                 + '<strong>Wind Speed:</strong> ' + todayWind + '<br>'
-                + '<strong>Expect:</strong> ' + todaySummary +'';
+                + '<strong>Expect:</strong> ' + todaySummary + '';
             $("#todayWeather").append(weatherCard);
 
             var weatherCard2 = "";
@@ -227,7 +230,7 @@
             weatherCard2 += '<strong>Low</strong> ' + tmrwTempLo + '°F<br>';
             weatherCard2 += '<strong>Humidity:</strong> ' + tmrwHumidity + '%<br>'
                 + '<strong>Wind Speed:</strong> ' + tmrwWind + '<br>'
-                + '<strong>Expect: </strong> ' + tmrwSummary +'';
+                + '<strong>Expect: </strong> ' + tmrwSummary + '';
             $("#tmrwWeather").append(weatherCard2);
 
             var weatherCard3 = "";
@@ -238,7 +241,7 @@
             weatherCard3 += '<strong>Low: </strong> ' + dayAfterTempLo + '°F<br>';
             weatherCard3 += '<strong>Humidity:</strong> ' + dayAfterHumidity + '%<br>'
                 + '<strong>Wind Speed:</strong> ' + dayAfterWind + '<br>'
-                + '<strong>Expect:</strong> ' + dayAfterSummary +'';
+                + '<strong>Expect:</strong> ' + dayAfterSummary + '';
             $("#dayAfterWeather").append(weatherCard3);
 
             icons.forEach(function (type) {
@@ -278,7 +281,8 @@
                 .then(function (result) {
                     console.log(result);
                     marker.setLngLat(result);
-                    map.flyTo({center: result,
+                    map.flyTo({
+                        center: result,
                         speed: 1 // make the flying slow
                     });
                     getWeather();

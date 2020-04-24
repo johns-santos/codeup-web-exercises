@@ -1,62 +1,65 @@
 <!doctype html5>
 <html>
 <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="x-ua-compatible" content="ie=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="utf-8"/>
+    <meta http-equiv="x-ua-compatible" content="ie=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <title>Pizza World</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 <style>
-        #main-container {
-            background-image:  url("img/pizza.jpg");
-            background-size: cover;
-            background-position: center;
-            height: 40vh;
+    #main-container {
+        background-image: url("img/pizza.jpg");
+        background-size: cover;
+        background-position: center;
+        height: 40vh;
 
-        }
-        #main-container h1 {
-            text-align: center;
-            background: lightgrey;
-            opacity: 0.6;
-        }
+    }
+
+    #main-container h1 {
+        text-align: center;
+        background: lightgrey;
+        opacity: 0.6;
+    }
 </style>
 
 <body>
 
 <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light mb-4" >
-        <a class="navbar-brand" href="#">Pizza World</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
+<nav class="navbar navbar-expand-lg navbar-light bg-light mb-4">
+    <a class="navbar-brand" href="#">Pizza World</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
 
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav mr-auto">
-                <li class="nav-item active">
-                    <a class="nav-link" href="#">Order online <span class="sr-only">(current)</span></a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Menu</a>
-                </li>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+                <a class="nav-link" href="#">Order online <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Menu</a>
+            </li>
 
-                <li class="nav-item">
+            <li class="nav-item">
                 <form class="form-inline my-2 my-sm-0">
                     <input class="form-control mr-sm-2" type="search" placeholder="Zip Code" aria-label="Search">
                     <button class="btn btn-outline-secondary my-2 my-sm-0" type="submit">Search store near you!
                     </button>
                 </form>
-                </li>
-            </ul>
-        </div>
-    </nav>
+            </li>
+        </ul>
+    </div>
+</nav>
 
 <!-- Main Container -->
 <div class="container">
 
-<!-- Jumbtron Hero -->
+    <!-- Jumbtron Hero -->
     <div class="jumbotron jumbotron-fluid mb-4" id="main-container">
         <h1 class="display-4">Welcome To Pizza World</h1>
     </div>
@@ -64,20 +67,20 @@
     <div>
         <h1 class="display-6 mb-2">Build your own pizza!</h1>
     </div>
-        <ul class="nav nav-tabs">
-            <li class="nav-item">
-                <a class="nav-link active" href="#card01">Size and crust</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Cheese and Sauce</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Toppings</a>
-            </li>
- 
-        </ul>
+    <ul class="nav nav-tabs">
+        <li class="nav-item">
+            <a class="nav-link active" href="#card01">Size and crust</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#">Cheese and Sauce</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#">Toppings</a>
+        </li>
 
- <!-- Form Element -->
+    </ul>
+
+    <!-- Form Element -->
     <form>
         <!--
         ==========================================================================
@@ -85,59 +88,59 @@
         ==========================================================================
         -->
         <div class="form-group">
-             <div class="card mb-3"  id="card01">
+            <div class="card mb-3" id="card01">
                 <div class="card-header" style="background: rgb(0, 123, 255); color:white;">
                     Choose size and crust
                 </div>
 
-            <div class="card m-3">
-                <div class="card-header">
-                    Hand Tossed
+                <div class="card m-3">
+                    <div class="card-header">
+                        Hand Tossed
+                    </div>
+
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">Garlic seasoned crust with a rich, buttery taste.
+                        </li>
+                        <li class="list-group-item">
+                            <div class="custom-control custom-radio">
+                                <input type="radio" id="customRadio1" name="customRadio" class="custom-control-input">
+                                <label class="custom-control-label" for="customRadio1">Small (10")</label>
+                            </div>
+                        </li>
+                        <li class="list-group-item">
+                            <div class="custom-control custom-radio">
+                                <input type="radio" id="customRadio2" name="customRadio" class="custom-control-input">
+                                <label class="custom-control-label" for="customRadio2">Medium (12")</label>
+                            </div>
+                        </li>
+                    </ul>
                 </div>
 
-                <ul class="list-group list-group-flush">
-                    <li class="list-group-item">Garlic seasoned crust with a rich, buttery taste.
-                    </li>
-                    <li class="list-group-item">
-                        <div class="custom-control custom-radio">
-                            <input type="radio" id="customRadio1" name="customRadio" class="custom-control-input">
-                            <label class="custom-control-label" for="customRadio1">Small (10")</label>
-                        </div>
-                    </li>
-                    <li class="list-group-item">
-                        <div class="custom-control custom-radio">
-                            <input type="radio" id="customRadio2" name="customRadio" class="custom-control-input">
-                            <label class="custom-control-label" for="customRadio2">Medium (12")</label>
-                        </div>
-                    </li>
-                </ul>
-            </div>
-
-            <div class="card m-3">
-                <div class="card-header">
-                    Crispy Thin
+                <div class="card m-3">
+                    <div class="card-header">
+                        Crispy Thin
+                    </div>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">Thin enough for optimum crispy to crunchy ratio</li>
+                        <li class="list-group-item">
+                            <div class="custom-control custom-radio">
+                                <input type="radio" id="customRadio3" name="customRadio" class="custom-control-input">
+                                <label class="custom-control-label" for="customRadio3">Medium (12")</label>
+                            </div>
+                        </li>
+                        <li class="list-group-item">
+                            <div class="custom-control custom-radio">
+                                <input type="radio" id="customRadio4" name="customRadio" class="custom-control-input">
+                                <label class="custom-control-label" for="customRadio4">Large (14")</label>
+                            </div>
+                        </li>
+                    </ul>
                 </div>
-                <ul class="list-group list-group-flush">
-                    <li class="list-group-item">Thin enough for optimum crispy to crunchy ratio</li>
-                    <li class="list-group-item">
-                        <div class="custom-control custom-radio">
-                            <input type="radio" id="customRadio3" name="customRadio" class="custom-control-input">
-                            <label class="custom-control-label" for="customRadio3">Medium (12")</label>
-                        </div>
-                    </li>
-                    <li class="list-group-item">
-                        <div class="custom-control custom-radio">
-                            <input type="radio" id="customRadio4" name="customRadio" class="custom-control-input">
-                            <label class="custom-control-label" for="customRadio4">Large (14")</label>
-                        </div>
-                    </li>
-                </ul>
-            </div>
 
-            <div class="card-footer" style="height: 3rem border-box">
-                <a class="btn btn-primary btn-sm float-right" href="#" role="button">Next Step ></a>
+                <div class="card-footer" style="height: 3rem border-box">
+                    <a class="btn btn-primary btn-sm float-right" href="#" role="button">Next Step ></a>
+                </div>
             </div>
-        </div>
         </div>
 
         <!--
@@ -147,13 +150,13 @@
         -->
 
         <div class="form-group">
-            <div class="card mb-3"  id="card01">
+            <div class="card mb-3" id="card01">
                 <div class="card-header" style="background: rgb(0, 123, 255); color:white">
                     Choose cheese and toppings
                 </div>
 
                 <div class="card m-3">
-                    <div class="card-header" >
+                    <div class="card-header">
                         Cheese
                     </div>
 
@@ -198,10 +201,9 @@
                 </div>
 
 
-
                 <div class="card-footer" style="height: 3rem border-box">
                     <div class="btn-group float-right" role="group" aria-label="Basic example">
-                        <button type="button" class="btn btn-primary"> < Prev Step </button>
+                        <button type="button" class="btn btn-primary"> < Prev Step</button>
                         <button type="button" class="btn btn-primary">Next Step ></button>
                     </div>
                 </div>
@@ -209,13 +211,13 @@
         </div>
 
 
-    <!--
-    ==========================================================================
-    3d Form - Toppings
-    ==========================================================================
-    -->
+        <!--
+        ==========================================================================
+        3d Form - Toppings
+        ==========================================================================
+        -->
         <div class="form-group">
-            <div class="card mb-3"  id="card01">
+            <div class="card mb-3" id="card01">
                 <div class="card-header" style="background: rgb(0, 123, 255); color:white">
                     Choose topping
                 </div>
@@ -281,7 +283,6 @@
                         </li>
 
 
-
                         <li class="list-group-item">
                             <div class="custom-control custom-radio">
                                 <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
@@ -292,7 +293,8 @@
                 </div>
 
                 <div class="card-footer" style="height: 3rem border-box">
-                    <a class="btn btn-primary btn-sm float-right" href="#" role="button">Check Out <i class="fa fa-shopping-cart"></i></a>
+                    <a class="btn btn-primary btn-sm float-right" href="#" role="button">Check Out <i
+                            class="fa fa-shopping-cart"></i></a>
                 </div>
             </div>
         </div>
@@ -302,8 +304,14 @@
 
 
 <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
 </body>
 </html>

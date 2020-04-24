@@ -7,6 +7,7 @@
 function isTrue(inputA, inputB) {
     return inputA === inputB;
 }
+
 // isTrue(true)             // true
 // isTrue(false)            // false
 // isTrue(0)                // false
@@ -36,9 +37,10 @@ function isFalse(input) {
 
 // Define a function named not that takes in any input and returns the boolean opposite of the provided input.
 // Use BANG (!) which means does not equal
-function not(input){
+function not(input) {
     return !input;
 }
+
 // not(false)                  // true
 // not(0)                      // true
 // not("")                     // true
@@ -51,11 +53,11 @@ function not(input){
 // not(123)                    // false
 
 
-
 // Define a function named addOne that takes in a single input. If the input is a number or a numeric string, return the value plus one.
 function addOne(input) {
     return parseFloat(input) + 1;
 }
+
 // addOne(0)                    // 1
 // addOne(2)                    // 3
 // addOne(-5)                   // -4
@@ -68,12 +70,12 @@ function addOne(input) {
 // addOne(NaN)                  // NaN
 
 
-
 // Define a function named isEven that takes in a single input. If the input is an even number or a string containing an even number, return true. Any other input should return false for the output.
 // USE modulal operator (num % 2 === 0)
 function isEven(input) {
     return parseInt(input) % 2 === 0;
 }
+
 // isEven(2)                   // true
 // isEven(-8)                  // true
 // isEven(0)                   // true
@@ -85,9 +87,10 @@ function isEven(input) {
 
 
 // Define a function named isIdentical that takes in two input arguments. If each input is equal both in data type and in value, then return true. If the values are not the same data type or not the same value, return false.
-function isIdentical(inputA, inputB){
+function isIdentical(inputA, inputB) {
     return inputA === inputB;
 }
+
 // isIdentical(3, 3)                     // true
 // isIdentical(false, false)             // true
 // isIdentical("hello", "hello")         // true
@@ -97,12 +100,12 @@ function isIdentical(inputA, inputB){
 // isIdentical("javascript", "java")     // false
 
 
-
 // Define a function named isEqual that takes in two input arguments.
 // If each argument is equal only in value, then return true. Otherwise return false.
-function isEqual(inputA, inputB){
+function isEqual(inputA, inputB) {
     return inputA == inputB;
 }
+
 // isEqual(3, "3")                       // true
 // isEqual("abc123", "abc123")           // true
 // isEqual(true, 1)                      // true
@@ -115,6 +118,7 @@ function isEqual(inputA, inputB){
 function or(inputA, inputB) {
     return inputA || inputB;
 }
+
 // or(true, true)                    // true
 // or(true, false)                   // true
 // or(false, true)                   // true
@@ -126,6 +130,7 @@ function or(inputA, inputB) {
 function and(inputA, inputB) {
     return inputA && inputB;
 }
+
 // and(true, true)                    // true
 // and(true, false)                   // false
 // and(false, true)                   // false
@@ -134,7 +139,7 @@ function and(inputA, inputB) {
 
 
 // Define a function named concat that takes in two input arguments. If both arguments are strings, then return the concatenated result. If two numbers are provided, then return the string concatenation of each set of numerals.
-function concat(inputA, inputB){
+function concat(inputA, inputB) {
     return inputA.toString() + inputB.toString();
 }
 

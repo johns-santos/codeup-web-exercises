@@ -84,26 +84,26 @@ a {
     height: 100%;
     width: 100%;
     background-image: linear-gradient(
-                        var(--gray) 0%,
-                        var(--gray) 25%,
-                        var(--white) 25%,
-                        var(--white) 75%,
-                        var(--gray) 75%,
-                        var(--gray) 100%);
+            var(--gray) 0%,
+            var(--gray) 25%,
+            var(--white) 25%,
+            var(--white) 75%,
+            var(--gray) 75%,
+            var(--gray) 100%);
 }
 
 .codeup-design-mobile {
-    font-size:50px;
+    font-size: 50px;
     font-family: 'Abel', sans-serif;
 }
 
 .codeup-design-small {
-    font-size:35px;
+    font-size: 35px;
     font-family: 'Abel', sans-serif;
 }
 
 .codeup-design-medium {
-    font-size:30px;
+    font-size: 30px;
     font-family: 'Abel', sans-serif;
 }
 

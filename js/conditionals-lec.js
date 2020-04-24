@@ -70,7 +70,6 @@ var numberInput = 9;
 */
 
 
-
 // ======================================================
 // =============== IF / ELSE SYNTAX ================
 // ======================================================
@@ -79,7 +78,6 @@ var numberInput = 9;
 // } else {
 //     // code here runs if condition evaluates to false
 // }
-
 
 
 /*
@@ -236,24 +234,21 @@ console.log(trafficInstructor('yellow'));
 // If user is under 15, they are not eligible for a learners permit, else they are. If they are eligible, check age. If they are 15 they are eligible for a learners permit, if they are 16 or older and have a permit, they are eligible for license, if they are 16 or older and do not have a permit, they are not eligble for a license.
 var userAge = 16;
 var hasPermit = true;
-    // If user is under 15, they are not eligible for a learners permit, else they are.
-    // If they are eligible, check age.
-    if(userAge < 15) {
-        alert("Not eligible for learning permit");
-    } else if (userAge === 15) {
-        alert("You are eligible for a permit");
-        // if they are 16 or older and have a permit, they are eligible for license,
-    } else if (userAge > 16 && hasPermit) {
-        alert("you can have license");
-        // if they are 16 or older and do not have a permit, they are not eligible for a license.
-    } else if (userAge > 16 && !hasPermit) {
-        alert("sorry you need a permit first");
-    } else {
-        alert("Please see front desk!");
-    }
-
-
-
+// If user is under 15, they are not eligible for a learners permit, else they are.
+// If they are eligible, check age.
+if (userAge < 15) {
+    alert("Not eligible for learning permit");
+} else if (userAge === 15) {
+    alert("You are eligible for a permit");
+    // if they are 16 or older and have a permit, they are eligible for license,
+} else if (userAge > 16 && hasPermit) {
+    alert("you can have license");
+    // if they are 16 or older and do not have a permit, they are not eligible for a license.
+} else if (userAge > 16 && !hasPermit) {
+    alert("sorry you need a permit first");
+} else {
+    alert("Please see front desk!");
+}
 
 
 // ====================================================
@@ -273,11 +268,11 @@ var hasPermit = true;
 // }
 // console.log(message);
 // TODO: Convert IF/ELSE to TERNARY OPERATOR
- var success = true;
- var message = (success) ? "Operation was successful from tern." : "Oops, something went wrong from tern.";
- console.log(message);
+var success = true;
+var message = (success) ? "Operation was successful from tern." : "Oops, something went wrong from tern.";
+console.log(message);
 
- // isAdmin TERNARY
+// isAdmin TERNARY
 // var isAdmin = true;
 // (isAdmin) ? showAdminNavbar() : showRegularNavbar();
 
@@ -293,9 +288,6 @@ var hasPermit = true;
 //TODO: CONVERT code block above to TERNARY STATEMENT:
 var weather = "sunny";
 var weatherMessage = (weather === "rainy") ? "It's raining" : "Have a nice day";
-
-
-
 
 
 // ====================================================
@@ -324,9 +316,9 @@ var weatherMessage = (weather === "rainy") ? "It's raining" : "Have a nice day";
 
 
 //TODO: Write a switch statement that evaluates weather as the condition. Check for "rainy", "sunny", "snow", and a default case.
-var  weather2 = "rainy";
+var weather2 = "rainy";
 
-switch(weather2) {
+switch (weather2) {
     case "rainy":
         alert("it's raining");
         break;
@@ -340,10 +332,11 @@ switch(weather2) {
         alert("have a nice day");
         break;
 }
+
 //TODO: Rewrite the intersection function from earlier as a switch statement.
-function checkWeather2(weather2){
+function checkWeather2(weather2) {
     var weatherMessage2;
-    switch(weather2){
+    switch (weather2) {
         case "rainy":
             weatherMessage2 = "Its raining";
             break;
@@ -356,6 +349,7 @@ function checkWeather2(weather2){
     }
     return weatherMessage2;
 }
+
 console.log(checkWeather2('sunny'));
 
 
@@ -375,10 +369,10 @@ function checkTrafficLight(trafficLight){
 console.log(checkTrafficLight("green"));
 */
 
-function checkTrafficLight(trafficLight){
+function checkTrafficLight(trafficLight) {
     var trafficMessage;
 
-    switch(trafficLight){
+    switch (trafficLight) {
         case "green":
             trafficMessage = "Keep Going";
             break;

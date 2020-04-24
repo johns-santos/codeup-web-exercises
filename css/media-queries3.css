@@ -1,27 +1,32 @@
 body {
     font-family: 'PT Sans', sans-serif;
 }
+
 .alert-info {
-    background: rgb(214	254	254);
+    background: rgb(214 254 254);
     border: grey 2px solid;
     text-align: center;
     padding: 1em;
     margin: 1em auto;
 }
+
 .alert-info a {
     color: dimgrey;
     text-decoration: none;
     font-size: 1.25em;
 }
+
 .alert-info a:visited {
     color: dimgrey;
     text-decoration: none;
 }
+
 h1 {
     text-align: left;
     font-size: 3em;
     float: left;
 }
+
 ul {
     float: right;
     position: relative;
@@ -29,6 +34,7 @@ ul {
     list-style: none;
     padding: 0;
 }
+
 li {
     text-align: center;
     display: inline;
@@ -36,6 +42,7 @@ li {
     margin: .5em auto;
     padding: .75em;
 }
+
 .header-img {
     display: block;
     margin-left: auto;
@@ -44,27 +51,33 @@ li {
     width: 100%;
     max-width: 890px;
 }
-#main{
+
+#main {
     float: left;
     margin: 0 .5em 0 0;
 }
+
 section.sub-section {
     font-style: italic;
     font-size: .85em;
     float: left;
     margin: 0 0 0 .5em;
 }
+
 footer {
     clear: both;
 }
+
 footer p {
     font-size: .35em;
     position: relative;
     top: 40px;
 }
+
 #social-media-links {
     float: right;
 }
+
 .fb {
     float: left;
     display: block;

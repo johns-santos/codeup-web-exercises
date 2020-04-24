@@ -31,13 +31,13 @@ movieRating = (arr) => {
 
 
 //   //loop through array
-for(var i = 0; i < movies.length; i++){
+for (var i = 0; i < movies.length; i++) {
 // //     let rating = ${rating};
 // //     let title = ${rating};
 // //   // if rating is equal to 5 output: title - is fantastic.
 // //     let rating = movies.${rating});
 // let title = (movies.${title});
-console.log(i);
+    console.log(i);
 //     // if rating is equal to 1 output: tile -  is terrible
 //   // else output : title
 // }

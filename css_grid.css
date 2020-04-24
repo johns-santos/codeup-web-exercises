@@ -30,6 +30,7 @@
         display: flex;
     }
 }
+
 @media all and (max-width: 575px) {
     body {
         background-color: #b4d455;
@@ -53,24 +54,23 @@
 }
 
 
-
- .container-1 div{
-    border:3px black solid;
-    padding:10px;
+.container-1 div {
+    border: 3px black solid;
+    padding: 10px;
 }
 
-.box-1{
-    flex:2;
-    order:2;
+.box-1 {
+    flex: 2;
+    order: 2;
 }
 
-.box-2{
-    flex:1;
-    order:1;
+.box-2 {
+    flex: 1;
+    order: 1;
 }
 
-.box-3{
-    flex:1;
+.box-3 {
+    flex: 1;
     order: 3;
 }
 

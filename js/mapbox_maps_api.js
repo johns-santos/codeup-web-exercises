@@ -60,11 +60,11 @@ var favoriteRestaurants = [
 
 
 // FOREACH - ITERATE THROUGH RESTAURANT ARRAY
-favoriteRestaurants.forEach(function(restaurant) {
+favoriteRestaurants.forEach(function (restaurant) {
 
     // CONVERT STREET RESTAURANT & RETURN GEOGRAPHIC COORDINATES
     geocode(restaurant.address, mapToken).then(function (result) {
-       // console.log(result); // VERIFY COORDINATES ARE RETURNED
+        // console.log(result); // VERIFY COORDINATES ARE RETURNED
 
         //POPUP FOR RESTAURANT NAME TEL & EXTRA DETAILS //
         var popup = new mapboxgl.Popup({offset: 5})
@@ -80,12 +80,12 @@ favoriteRestaurants.forEach(function(restaurant) {
             .addTo(map);
 
 
-    // MARKER FOR RESTAURANTS
-    var marker = new mapboxgl.Marker(markerOptions )
-        .setLngLat(result)
-        .addTo(map)
-        .setPopup(popup) // sets a popup on this marker
-        .togglePopup()
+        // MARKER FOR RESTAURANTS
+        var marker = new mapboxgl.Marker(markerOptions)
+            .setLngLat(result)
+            .addTo(map)
+            .setPopup(popup) // sets a popup on this marker
+            .togglePopup()
 
     })
 

@@ -1,5 +1,5 @@
 :root {
-    --bg-info:  lightblue;
+    --bg-info: lightblue;
     --text-info: lightgreen;
     --bg-success: lightyellow;
     --text-success: lightpink;
@@ -14,26 +14,26 @@ body, html {
     font-family: Arial, Ubuntu, sans-serif;
 }
 
-.message{
- /*   overflow: auto; */
+.message {
+    /*   overflow: auto; */
     padding: .75em;
     border: solid 1px lightgrey;
     margin: .5em auto;
-    border-radius:  4px;
+    border-radius: 4px;
     font-size: 15px;
-    width: 80%;   
+    width: 80%;
 }
 
-.message-info{
+.message-info {
     background-color: var(--bg-info);
-    color:darkblue;
+    color: darkblue;
 
 }
 
 .message-success {
     background-color: var(--text-info);
     color: darkgreen;
- 
+
 }
 
 .message-warning {
@@ -42,7 +42,7 @@ body, html {
 }
 
 
-.message-error{
+.message-error {
     background-color: var(--text-success);
     color: darkred;
 

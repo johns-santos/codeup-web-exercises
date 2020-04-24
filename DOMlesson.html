@@ -1,5 +1,3 @@
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,16 +5,19 @@
     <title>DOM</title>
     <style>
         .redBackground {
-            background-color:red
+            background-color: red
         }
+
         .greenText {
-            color:green
+            color: green
         }
+
         .purple {
-            color:purple;
+            color: purple;
         }
+
         .cyan {
-            color:cyan;
+            color: cyan;
         }
     </style>
 </head>
@@ -40,11 +41,11 @@
     var header = document.getElementById("header");
     console.log(header);
 
-    var thingsIWant = ["Great Career","Oculus Quest","Nintendo Switch","2 Front Teeth","Macbook Pro 16-inch","Valve Index"];
+    var thingsIWant = ["Great Career", "Oculus Quest", "Nintendo Switch", "2 Front Teeth", "Macbook Pro 16-inch", "Valve Index"];
 
     var wishList = document.getElementById("wishList");
     var htmlString = "";
-    for (var i = 0;i<thingsIWant.length;i++){
+    for (var i = 0; i < thingsIWant.length; i++) {
         if (i % 2 !== 0)
             htmlString += "<li class='even'>" + thingsIWant[i] + "</li>";
         else
@@ -53,15 +54,16 @@
     wishList.innerHTML = htmlString;
     var evens = document.getElementsByClassName("even");
 
-    setTimeout(function(){
-        for (var i = 0;i<evens.length;i++){
+    setTimeout(function () {
+        for (var i = 0; i < evens.length; i++) {
             // console.log(evens[i]);
             evens[i].innerHTML = "<em>Money</em>";
             console.log(evens[i].innerHTML);
-        }},7000);
+        }
+    }, 7000);
 
     var odds = document.getElementsByClassName("odd");
-    for (var i = 0;i<odds.length;i++) {
+    for (var i = 0; i < odds.length; i++) {
         odds[i].setAttribute("class", "odd redBackground greenText");
     }
 
@@ -70,24 +72,23 @@
 
 
     var clicks = 0;
-    var buttonClick = function(){
+    var buttonClick = function () {
         clicks++;
         console.log("button was clicked " + clicks + " times")
     }
 
     var button = document.getElementById("button");
-    button.addEventListener("click",buttonClick);
-    button.addEventListener("mouseover", function(){
+    button.addEventListener("click", buttonClick);
+    button.addEventListener("mouseover", function () {
         button.setAttribute("class", "purple");
     })
-    button.addEventListener("mouseout", function(){
-        button.setAttribute("class","cyan");
+    button.addEventListener("mouseout", function () {
+        button.setAttribute("class", "cyan");
     })
 
-    setTimeout(function() {
+    setTimeout(function () {
         button.removeEventListener("click", buttonClick);
     }, 5000);
-
 
 
     var wishList = ["dog", "money", "pony", "diamonds"];
@@ -98,16 +99,17 @@
         var gift = document.getElementById("gift").value;
         gifts.push(gift);
         renderWishLIst(); // wips out wish list, refills it with gifts array
-        document.getElementById("gift").value ="";
+        document.getElementById("gift").value = "";
     }
 
     function renderWhishLIst() {
         var giftString = "";
-        gifts.forEach(function(gift) {
+        gifts.forEach(function (gift) {
             giftString += "<li>" + gift = "</li>";
         });
         document.getElementById("wishList").innerHTML = giftString;
     }
+
     renderWishList();
 
 

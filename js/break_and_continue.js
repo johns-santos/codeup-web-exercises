@@ -1,4 +1,3 @@
-
 do {
     var userNumber = Number(prompt("Pick an odd number between 1 and 50"));
 
@@ -45,9 +44,8 @@ for (var i = 1; i <= 50; i++) {
 
 }
 
-(function() {
+(function () {
     "use strict";
-
 
 
 // WHILE
@@ -56,13 +54,11 @@ for (var i = 1; i <= 50; i++) {
 
     while (true) {
         skipNumber = Number(prompt("Please enter an odd number between 1 and 50: "));
-        if(skipNumber % 2 !== 0 && skipNumber >= 1 && skipNumber <= 50) {
+        if (skipNumber % 2 !== 0 && skipNumber >= 1 && skipNumber <= 50) {
             console.log("Number to skip is: " + skipNumber);
             break;
         }
     }
-
-
 
 
 })();

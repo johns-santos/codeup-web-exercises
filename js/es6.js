@@ -53,7 +53,7 @@ users.push({
     email: 'jack@gmail.com',
     languages: ['test', 'test1', 'test2']
 });
- console.log('users');
+console.log('users');
 //
 //
 //
@@ -86,7 +86,7 @@ users.forEach((user) => {
 //     return names.push(user.name);
 // });
 //
-users.forEach((user) =>{
+users.forEach((user) => {
     return names.push(user.name);
 });
 
@@ -118,13 +118,13 @@ console.log(developers);
 let list = '<ul>';
 // // TODO: rewrite the following loop to use a for..of loop
 // developers.forEach(function (developer) {
-for(let developer of developers) {
+for (let developer of developers) {
 
 //     // TODO: rewrite the assignment below to use template strings
 //     list += '<li>' + developer + '</li>';
 // });
 // list += '</ul>';
-   list += `<li>${developer}</li>`;
+    list += `<li>${developer}</li>`;
 }
 list += '</ul>';
 // console.log(list);

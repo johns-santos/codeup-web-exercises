@@ -40,7 +40,6 @@ var random = Math.floor((Math.random() * 3) + 1);
 console.log(random);
 
 
-
 // Don't modify the following line, it generates a random number between 1 and 3
 // and stores it in a variable named random
 var random = Math.floor((Math.random() * 3) + 1);
@@ -70,6 +69,7 @@ function isTwo(number) {
         return false;
     }
 }
+
 console.log(isTwo(3));
 
 console.log(isTwo(random));
@@ -89,10 +89,12 @@ console.log(isTwo(random));
 
 var tipPercentage = Number();
 var billTotal = Number();
-function calculateTip(tipPercentage, billTotal){
-    var tip =  (tipPercentage) * (billTotal);
+
+function calculateTip(tipPercentage, billTotal) {
+    var tip = (tipPercentage) * (billTotal);
     return tip;
 }
+
 console.log(calculateTip(0.20, 200)); // expexted output 40.00
 
 /**
@@ -125,7 +127,8 @@ function calculateTip2(tipPercentage2, billTotal2) {
  */
 var originalPrice = Number();
 var discountPercent = Number();
-function applyDiscount(originalPrice, discountPercent){
+
+function applyDiscount(originalPrice, discountPercent) {
     var discount = (originalPrice) * (discountPercent);
     var applyDiscount = originalPrice - discount;
     return applyDiscount;
@@ -161,7 +164,7 @@ console.log('These are build to spec requirements');
  * // @param num
  * // @returns {boolean}
  */
-var isTwo = function(num) {
+var isTwo = function (num) {
     return num === 2;
 };
 console.log(isTwo(1)); // returns false
@@ -178,9 +181,8 @@ console.log(isTwo(random));
  */
 var tipPercent = prompt('what percentage do you want to tip?????');
 var costForMeal = prompt('What was the total cost of meal?');
-var amountToTip  = tipPercent * costForMeal;
+var amountToTip = tipPercent * costForMeal;
 alert(amountToTip);
-
 
 
 /** ==============SAME AS ABOVE TO INSTRUCT SPECS =======================================
@@ -197,7 +199,7 @@ alert(amountToTip);
  *
  * > applyDiscount(45.99, 0.12) // 40.4712
  */
-var applydiscount2 = function(price2, discountPercent2) {
+var applydiscount2 = function (price2, discountPercent2) {
     var discountAmount2 = price2 * discountPercent2;
     return (price2 - discountPercent2);
 };

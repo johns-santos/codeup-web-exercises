@@ -8,18 +8,16 @@ pets[5] = "Malu";
 pets[6] = "Lily";
 
 console.log("There are " + pets.length + " pets in the pets array:");
-for(var i=0;i<pets.length;i++) {
+for (var i = 0; i < pets.length; i++) {
     console.log("pets[" + i + "]: " + pets[i]);
 }
 
 //pets.forEach function method of iterating over an array.
-pets.forEach(function(pet, i) {
+pets.forEach(function (pet, i) {
     console.log("The pet at pets[" + i + "]: " + pet);
 });
 
 // var numbers = [42, 53, 66, 783, 241];
-
-
 
 
 // Add a variable to an existing array
@@ -46,7 +44,6 @@ console.log(fruit);
 console.log(fruit.pop());
 
 
-
 // Locate index of item in array
 console.log(fruit.indexOf('pineapple'));
 console.log(fruit[fruit.indexOf('pineapple')]);
@@ -54,7 +51,6 @@ console.log(fruit[fruit.indexOf('pineapple')]);
 
 fruit.push("apple");
 console.log(fruit.lastIndexOf('apple'));
-
 
 
 //===========JOIN===============
@@ -69,19 +65,18 @@ var paragraph = 'JavaScript arrays have a variety of methods that allow for mani
 paragraph.split('.');
 
 
-
 // Capitalize first letter of each word
 var sentence = "The quick brown fox jumps over the lazy dog";
 console.log(sentence);
 var words = sentence.split(" ");
-for (var i = 0;i<words.length; i++) {
+for (var i = 0; i < words.length; i++) {
     // capitalize first letter
     var word = words[i];
     var letters = word.split("");
     var capitalFirstLetter = letters[0].toUpperCase();
     var capitalizedWord = "";
     capitalizedWord += capitalFirstLetter;
-    for (var j=1;j<letters.length;j++) {
+    for (var j = 1; j < letters.length; j++) {
         capitalizedWord += letters[j];
     }
     words[i] = capitalizedWord;
@@ -102,6 +97,7 @@ function capFirstLetter(str) {
     // Directly return the joined string
     return splitStr.join(' ');
 }
+
 console.log(capFirstLetter('The quick brown fox jumps over the lazy dog'));
 
 
@@ -113,10 +109,9 @@ fruit.push['pear', 'pineapple', 'grape', 'apple', 'mango'];
 fruit.unshift('strawberry');
 
 
-
 // ================== SLICE ================================
 // return items from index to index
-var fruitThru3 = fruit.slice(0,3);
+var fruitThru3 = fruit.slice(0, 3);
 console.log(fruitThru3);
 
 var fruitThru = fruit.slice(3);

@@ -72,6 +72,6 @@ a {
 
 .card {
     /* This is a flex item */
-    align-self: center; 
+    align-self: center;
     flex-basis: 40%;
 }

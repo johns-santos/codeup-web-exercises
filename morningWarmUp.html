@@ -10,7 +10,7 @@ Write a javascript function named helloWorld that returns a string saying “hel
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <style>
-        .box{
+        .box {
             height: 200px;
             width: 200px;
             border: solid 2px red;
@@ -28,427 +28,435 @@ Write a javascript function named helloWorld that returns a string saying “hel
 
 
 <script src='https://code.jquery.com/jquery-2.2.4.js'></script>
-    <script>
-        //=======================================================================================
+<script>
+    //=======================================================================================
 
-        // Write a function that returns string "hello world"
-        // function helloWorld() {
-        //     return "Hello World";
-        // } console.log(morningWarmUp());
+    // Write a function that returns string "hello world"
+    // function helloWorld() {
+    //     return "Hello World";
+    // } console.log(morningWarmUp());
 
-        //=======================================================================================
+    //=======================================================================================
 
-        // Write a js function that, when sent a name like "Daniel",
-        // returns a string "Hello Daniel"
-        function helloName(name) {
-            return "Hello " + name +"!";
+    // Write a js function that, when sent a name like "Daniel",
+    // returns a string "Hello Daniel"
+    function helloName(name) {
+        return "Hello " + name + "!";
+    }
+
+    console.log(helloName("John"));
+    //=======================================================================================
+
+    // Write a js function called add(x,y)
+    // that takes two numbers and trutned the sum
+    function add(x, y) {
+        return (x + y);
+    }
+
+    console.log(add(2, 3));
+
+    //=======================================================================================
+
+    // write a js function callled addFour(w,x,y,z)
+    // that takes in four numbers and returns the sum
+    function addFour(w, x, y, z) {
+        return (w + x + y + z);
+    }
+
+    console.log(addFour(1, 2, 3, 4));
+
+    // same as above using var and sum operation
+    function addFour2(w, x, y, z) {
+        var sum = w + x + y + z;
+        return sum;
+    }
+
+    console.log(addFour2(2, 2, 2, 2));
+
+    //=======================================================================================
+
+    // Write a js functoin called calculateRectableArea that
+    // takes in length and width and returns the are of a rectangle
+    function calculateRectangleArea(width, length) {
+        var rectangleArea = width * length;
+        return rectangleArea
+    }
+
+    console.log(calculateRectangleArea(5, 2));
+
+    //write an array that returns the first item of an array
+    function firstItem(inputArray) {
+        return inputArray[0]
+    }
+
+    console.log(firstItem(["dog", "cat", "hamster"]));
+
+    //=======================================================================================
+
+    // write a js function callled arrayLength that takes in an array and returns the length of that array
+    function arrayLength(namelist) {
+        return namelist.length
+    }
+
+    console.log(arrayLength(['john', 'joe', 'gene', 'bella', 'monica']));
+
+    // Same as above done by insructor - refactored - (another way to create a function in JS)
+    var arrayLength1 = function (namelist1) {
+        return namelist1.length;
+    }
+    console.log(arrayLength1(["dog", "cat", "hamster"]));
+    //=======================================================================================
+
+    // write a js function called lastItem that takes in an array and returned the last item
+    var lastItem = function (inputArray) {
+        return inputArray[inputArray.length - 1];
+    }
+    console.log(lastItem(["test1", "test2", "test3"]));
+
+    //=======================================================================================
+
+    //write a JS function called nthItem that takes in an array and a number returns the nth item from the array
+
+    var nthItem2 = function (inputArray, i) {
+        return inputArray[i - 1];
+    }
+    console.log(nthItem2(["hello", "goodbye", "greetings", "soLong"], 4));
+
+    // JS function named getType that returns the data type of input
+    var getType = function (userInput) {
+        return typeof userInput;
+    }
+    console.log(getType("test"));
+    // Instructor example of (typeof) function
+    var getInput2 = function (input) {
+        return typeof input
+    }
+    console.log(getInput2(50));
+
+    //=======================================================================================
+    // JS function that takes an array and puts 2 into
+    var put2 = function (inputArray) {
+        inputArray.push(2);
+        return inputArray;
+    }
+
+    var testArray = ["test1", "test2", "test3", "test4"]
+    var nameArray = ["john", "bella", "doni", "dar", "mon"]
+    console.log(put2(testArray));
+    console.log(put2(nameArray));
+
+
+    //=======================================================================================
+
+    // === CONDITIONAL (IF)
+    // JS function that returns true if num is greater than 10
+    console.log(17 > 10);
+    console.log(8 > 10);
+
+    function greaterThan(num) {
+        return num > 10;
+    }
+
+    console.log(greaterThan(9));
+    //=======================================================================================
+
+
+    //=======================================================================================
+    // JS function called youMayEnter that accepts a number that is an age. If age is 13 or greater, return "You may enter", else return "Sorry, you need a parent or guardian to enter."
+
+    //1. Write a function named youMayEnter that takes a variable
+    //2. parameter is a number (age)
+    var youMayEnter = function (age) {
+        //3. conditional -> age > 13 "You May Enter"
+        if (age >= 13) {
+            return "You May Enter";
+            //4. If they are not 13 or older - return "You Need a Guardian"
+        } else {
+            return "Sorry, you need a parent or guardian to enter.";
         }
-        console.log(helloName("John"));
-        //=======================================================================================
+    }
+    console.log(youMayEnter(13));
+    console.log(youMayEnter(8));
+    //=======================================================================================
 
-        // Write a js function called add(x,y)
-        // that takes two numbers and trutned the sum
-        function add(x,y) {
-            return (x + y);
+    //=======================================================================================
+    //Write a js function called seeYouLater, that accepts a strings.
+    // IF string is alligator, return "See you later alligator".
+    // IF string is crocodile, return "after while crocodile".
+    // ELSE return "so long"
+
+    // var seeYouLater = function(words) {
+    //     if (words === 'alligator'){
+    //         return 'See you later alligator';
+    //     }
+    //     else if (words === 'crocodile'){
+    //         return 'after while crocodile';
+    //     } else {
+    //         return 'so long';
+    //     }
+    // }
+
+    function seeYouLater(inputString) {
+        if (inputString === "alligator") {
+            return "See you later alligator!";
+        } else if (inputString === "crocodile") {
+            return "After a while, crocodile!";
+        } else {
+            return "So long!";
         }
-        console.log(add(2,3));
+    }
 
-        //=======================================================================================
+    console.log(seeYouLater('alligator'));
+    console.log(seeYouLater('crocodile'));
+    console.log(seeYouLater('pizza'));
+    //=======================================================================================
 
-        // write a js function callled addFour(w,x,y,z)
-        // that takes in four numbers and returns the sum
-        function addFour(w,x,y,z) {
-            return (w + x + y +z);
+    //============================================
+    // write a function that test another function
+    function functionA(callBackFunction) {
+        callBackFunction();
+    }
+
+    functionA(function () {
+        alert("It Works");
+    });
+
+    // Write a function called 'contains' that receives an array and another param and
+    // returns true if the paraam is found in the array
+
+    function contains(arr, x) {
+        // initialize index at 0; while index is less
+        // than length of array; add 1 to index and loop
+        for (var i = 0; i < arr.length; i++) {
+            // if value of index equals x return true
+            if (arr[i] === x) return true;
         }
-        console.log(addFour(1,2,3,4));
+        return false;
+    }
 
-        // same as above using var and sum operation
-        function addFour2(w,x,y,z) {
-            var sum = w + x + y + z;
-            return sum;
+    console.log(contains(['sunday', 'monday', 'airplane'], 'monday'));
+
+    // ========================== SOLUTION 2 ==========================//
+    var contains1 = function (arr, param) {
+        return arr.includes(param);
+    }
+    console.log(contains1([1, 2, 3, 4], 4));
+
+    // ========================= Instructor Solution ====================/
+    var contains2 = function (arr, param) {
+        for (var i = 0; i < arr.length; i++) {
+            console.log(i);
+            if (arr[i] === param)
+                return true;
         }
-        console.log(addFour2(2,2,2,2));
+        return false;
+    }
+    console.log(contains2([1, 2, 3, 4], 4));
 
-        //=======================================================================================
 
-        // Write a js functoin called calculateRectableArea that
-        // takes in length and width and returns the are of a rectangle
-        function calculateRectangleArea(width, length){
-            var rectangleArea = width * length;
-            return rectangleArea
+    // Let's make Santa an OBJECT LITERAL
+    var santa = {
+        name: "Santa Claus",
+        niceList: ["John", "Bella", "Anthony", "Monica"],
+        naughtyList: ["Sara", "Sabrina", "Yvette"],
+        sayHello: function () {
+            return "Ho, Ho, Ho!!! Merry Christmas!!!";
         }
-        console.log(calculateRectangleArea(5, 2));
+    }
 
-        //write an array that returns the first item of an array
-        function firstItem(inputArray){
-            return inputArray[0]
+
+    // Loop through the following  array of Reindeer objects and
+    // return an array of Reindeer objects that are "gold" reindeer
+    var reindeerList = [
+        {
+            name: "Dot",
+            age: 5,
+            isGold: false
+        },
+        {
+            name: "Dasher",
+            age: 8,
+            isGold: true
+        },
+        {
+            name: "Patch",
+            age: 2,
+            isGold: false
+        },
+        {
+            name: "Rocket",
+            age: 6,
+            isGold: false
+        },
+        {
+            name: "Dancer",
+            age: 9,
+            isGold: true
+        },
+        {
+            name: "Prancer",
+            age: 5,
+            isGold: true
+        },
+        {
+            name: "Groot",
+            age: 9,
+            isGold: false
+        },
+        {
+            name: "Vixen",
+            age: 9,
+            isGold: true
+        },
+        {
+            name: "Comet",
+            age: 11,
+            isGold: true
+        },
+        {
+            name: "Archie",
+            age: 3,
+            isGold: false
+        },
+        {
+            name: "Cupid",
+            age: 13,
+            isGold: true
+        },
+        {
+            name: "Donder",
+            age: 16,
+            isGold: true
+        },
+        {
+            name: "Boots",
+            age: 16,
+            isGold: false
+        },
+        {
+            name: "Blizten",
+            age: 16,
+            isGold: true
         }
-            console.log(firstItem(["dog", "cat", "hamster"]));
+    ]
 
-        //=======================================================================================
+    // // Now need to iterate through deer array and return isGold TRUE
+    // // FOR EACH should be used here
+    // function getGoldReindeer(reindeerArray){
+    //     var bucket = []; // used to hold Gold Reindeer
+    //
+    //     for(var i = 0; i < reindeerArray.length; i++){ // ForLoop to iterate array
+    //         if(reindeerArray[i].isGold === true){
+    //             bucket.push(reindeerArray[i]);
+    //         }
+    //     }
+    //     return bucket;
+    // }
+    // console.log(getGoldReindeer(reindeerList));
 
-        // write a js function callled arrayLength that takes in an array and returns the length of that array
-        function arrayLength(namelist){
-            return namelist.length
-        }
-            console.log(arrayLength(['john', 'joe', 'gene', 'bella', 'monica']));
-        
-        // Same as above done by insructor - refactored - (another way to create a function in JS)
-        var arrayLength1 = function (namelist1) {
-            return namelist1.length;
-        }
-            console.log(arrayLength1(["dog", "cat", "hamster"]));
-        //=======================================================================================
 
-        // write a js function called lastItem that takes in an array and returned the last item
-        var lastItem = function(inputArray) {
-            return inputArray[inputArray.length - 1];
-        }
-        console.log(lastItem(["test1", "test2", "test3"]));
+    // FOREACH loop - this is preferred way as each item in the array will be
+    // loop through.................
+    function getGoldReindeer(reindeerArray) {
+        var bucket = [];
 
-        //=======================================================================================
-
-        //write a JS function called nthItem that takes in an array and a number returns the nth item from the array
-
-        var nthItem2 = function(inputArray, i) {
-            return inputArray[i - 1];
-        }
-        console.log(nthItem2(["hello", "goodbye", "greetings", "soLong"], 4));
-
-        // JS function named getType that returns the data type of input
-        var getType = function(userInput) {
-            return typeof userInput;
-                }
-                console.log(getType("test"));
-            // Instructor example of (typeof) function
-            var getInput2 = function(input) {
-                return typeof input
+        reindeerArray.forEach(function (reindeer) {
+            if (reindeer.isGold === true) {
+                bucket.push(reindeer);
             }
-            console.log(getInput2(50));
-
- //=======================================================================================
-        // JS function that takes an array and puts 2 into
-        var put2 = function(inputArray) {
-            inputArray.push(2);
-            return inputArray;
-        }
-
-        var  testArray = ["test1", "test2", "test3", "test4"]
-        var nameArray = ["john", "bella", "doni", "dar", "mon"]
-        console.log(put2(testArray));
-        console.log(put2(nameArray));
-
-
-        //=======================================================================================
-
-        // === CONDITIONAL (IF)
-        // JS function that returns true if num is greater than 10
-        console.log(17 > 10);
-        console.log(8 > 10);
-
-        function greaterThan(num) {
-            return num > 10;
-        }
-        console.log(greaterThan(9));
- //=======================================================================================
-
-
- //=======================================================================================
-        // JS function called youMayEnter that accepts a number that is an age. If age is 13 or greater, return "You may enter", else return "Sorry, you need a parent or guardian to enter."
-
-      //1. Write a function named youMayEnter that takes a variable
-      //2. parameter is a number (age)
-        var youMayEnter = function(age) {
-            //3. conditional -> age > 13 "You May Enter"
-            if (age >= 13) {
-                return "You May Enter";
-                //4. If they are not 13 or older - return "You Need a Guardian"
-            } else {
-                return "Sorry, you need a parent or guardian to enter.";
-            }
-        }
-        console.log(youMayEnter(13));
-        console.log(youMayEnter(8));
-//=======================================================================================
-
-        //=======================================================================================
-        //Write a js function called seeYouLater, that accepts a strings.
-        // IF string is alligator, return "See you later alligator".
-        // IF string is crocodile, return "after while crocodile".
-        // ELSE return "so long"
-
-        // var seeYouLater = function(words) {
-        //     if (words === 'alligator'){
-        //         return 'See you later alligator';
-        //     }
-        //     else if (words === 'crocodile'){
-        //         return 'after while crocodile';
-        //     } else {
-        //         return 'so long';
-        //     }
-        // }
-
-        function seeYouLater(inputString) {
-            if(inputString === "alligator"){
-                return "See you later alligator!";
-            } else if (inputString === "crocodile"){
-                return "After a while, crocodile!";
-            } else {
-                return "So long!";
-            }
-        }
-
-        console.log(seeYouLater('alligator'));
-        console.log(seeYouLater('crocodile'));
-        console.log(seeYouLater('pizza'));
-        //=======================================================================================
-
-//============================================
-        // write a function that test another function
-        function functionA(callBackFunction) {
-            callBackFunction();
-        }
-        functionA(function() {
-            alert("It Works");
         });
+        return bucket;
+    }
 
-        // Write a function called 'contains' that receives an array and another param and
-        // returns true if the paraam is found in the array
+    console.log(getGoldReindeer(reindeerList));
 
-        function contains(arr, x) {
-            // initialize index at 0; while index is less
-            // than length of array; add 1 to index and loop
-            for (var i = 0; i < arr.length; i++) {
-                // if value of index equals x return true
-                if (arr[i] === x) return true;
-            }
-            return false;
+
+    // function named fizzBuzz - accepts a number and returns "fizz"  for every number
+    // divisible by 3 and "Buzz" for every num divisible by 5 and "FizzBuzz"
+    // for every number divisible by both 3 and 5.
+
+    function fizzBuzz(num) {
+        for (var i = 0; i <= num; i++)
+            if (i % 15 === 0)
+                console.log("FizzBuzz");
+            else if (i % 3 === 0)
+                console.log("Fizz");
+            else if (i % 5 === 0)
+                console.log("Buzz");
+            else console.log(i);
+    };
+
+
+    // Using jquery, create a box with a button that selects a random background
+    // color when clicked.
+    $('#changeColor').click(function () {
+        var CSS_COLOR_NAMES = ["AliceBlue", "AntiqueWhite", "Aqua", "Aquamarine", "Azure", "Beige", "Bisque", "Black", "BlanchedAlmond", "Blue", "BlueViolet", "Brown", "BurlyWood", "CadetBlue", "Chartreuse", "Chocolate", "Coral", "CornflowerBlue", "Cornsilk", "Crimson", "Cyan", "DarkBlue", "DarkCyan", "DarkGoldenRod", "DarkGray", "DarkGrey", "DarkGreen", "DarkKhaki", "DarkMagenta", "DarkOliveGreen", "Darkorange", "DarkOrchid", "DarkRed", "DarkSalmon", "DarkSeaGreen", "DarkSlateBlue", "DarkSlateGray", "DarkSlateGrey", "DarkTurquoise", "DarkViolet", "DeepPink", "DeepSkyBlue", "DimGray", "DimGrey", "DodgerBlue", "FireBrick", "FloralWhite", "ForestGreen", "Fuchsia", "Gainsboro", "GhostWhite", "Gold", "GoldenRod", "Gray", "Grey", "Green", "GreenYellow", "HoneyDew", "HotPink", "IndianRed", "Indigo", "Ivory", "Khaki", "Lavender", "LavenderBlush", "LawnGreen", "LemonChiffon", "LightBlue", "LightCoral", "LightCyan", "LightGoldenRodYellow", "LightGray", "LightGrey", "LightGreen", "LightPink", "LightSalmon", "LightSeaGreen", "LightSkyBlue", "LightSlateGray", "LightSlateGrey", "LightSteelBlue", "LightYellow", "Lime", "LimeGreen", "Linen", "Magenta", "Maroon", "MediumAquaMarine", "MediumBlue", "MediumOrchid", "MediumPurple", "MediumSeaGreen", "MediumSlateBlue", "MediumSpringGreen", "MediumTurquoise", "MediumVioletRed", "MidnightBlue", "MintCream", "MistyRose", "Moccasin", "NavajoWhite", "Navy", "OldLace", "Olive", "OliveDrab", "Orange", "OrangeRed", "Orchid", "PaleGoldenRod", "PaleGreen", "PaleTurquoise", "PaleVioletRed", "PapayaWhip", "PeachPuff", "Peru", "Pink", "Plum", "PowderBlue", "Purple", "Red", "RosyBrown", "RoyalBlue", "SaddleBrown", "Salmon", "SandyBrown", "SeaGreen", "SeaShell", "Sienna", "Silver", "SkyBlue", "SlateBlue", "SlateGray", "SlateGrey", "Snow", "SpringGreen", "SteelBlue", "Tan", "Teal", "Thistle", "Tomato", "Turquoise", "Violet", "Wheat", "White", "WhiteSmoke", "Yellow", "YellowGreen"];
+        var randomIndex = CSS_COLOR_NAMES[Math.floor(Math.random() * CSS_COLOR_NAMES.length)];
+        console.log(randomIndex);
+        $('.box').css('background', randomIndex);
+    });
+
+
+    // create function that accepts array and based on "heightInMM" property
+    // returns the average height of all objects in array.
+    var hamsters = [
+        {
+            name: "Hamtaro",
+            heightInMM: 86,
+            fur: ['orange', 'white'],
+            gender: "male",
+            dateOfBirth: "August 6"
+        }, {
+            name: "Bijou",
+            heightInMM: 75,
+            fur: ['white'],
+            gender: "female",
+            dateOfBirth: "July 10"
+        }, {
+            name: "Oxnard",
+            heightInMM: 100,
+            fur: ['grey', 'white'],
+            gender: "male",
+            dateOfBirth: "May 3"
+        }, {
+            name: "Boss",
+            heightInMM: 120,
+            fur: ['brown', 'white'],
+            gender: "male",
+            dateOfBirth: "Spetember 21"
+        }, {
+            name: "Snoozer",
+            heightInMM: 85,
+            fur: ['brown', 'white', "pink"],
+            gender: "male",
+            dateOfBirth: "January 14"
         }
-        console.log(contains(['sunday', 'monday', 'airplane'], 'monday'));
+    ];
 
-// ========================== SOLUTION 2 ==========================//
-        var contains1 = function(arr, param) {
-            return arr.includes(param);
+
+    function avgHeight(arr) {
+        var total = 0; // total number of hamsters in array
+        for (var i = 0; i < arr.length; i++) {
+            total += arr[i].heightInMM // add all values of "heightInMM"  property
         }
-        console.log(contains1([1,2,3,4], 4));
+        return total / arr.length; // divide total  height value by length of array
+    }
 
-// ========================= Instructor Solution ====================/
-        var contains2 = function (arr, param) {
-            for (var i = 0; i < arr.length; i++) {
-                console.log(i);
-                if (arr[i] === param)
-                    return true;
-            }
-            return false;
-        }
-        console.log(contains2([1,2,3,4], 4));
+    // write a function that compares two functions and returns true if strings are a
+    // anagram "word constructed of the same letters"
+    let isAnagram = (a, b) => {
+        return (a.toLowerCase().split('').sort().join() === b.toLowerCase().split('').sort().join());
+    };
+    console.log(isAnagram('listen', 'silent'));
+    console.log(isAnagram('test', 'no'));
 
 
-        // Let's make Santa an OBJECT LITERAL
-        var santa = {
-            name: "Santa Claus",
-            niceList: ["John", "Bella", "Anthony", "Monica"],
-            naughtyList: ["Sara", "Sabrina", "Yvette"],
-            sayHello: function() {
-                return "Ho, Ho, Ho!!! Merry Christmas!!!";
-            }
-        }
+</script>
 
 
-        // Loop through the following  array of Reindeer objects and
-        // return an array of Reindeer objects that are "gold" reindeer
-        var reindeerList = [
-            {
-                name: "Dot",
-                age: 5,
-                isGold: false
-            },
-            {
-                name: "Dasher",
-                age: 8,
-                isGold: true
-            },
-            {
-                name: "Patch",
-                age: 2,
-                isGold: false
-            },
-            {
-                name: "Rocket",
-                age: 6,
-                isGold: false
-            },
-            {
-                name: "Dancer",
-                age: 9,
-                isGold: true
-            },
-            {
-                name: "Prancer",
-                age: 5,
-                isGold: true
-            },
-            {
-                name: "Groot",
-                age: 9,
-                isGold: false
-            },
-            {
-                name: "Vixen",
-                age: 9,
-                isGold: true
-            },
-            {
-                name: "Comet",
-                age: 11,
-                isGold: true
-            },
-            {
-                name: "Archie",
-                age: 3,
-                isGold: false
-            },
-            {
-                name: "Cupid",
-                age: 13,
-                isGold: true
-            },
-            {
-                name: "Donder",
-                age: 16,
-                isGold: true
-            },
-            {
-                name: "Boots",
-                age: 16,
-                isGold: false
-            },
-            {
-                name: "Blizten",
-                age: 16,
-                isGold: true
-            }
-        ]
-
-        // // Now need to iterate through deer array and return isGold TRUE
-        // // FOR EACH should be used here
-        // function getGoldReindeer(reindeerArray){
-        //     var bucket = []; // used to hold Gold Reindeer
-        //
-        //     for(var i = 0; i < reindeerArray.length; i++){ // ForLoop to iterate array
-        //         if(reindeerArray[i].isGold === true){
-        //             bucket.push(reindeerArray[i]);
-        //         }
-        //     }
-        //     return bucket;
-        // }
-        // console.log(getGoldReindeer(reindeerList));
-
-
-        // FOREACH loop - this is preferred way as each item in the array will be
-        // loop through.................
-        function getGoldReindeer(reindeerArray) {
-            var bucket = [];
-
-            reindeerArray.forEach(function (reindeer) {
-                if (reindeer.isGold === true) {
-                    bucket.push(reindeer);
-                }
-            });
-            return bucket;
-        }
-        console.log(getGoldReindeer(reindeerList));
-
-
-        // function named fizzBuzz - accepts a number and returns "fizz"  for every number
-        // divisible by 3 and "Buzz" for every num divisible by 5 and "FizzBuzz"
-        // for every number divisible by both 3 and 5.
-
-        function fizzBuzz(num) {
-            for(var i = 0; i <= num; i++)
-                if(i % 15 === 0 )
-                    console.log("FizzBuzz");
-                else if  (i % 3 === 0 )
-                    console.log("Fizz");
-                else if (i % 5 === 0 )
-                    console.log("Buzz");
-                else console.log(i);
-        };
-
-
-
-        // Using jquery, create a box with a button that selects a random background
-        // color when clicked.
-        $('#changeColor').click(function () {
-            var CSS_COLOR_NAMES = ["AliceBlue", "AntiqueWhite", "Aqua", "Aquamarine", "Azure", "Beige", "Bisque", "Black", "BlanchedAlmond", "Blue", "BlueViolet", "Brown", "BurlyWood", "CadetBlue", "Chartreuse", "Chocolate", "Coral", "CornflowerBlue", "Cornsilk", "Crimson", "Cyan", "DarkBlue", "DarkCyan", "DarkGoldenRod", "DarkGray", "DarkGrey", "DarkGreen", "DarkKhaki", "DarkMagenta", "DarkOliveGreen", "Darkorange", "DarkOrchid", "DarkRed", "DarkSalmon", "DarkSeaGreen", "DarkSlateBlue", "DarkSlateGray", "DarkSlateGrey", "DarkTurquoise", "DarkViolet", "DeepPink", "DeepSkyBlue", "DimGray", "DimGrey", "DodgerBlue", "FireBrick", "FloralWhite", "ForestGreen", "Fuchsia", "Gainsboro", "GhostWhite", "Gold", "GoldenRod", "Gray", "Grey", "Green", "GreenYellow", "HoneyDew", "HotPink", "IndianRed", "Indigo", "Ivory", "Khaki", "Lavender", "LavenderBlush", "LawnGreen", "LemonChiffon", "LightBlue", "LightCoral", "LightCyan", "LightGoldenRodYellow", "LightGray", "LightGrey", "LightGreen", "LightPink", "LightSalmon", "LightSeaGreen", "LightSkyBlue", "LightSlateGray", "LightSlateGrey", "LightSteelBlue", "LightYellow", "Lime", "LimeGreen", "Linen", "Magenta", "Maroon", "MediumAquaMarine", "MediumBlue", "MediumOrchid", "MediumPurple", "MediumSeaGreen", "MediumSlateBlue", "MediumSpringGreen", "MediumTurquoise", "MediumVioletRed", "MidnightBlue", "MintCream", "MistyRose", "Moccasin", "NavajoWhite", "Navy", "OldLace", "Olive", "OliveDrab", "Orange", "OrangeRed", "Orchid", "PaleGoldenRod", "PaleGreen", "PaleTurquoise", "PaleVioletRed", "PapayaWhip", "PeachPuff", "Peru", "Pink", "Plum", "PowderBlue", "Purple", "Red", "RosyBrown", "RoyalBlue", "SaddleBrown", "Salmon", "SandyBrown", "SeaGreen", "SeaShell", "Sienna", "Silver", "SkyBlue", "SlateBlue", "SlateGray", "SlateGrey", "Snow", "SpringGreen", "SteelBlue", "Tan", "Teal", "Thistle", "Tomato", "Turquoise", "Violet", "Wheat", "White", "WhiteSmoke", "Yellow", "YellowGreen"];
-            var randomIndex =   CSS_COLOR_NAMES[Math.floor(Math.random() * CSS_COLOR_NAMES.length)];
-            console.log(randomIndex);
-            $('.box').css('background', randomIndex);
-        });
-
-
-
-        // create function that accepts array and based on "heightInMM" property
-        // returns the average height of all objects in array.
-        var hamsters = [
-            {
-                name: "Hamtaro",
-                heightInMM: 86,
-                fur: ['orange', 'white'],
-                gender: "male",
-                dateOfBirth: "August 6"
-            } , {
-                name: "Bijou",
-                heightInMM: 75,
-                fur: ['white'],
-                gender: "female",
-                dateOfBirth: "July 10"
-            } , {
-                name: "Oxnard",
-                heightInMM: 100,
-                fur: ['grey', 'white'],
-                gender: "male",
-                dateOfBirth: "May 3"
-            } , {
-                name: "Boss",
-                heightInMM: 120,
-                fur: ['brown', 'white'],
-                gender: "male",
-                dateOfBirth: "Spetember 21"
-            } , {
-                name: "Snoozer",
-                heightInMM: 85,
-                fur: ['brown', 'white', "pink"],
-                gender: "male",
-                dateOfBirth: "January 14"
-            }
-        ];
-
-
-        function avgHeight(arr){
-            var total = 0; // total number of hamsters in array
-            for(var i = 0; i < arr.length; i++) {
-                total += arr[i].heightInMM // add all values of "heightInMM"  property
-            }
-            return total/arr.length; // divide total  height value by length of array
-        }
-
-        // write a function that compares two functions and returns true if strings are a
-        // anagram "word constructed of the same letters"
-        let isAnagram = (a, b) =>{
-            return (a.toLowerCase().split('').sort().join() === b.toLowerCase().split('').sort().join());
-        };
-        console.log(isAnagram('listen', 'silent'));
-        console.log(isAnagram('test', 'no'));
-
-
-    </script>
-
-
-
-    <title>Hello World JS</title>
+<title>Hello World JS</title>
 </head>
 <body>
-    <h2>Hello World Console Log</h2>
+<h2>Hello World Console Log</h2>
 </body>
 </html>

@@ -1,4 +1,3 @@
-
 // REQUIRE method
 //******************************************************//
 // const data = require('./data.js');
@@ -8,10 +7,10 @@
 //
 
 
-
 // IMPORT method
 //******************************************************//
 import math from './data.js';
+
 console.log(math.add(4, 5)); // logs `9`
 console.log(math.divide(4, 2)); // logs `2`
 

@@ -2,16 +2,17 @@ dt {
     font-weight: bold;
     font-size: 2em;
 }
+
 body {
     background-color: #b7e3e4;
-    color:  #f03f35;
+    color: #f03f35;
     margin: 0;
     padding: 0;
     font-family: 'Work Sans', sans-serif;
     font-weight: 300;
 }
 
-#headerTitles, h1{
+#headerTitles, h1 {
     margin-top: 2em;
 }
 
@@ -20,7 +21,8 @@ h1, h2, h3, h4, h5, h6 {
     font-weight: 900;
     color: #f03f35;
 }
-.popcornImg{
+
+.popcornImg {
     top: 0;
     left: 0;
     bottom: 0;
@@ -28,41 +30,50 @@ h1, h2, h3, h4, h5, h6 {
     z-index: -1;
 }
 
-input[type=text]{
+input[type=text] {
     font-size: 1em;
 }
+
 .container {
-    width:100%;
-    height:100%;
+    width: 100%;
+    height: 100%;
 }
+
 table {
     margin: 0 auto;
     font-family: 'Roboto', sans-serif;
 }
+
 td, th {
     padding: .2em 1em;
     width: 15em;
-    border-bottom: 1px solid #708090	;
+    border-bottom: 1px solid #708090;
 }
+
 tr:nth-child(even) {
     background-color: white;
 }
+
 #titleDiv {
     text-align: center;
     background-color: white;
     color: #fffb00;
     overflow: hidden;
 }
+
 h1 {
     font-size: 3em;
     margin-top: 0;
 }
+
 h2 {
     font-size: 2em;
 }
+
 dd {
     font-size: 1.2em;
 }
+
 #buttons button {
     float: right;
     margin: 1em;
@@ -72,6 +83,7 @@ dd {
     border-radius: 5px;
     border: solid 2px #708090;
 }
+
 #buttons {
     overflow: hidden;
 }
@@ -83,13 +95,13 @@ dd {
     text-align: center;
 }
 
-#buttons{
+#buttons {
     display: flex;
-   justify-content: center;
+    justify-content: center;
 
 }
 
-input{
+input {
     border-radius: 5px;
 }
 
@@ -97,49 +109,57 @@ input{
     margin-right: 5em;
     position: relative;
 }
+
 .movie-form button {
     position: relative;
     font-size: .8em;
     padding: .2em;
     line-height: 1em;
-    margin-top: 1em ;
+    margin-top: 1em;
     size: 5em;
 }
 
 #movieUpdate {
     font-size: 1em;
 }
+
 #headerImageLeft {
     float: left;
     width: 25%;
 }
+
 #headerImageRight {
     float: right;
     width: 25%;
 }
+
 #headerTitles {
     width: 50%;
     float: left;
 }
+
 #titleDiv img {
     max-width: 100%;
 }
-#main{
-    border-top: solid 5px #708090	;
+
+#main {
+    border-top: solid 5px #708090;
     border-top-style: inset;
 }
-#wrapper{
+
+#wrapper {
     display: flex;
     justify-content: center;
 }
 
-.addMovieBtn{
+.addMovieBtn {
     background-color: #f03f35;
     color: white;
     border: solid 1px #708090;
     size: 5em;
 
 }
+
 /*h1,h3,h4 { color: red; font: bold 52px Helvetica, Arial, Sans-Serif;*/
 /*    text-shadow: 1px 1px black, 2px 2px black, 3px 3px black;*/
 /*    -webkit-transition: all 0.12s ease-out;*/

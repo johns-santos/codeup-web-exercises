@@ -14,32 +14,30 @@ wait(1000).then(() => console.log('You\'ll see this after 1 second'));
 console.log('Hello');
 
 const token = gitHubToken;
-        // Github Fetch request
+// Github Fetch request
 const github = fetch('https://api.github.com/users/', {headers: {Authorization: `token ${token}`}});
 
 
-        // Initiate fetch request for user data
-        github
-            // .then(res => res.json()).then(json
-            .then(response => response.json())
-            // .then(users => users.map(user => user.login))
-            .then(data => {
-                console.log(data);
-                // Display output requires loop
-                let output = '';
-                data.forEach(function (user) {
-                    output += `<li>${user.login}</li>`;
-                });
-                //     console.log(user.login);
-                // });
-                document.getElementById('output').innerHTML = output;
-            })
-            .catch(err => console.log(err));
+// Initiate fetch request for user data
+github
+    // .then(res => res.json()).then(json
+    .then(response => response.json())
+    // .then(users => users.map(user => user.login))
+    .then(data => {
+        console.log(data);
+        // Display output requires loop
+        let output = '';
+        data.forEach(function (user) {
+            output += `<li>${user.login}</li>`;
+        });
+        //     console.log(user.login);
+        // });
+        document.getElementById('output').innerHTML = output;
+    })
+    .catch(err => console.log(err));
 
 
-
-
-const lastCommit = (username)=> {
+const lastCommit = (username) => {
     // return a promise that resolves to username last commit time
     let url = `https://api.github.com/users/${username}`;
     fetch(url, {headers: {Authorization: `token ${token}`}})

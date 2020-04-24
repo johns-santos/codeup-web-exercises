@@ -1,4 +1,4 @@
-(function() {
+(function () {
     "use strict";
 
     /**
@@ -14,7 +14,7 @@
     var person = {
         firstName: "Daniel",
         lastName: "Fryar",
-        sayHello : function() {
+        sayHello: function () {
             return "Hello from " + this.firstName + " " + this.lastName + "!";
         }
     }
@@ -61,9 +61,9 @@
             discount = shopper.amount * .12;
         var total = shopper.amount - discount;
         console.log(shopper.name + "'s bill was $" +
-                    shopper.amount +
-                    ". They received a discount of $" +
-                    discount +" and their total was $" +total + ".");
+            shopper.amount +
+            ". They received a discount of $" +
+            discount + " and their total was $" + total + ".");
     })
 
     /** TODO:
@@ -122,34 +122,34 @@
             }
         },
         {
-            author : {
+            author: {
                 firstName: "Alan",
                 lastName: "Watts"
             },
-            title : "The Book on The Taboo Against Knowing Who You Are"
+            title: "The Book on The Taboo Against Knowing Who You Are"
         },
 
         {
-            author : [
-                {firstName:"Joseph"},
-                {lastName:"Murphy"}
+            author: [
+                {firstName: "Joseph"},
+                {lastName: "Murphy"}
             ],
-            title : "The Power Of Your Subconscious Mind"
+            title: "The Power Of Your Subconscious Mind"
         },
 
         {
-            author : [
-                {firstName:"Danny"},
-                {lastName:"Meyer"}
+            author: [
+                {firstName: "Danny"},
+                {lastName: "Meyer"}
             ],
-            title : "Setting the Table"
+            title: "Setting the Table"
         },
         {
-            author : [
-                {firstName:"Ayn"},
-                {lastName:"Rand"}
+            author: [
+                {firstName: "Ayn"},
+                {lastName: "Rand"}
             ],
-            title : "Atlas Shrugged"
+            title: "Atlas Shrugged"
         },
         {
             title: "The Salmon of Doubt",
@@ -186,17 +186,17 @@
                 lastName: "Stevenson",
             }
         },
-        {author:{firstName: "J.K.", lastName: "Rowling"}, title: "Harry Potter and the Chamber of Secrets"},
-        {author:{firstName: "Arthur.", lastName: "Golden"}, title: "Memoirs of a Geisha"},
-        {author:{firstName: "Dante", lastName: "Alighieri"}, title: "Divine Comedy"},
-        {author:{firstName: "Carl", lastName: "Jung"}, title: "The Archetypes and the Collective Unconscious"},
-        {author:{firstName: "Karl", lastName: "Marx"}, title: "The Communist Manifesto"},
-        {author:{firstName: "A.A.", lastName: "Milne"}, title: "Winnie the Pooh"},
-        {number: 1, title: "Wild At Heart", author:{firstName: "John", lastName: "Eldridge"}},
-        {number: 2, title: "sherlock holmes", author:{firstName: "Author", lastName: "Doyle"}},
-        {number: 3, title: "Daniel Boone", author:{firstName: "John", lastName: "Faragher"}},
-        {number: 4, title: "Linux Bible", author:{firstName: "Christopher", lastName: "Negus"}},
-        {number: 5, title: "How Linux Works", author:{firstName: "Brian", lastName: "Ward"}},
+        {author: {firstName: "J.K.", lastName: "Rowling"}, title: "Harry Potter and the Chamber of Secrets"},
+        {author: {firstName: "Arthur.", lastName: "Golden"}, title: "Memoirs of a Geisha"},
+        {author: {firstName: "Dante", lastName: "Alighieri"}, title: "Divine Comedy"},
+        {author: {firstName: "Carl", lastName: "Jung"}, title: "The Archetypes and the Collective Unconscious"},
+        {author: {firstName: "Karl", lastName: "Marx"}, title: "The Communist Manifesto"},
+        {author: {firstName: "A.A.", lastName: "Milne"}, title: "Winnie the Pooh"},
+        {number: 1, title: "Wild At Heart", author: {firstName: "John", lastName: "Eldridge"}},
+        {number: 2, title: "sherlock holmes", author: {firstName: "Author", lastName: "Doyle"}},
+        {number: 3, title: "Daniel Boone", author: {firstName: "John", lastName: "Faragher"}},
+        {number: 4, title: "Linux Bible", author: {firstName: "Christopher", lastName: "Negus"}},
+        {number: 5, title: "How Linux Works", author: {firstName: "Brian", lastName: "Ward"}},
         {
             title: "The Rise",
             author: {
@@ -234,17 +234,17 @@
         },
         {
             title: "48 Laws of Power",
-            author:{
+            author: {
                 firstName: "Robert",
                 lastName: "Greene",
             }
         },
         {
             title: "Rich dad, poor dad",
-            author:{
+            author: {
                 firstName: "Robert",
                 lastName: "Kyosaki",
-                report: function() {
+                report: function () {
                     console.log(this.firstName + " " + this.lastName + " .");
                 }
             },
@@ -271,7 +271,7 @@
         }
     ];
     console.log(books.length);
-    for (var i=0;i<books.length;i++) {
+    for (var i = 0; i < books.length; i++) {
         console.log(books[i].title + " by " + books[i].author.lastName);
     }
 
@@ -299,10 +299,10 @@
      *      ---
      *      ...
      */
-    books.forEach(function(book, i) {
-        console.log("Book # "+(i+1))
-        console.log("Title: "+book.title)
-        console.log("Author: "+ book.author.firstName + " " + book.author.lastName)
+    books.forEach(function (book, i) {
+        console.log("Book # " + (i + 1))
+        console.log("Title: " + book.title)
+        console.log("Author: " + book.author.firstName + " " + book.author.lastName)
         console.log("---")
     });
 
@@ -318,7 +318,7 @@
      */
 
     var title = "Hello";
-    var createBook = function(title, authorFirstName, authorLastName){
+    var createBook = function (title, authorFirstName, authorLastName) {
         var book = {};
         book.title = title;
         book.author = {};
@@ -329,10 +329,10 @@
 
     books.push(createBook("Leviathan", "Scott", "Westfield"));
 
-    var showBookInfo = function(book, i) {
-        console.log("Book # "+(i+1))
-        console.log("Title: "+book.title)
-        console.log("Author: "+ book.author.firstName + " " + book.author.lastName)
+    var showBookInfo = function (book, i) {
+        console.log("Book # " + (i + 1))
+        console.log("Title: " + book.title)
+        console.log("Author: " + book.author.firstName + " " + book.author.lastName)
         console.log("---")
 
     }

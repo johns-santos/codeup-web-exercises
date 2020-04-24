@@ -1,22 +1,26 @@
 body {
     font-family: 'PT Sans', sans-serif;
 }
+
 .alert-info {
-    background: rgb(214	254	254);
+    background: rgb(214 254 254);
     border: grey 2px solid;
     text-align: center;
     padding: 1em;
     margin: 1em auto;
 }
+
 .alert-info a {
     color: dimgrey;
     text-decoration: none;
     font-size: 1.25em;
 }
+
 .alert-info a:visited {
     color: dimgrey;
     text-decoration: none;
 }
+
 h1 {
     text-align: center;
 }
@@ -28,7 +32,7 @@ ul {
 
 li {
     text-align: center;
-    background: rgb(204	204	204);
+    background: rgb(204 204 204);
     margin: .5em auto;
     padding: .75em;
 }
@@ -41,9 +45,11 @@ li {
     width: 100%;
     max-width: 890px;
 }
-#main{
+
+#main {
     margin: 0em;
 }
+
 section.sub-section {
     font-style: italic;
     font-size: .85em;
@@ -55,14 +61,17 @@ footer p {
     position: relative;
     top: 40px;
 }
+
 #social-media-links {
     float: right;
 }
+
 .fb {
     float: left;
     display: block;
     /*width: 100%;*/
 }
+
 @media all and (min-width: 500px) {
     #main {
         float: left;
@@ -73,9 +82,11 @@ footer p {
         float: left;
         margin: 0 0 0 .5em;
     }
+
     footer {
         clear: both;
     }
+
     .hidden-on-desktop {
         display: none;
     }
@@ -84,6 +95,7 @@ footer p {
         display: inline;
         background: none;
     }
+
     ul {
         float: right;
         position: relative;
@@ -91,6 +103,7 @@ footer p {
         list-style: none;
         padding: 0;
     }
+
     h1 {
         text-align: left;
         font-size: 3em;

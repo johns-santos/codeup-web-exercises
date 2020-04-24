@@ -2,32 +2,41 @@
   {
     "title": "clear-day",
     "icon": "/icon/Sun.svg"
-  }, {
-  "title": "clear-night",
-  "icon": "/icon/Sunset.svg"
-  }, {
-  "title": "rain",
-   "icon": "/icon/Cloud-Rain-Moon-Alt.svg"
-  },{
-  "title": "snow",
-  "icon": "/icon/Snowflake.svg"
-}, {
-  "title": "sleet",
-  "icon": "/icon/Cloud-Snow-Alt.svg"
-}, {
-  "title": "wind",
-  "icon": "/icon/Wind.svg"
-}, {
-  "title": "fog",
-  "icon": "/icon/Cloud-Fog-Sun.svg"
-}, {
-  "title": "cloudy",
-  "icon": "/icon/Cloud.svg"
-}, {
-  "title": "partly-cloudy-day",
-  "icon": "/icon/Cloud-Rain-Sun.svg"
-},{
-  "title": " partly-cloudy-night",
-  "icon": "/icon/Cloud-Rain-Moon.svg"
-}
+  },
+  {
+    "title": "clear-night",
+    "icon": "/icon/Sunset.svg"
+  },
+  {
+    "title": "rain",
+    "icon": "/icon/Cloud-Rain-Moon-Alt.svg"
+  },
+  {
+    "title": "snow",
+    "icon": "/icon/Snowflake.svg"
+  },
+  {
+    "title": "sleet",
+    "icon": "/icon/Cloud-Snow-Alt.svg"
+  },
+  {
+    "title": "wind",
+    "icon": "/icon/Wind.svg"
+  },
+  {
+    "title": "fog",
+    "icon": "/icon/Cloud-Fog-Sun.svg"
+  },
+  {
+    "title": "cloudy",
+    "icon": "/icon/Cloud.svg"
+  },
+  {
+    "title": "partly-cloudy-day",
+    "icon": "/icon/Cloud-Rain-Sun.svg"
+  },
+  {
+    "title": " partly-cloudy-night",
+    "icon": "/icon/Cloud-Rain-Moon.svg"
+  }
 ]

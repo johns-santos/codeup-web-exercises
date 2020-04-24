@@ -6,11 +6,12 @@ function Task(description, assignedTo, deliveryDate) {
 }
 
 // UI Constructor
-function UI() {}
+function UI() {
+}
 
 
 // Add Task To List FUNC
-UI.prototype.addTaskToList = function(task) {
+UI.prototype.addTaskToList = function (task) {
     // console.log(book);
     const list = document.getElementById('task-list');
     // Create tr element
@@ -27,11 +28,11 @@ UI.prototype.addTaskToList = function(task) {
 
     list.appendChild(row);
 
-    };
+};
 
 
-    // SHOW ALERT - Because standard ALERT is not professional looking
-UI.prototype.showAlert = function(message, className) {
+// SHOW ALERT - Because standard ALERT is not professional looking
+UI.prototype.showAlert = function (message, className) {
     // Create div
     const div = document.createElement("div");
     // Add Alert Classes
@@ -46,13 +47,13 @@ UI.prototype.showAlert = function(message, className) {
     container.insertBefore(div, form);
 
     // Alert Timeout after 3 seconds
-    setTimeout(function() {
+    setTimeout(function () {
         document.querySelector('.alert').remove();
     }, 3000); // using mili-seconds
 };
 
-    // Clear Fields
-UI.prototype.clearFields = function(){
+// Clear Fields
+UI.prototype.clearFields = function () {
     document.getElementById('description').value = "";
     document.getElementById('assignedTo').value = "";
     document.getElementById('deliveryDate').value = "";
@@ -67,9 +68,9 @@ document.getElementById('task-form').addEventListener('submit',
         const deliveryDate = document.getElementById('deliveryDate').value;
         // console.log(title, author, isbn); // hit submit and element value should be logged
 
-/*======================= INSTANTIATE BOOK ======================== */
-        const task = new Task(description, assignedTo,deliveryDate );
-         // console.log(task); // task object is expected to be returned
+        /*======================= INSTANTIATE BOOK ======================== */
+        const task = new Task(description, assignedTo, deliveryDate);
+        // console.log(task); // task object is expected to be returned
 
 
         /*======================= INSTANTIATE UI - BOOK LIST =============== */
@@ -78,7 +79,7 @@ document.getElementById('task-form').addEventListener('submit',
 
 
         // Validate INPUT with IF statement
-        if(description === "" ||  assignedTo === "" ||  deliveryDate === ""){
+        if (description === "" || assignedTo === "" || deliveryDate === "") {
 
             // if(description === "" || timeComplete === "" || assignedTo === ""){
             // alert("Failed: Please fill out form before submitting.");
@@ -95,7 +96,7 @@ document.getElementById('task-form').addEventListener('submit',
         }
 
         // Using simple JQuery click function to remove closest tr
-        $(".removeBtn").click(function() {
+        $(".removeBtn").click(function () {
             $(this).closest('tr').remove();
         });
 

@@ -1,13 +1,14 @@
 * {
     box-sizing: border-box;
 }
+
 body {
     margin: 0;
     font-family: Helvetica;
     font-weight: bold;
 }
 
-.note-item{
+.note-item {
     font-weight: normal;
 }
 
@@ -25,7 +26,7 @@ body {
     background: #BFD45D;
     border: 2px solid #F9EFD6;
     padding: 1em;
-    
+
 }
 
 .flex-item1 {

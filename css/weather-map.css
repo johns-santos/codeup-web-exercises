@@ -10,10 +10,12 @@ h2 {
     font-family: sans-serif;
     text-align: center;
 }
+
 h3 {
     display: flex;
     justify-content: center;
 }
+
 img {
     height: 40px;
     width: 40px;

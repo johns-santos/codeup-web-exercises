@@ -25,21 +25,22 @@ var car = {
             console.log("...");
         }
     },
-    numberOfWheels:4
+    numberOfWheels: 4
 }
 
-console.log("Car was made in "+ car.year);
+console.log("Car was made in " + car.year);
 console.log("car has these options:");
-car.options.forEach(function(option){
-    console.log(option)});
+car.options.forEach(function (option) {
+    console.log(option)
+});
 car.goGoGo("key");
 
 var teacher = {
     name: "Daniel",
     languages: ["English", "Javascript", "Java"],
-    teach: function(language) {
+    teach: function (language) {
         if (teacher.languages.includes(language))
-            console.log("Here is some knowledge about "+language);
+            console.log("Here is some knowledge about " + language);
         else
             console.log("blah blah blah");
     }
@@ -52,7 +53,7 @@ var truck = new Object();
 truck.make = "Tesla";
 truck.model = "CyberTruck";
 truck.year = 2022;
-truck.gogogo = function(){
+truck.gogogo = function () {
     console.log("VROOOM!");
 }
 console.log(car.make);
@@ -67,36 +68,36 @@ truck["number Of Wheels"] = 3;
 var cars = [
 
     {
-        make:"Dodge",
+        make: "Dodge",
         model: "Challenger",
-        year:2015,
-        report: function() {
+        year: 2015,
+        report: function () {
             console.log(this.year + " " + this.make + " " + this.model);
         }
     },
     car,
     {
-        make:"Ford",
-        model:"Shelby GT 500",
+        make: "Ford",
+        model: "Shelby GT 500",
         year: 1969,
-        report: function() {
+        report: function () {
             console.log(this.year + " " + this.make + " " + this.model);
         }
     },
     {
-        make:"Cadillac",
-        model:"Escalade",
-        year:2019,
-        report: function() {
+        make: "Cadillac",
+        model: "Escalade",
+        year: 2019,
+        report: function () {
             console.log(this.year + " " + this.make + " " + this.model);
         }
     }
 ]
-car.report = function() {
+car.report = function () {
     console.log(this.year + " " + this.make + " " + this.model);
 }
 
-cars.forEach(function(item, i, list){
+cars.forEach(function (item, i, list) {
     // list[i].report();
     item.report();
 })

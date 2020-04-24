@@ -1,4 +1,4 @@
-(function() {
+(function () {
     "use strict";
 
     var detonationTimer = 5;
@@ -6,7 +6,7 @@
 
     // TODO: This function needs to be called once every second
     function updateTimer() {
-        console.log (detonationTimer);
+        console.log(detonationTimer);
         if (detonationTimer == 0) {
             alert('EXTERMINATE!');
             document.body.innerHTML = '';
@@ -28,10 +28,9 @@
 
     }
 
-   function resetTheBOM() {
+    function resetTheBOM() {
         window.location.reload();
     }
-
 
 
     // Don't modify anything below this line!

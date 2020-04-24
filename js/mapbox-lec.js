@@ -1,10 +1,10 @@
 /**********************************************
- * 			SETTING UP KEYS.JS
+ *            SETTING UP KEYS.JS
  *********************************************/
 // TODO TOGETHER: Open .gitignore and add keys.js. Add keys.js file and import to mapbox html file. Your api keys are stored in keys.js and are added to the .gitignore so they are protected
 
 /**********************************************
- * 			CUSTOMIZING THE MAP
+ *            CUSTOMIZING THE MAP
  *********************************************/
 // Predefined map styles --> https://docs.mapbox.com/mapbox-gl-js/api/#map
 // A map center can be set by passing in the latitude and longitude coordinates of a location as an array [LONGITUDE_VALUE, LATITUDE_VALUE]
@@ -27,7 +27,7 @@
 
 
 /**********************************************
- * 					MARKERS
+ *                    MARKERS
  *********************************************/
 // Marker Docs --> https://docs.mapbox.com/mapbox-gl-js/api/#marker
 // Markers are specific locations on a map
@@ -46,7 +46,6 @@
 // 	.addTo(map);
 
 
-
 // TODO TOGETHER: Change the color of the marker
 
 
@@ -55,7 +54,7 @@
 
 
 /**********************************************
- * 					POPUPS
+ *                    POPUPS
  *********************************************/
 // Popups are the info boxes that appear on a map and may describe a given location.
 // Popup docs --> https://docs.mapbox.com/mapbox-gl-js/api/#popup
@@ -79,14 +78,12 @@
 // marker.setPopup(alamoPopup)
 
 
-
 // TODO: Review the popup docs. What are some additional options we can pass to the popup?
 // TODO: Try setting the text by using ".setText()" instead of ".setHTML()"
 
 
-
 /**********************************************
- * 					Geocoder
+ *                    Geocoder
  *********************************************/
 // Geocoding Docs --> https://docs.mapbox.com/api/search/#geocoding
 
@@ -96,10 +93,10 @@
 mapboxgl.accessToken = mapboxToken;
 
 var mapOptions = {
-	container: 'map',
-	style: 'mapbox://styles/mapbox/streets-v9',
-	zoom: 15,
-	center: [-98.4916, 29.4252]
+    container: 'map',
+    style: 'mapbox://styles/mapbox/streets-v9',
+    zoom: 15,
+    center: [-98.4916, 29.4252]
 }
 
 var map = new mapboxgl.Map(mapOptions);
@@ -120,12 +117,8 @@ var map = new mapboxgl.Map(mapOptions);
 // TODO TOGETHER: Reverse Geocoding: Using the reverse geocoding method, enter the coordinates {lng: -98.4861, lat: 29.4260} to get a physical address for the alamo
 
 reverseGeocode({lng: -98.4861, lat: 29.4260}, mapboxToken).then(function (result) {
-	console.log(result);
+    console.log(result);
 })
-
-
-
-
 
 
 // TODO: Reverse geocode coordinates of your choice using the reverse geocode method

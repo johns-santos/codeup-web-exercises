@@ -10,6 +10,7 @@
 * {
     box-sizing: border-box;
 }
+
 body, html {
     background-color: var(--main-bg);
     height: 100%;
@@ -18,12 +19,14 @@ body, html {
     padding: 0;
     font-family: Arial, Ubuntu, sans-serif;
 }
+
 header {
     background-image: url("https://loremflickr.com/1200/300");
     background-size: cover;
     min-height: 300px;
     padding-top: 275px;
 }
+
 a {
     color: var(--link-color);
 
@@ -36,29 +39,35 @@ a {
     z-index: 1000;
     /*border-top:  1px solid grey;*/
 }
+
 .nav {
     list-style-type: none;
     padding: 0;
     margin: 0;
     color: grey;
 }
+
 .nav-link {
     color: var(--main-link-color);
     font-weight: bold;
     text-decoration: none;
     /*color: grey;*/
 }
+
 .nav-item {
     display: inline-block;
     padding: 1.5em;
 }
+
 .nav-link:hover {
     color: var(--link-color);
 }
+
 .profile {
     background: var(--light-bg);
     height: 80px;
 }
+
 .btn {
     border: 1px solid var(--main-link-color);
     color: var(--main-link-color);
@@ -67,25 +76,31 @@ a {
     padding: 8px;
     border-radius: 5px;
 }
+
 .btn-large {
     font-size: 1.3em;
     padding: 4px;
 }
+
 .img-circle {
     border-radius: 100%;
     border: 3px solid var(--light-bg);
 }
+
 .text-right {
     text-align: right;
 }
+
 .text-muted {
     color: var(--main-link-color);
 }
+
 .profile-image {
     position: absolute;
-   /* float: left; */
+    /* float: left; */
     top: 240px;
 }
+
 .profile-form {
     float: right;
     line-height: 80px;
@@ -99,6 +114,7 @@ a {
     width: calc(25% - 1em);
     /*margin-right: 0 .5em;*/
 }
+
 .container {
     margin: 2em;
 }
@@ -107,13 +123,13 @@ a {
     width: calc(50% - 1em);
     margin: 0.5em;
     float: left;
-   
+
 }
 
 .who-to-follow {
     width: calc(25% - 1em);
     margin: 0.5em;
-    float: left;   
+    float: left;
 }
 
 .media-image {
@@ -124,13 +140,15 @@ a {
 }
 
 .media-body {
-    width: calc(100% - 50px);  
+    width: calc(100% - 50px);
     float: left;
 }
+
 .profile-items {
     padding: 0;
     list-style: none;
 }
+
 .profile-entry {
     margin: .5em;
 }
@@ -138,6 +156,7 @@ a {
 .container {
     height: 2em;
 }
+
 .media {
     width: 100%;
     background-color: var(--light-bg);
@@ -150,6 +169,7 @@ a {
     list-style: none;
     /* padding: 0; */
 }
+
 .profile-entry {
     margin: .5em;
 }

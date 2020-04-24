@@ -1,7 +1,6 @@
 "use strict";
 
 
-
 /**  TODO: Create an array of 4 people's names and store it in a variable calle 'names' */
 var names = ['monica', 'doncia', 'darlene', 'joehana']
 console.log('============================')
@@ -28,7 +27,7 @@ for (var name = 0; name < names2.length; name++) {
 
 /** TODO: Refactor your above code to use a `forEach` loop */
 console.log('===========test=================');
-names.forEach(function (name){
+names.forEach(function (name) {
     console.log(name)
     /*        if(name == 'monica')
                 console.log(name + ' SanMiguel')
@@ -50,17 +49,21 @@ console.log('===========test=================');
  */
 
 var num = [1, 2, 3, 4, 5];
-function first(num){
+
+function first(num) {
     return num[0];
 }
+
 console.log(first(num));
 
-function second(num){
+function second(num) {
     return num[1];
 }
+
 console.log(second(num));
 
-function last(num){
+function last(num) {
     return num[4];
 }
+
 console.log(last(num));
