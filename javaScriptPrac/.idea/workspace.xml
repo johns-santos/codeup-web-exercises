@@ -1,7 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2988ac60-60a4-40fd-a66d-f06d2df1b6eb" name="Default Changelist" comment="" />
+    <list default="true" id="4118a0aa-507e-4dc8-ae71-20d9b219d634" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/js101/game/annoy.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/js101/game/annoy.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js101/loops.js" beforeDir="false" afterPath="$PROJECT_DIR$/js101/loops.js" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -14,7 +22,11 @@
       </list>
     </option>
   </component>
-  <component name="ProjectId" id="1aySBcbE2hOpuKX9VJLM8p985w9" />
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectId" id="1ayhZvK7bH46aNH3oPitprqJloi" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="autoscrollToSource" value="true" />
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -24,9 +36,9 @@
   <component name="PropertiesComponent">
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="RunManager">
     <configuration default="true" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" activateToolWindowBeforeRun="false" APPLICATION_SERVER_NAME="Tomcat 9.0.311" ALTERNATIVE_JRE_ENABLED="true" ALTERNATIVE_JRE_PATH="/Library/Java/JavaVirtualMachines/jdk-11.0.6.jdk/Contents/Home">
@@ -98,12 +110,12 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="2988ac60-60a4-40fd-a66d-f06d2df1b6eb" name="Default Changelist" comment="" />
-      <created>1587706205823</created>
+      <changelist id="4118a0aa-507e-4dc8-ae71-20d9b219d634" name="Default Changelist" comment="" />
+      <created>1587713799869</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1587706205823</updated>
-      <workItem from="1587706207024" duration="5652000" />
+      <updated>1587713799869</updated>
+      <workItem from="1587713801333" duration="1650000" />
     </task>
     <servers />
   </component>
