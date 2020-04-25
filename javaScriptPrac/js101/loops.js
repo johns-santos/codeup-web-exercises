@@ -1,8 +1,7 @@
 
 
 
-//Wile loops
-
+//======= WHILE loops
 var x = 0;
 while(x <= 10){
     console.log(x);
@@ -20,21 +19,18 @@ while(count < str.length){
 }
 
 console.log("=============");
-
-
 // print 1,3, 5,7,9
 var num = 1;
+
 while(num <= 10) {
     console.log(num);
     num += 2;
 }
 
 console.log("=============");
-
-
-
 // Add a conditional to loop to print modulo of 4
 var number1 = 1;
+
 while(number1 <= 20 ){
     if(number1 % 4 === 0) {
         console.log(number1);
@@ -44,9 +40,8 @@ while(number1 <= 20 ){
 
 
 console.log("=============");
-
-
 var between1 = -10;
+
 while(between1 <= 19) {
     console.log(between1);
     between1++;
@@ -54,9 +49,8 @@ while(between1 <= 19) {
 
 
 console.log("=============");
-
-
 var between2 = 10;
+
 while(between2 <= 40) {
     if (between2 % 2 === 0) {
         console.log(between2);
@@ -66,8 +60,8 @@ while(between2 <= 40) {
 
 
 console.log("=============");
-
 var between3 = 300;
+
 while(between3 <= 333) {
     if (between3 % 2 !== 0) {
         console.log(between3);
@@ -76,15 +70,76 @@ while(between3 <= 333) {
 }
 
 console.log("=============");
-
-
-
 var between4 = 5;
+
 while(between4 <= 50) {
     if ((between4 % 5 === 0) &&  (between4 % 3 === 0)) {
         console.log(between4);
     }
     between4++;
 }
+
+
+
+// ================= FOR Loops ====
+console.log("===== FOR Loops ========");
+
+var string = "hello";
+
+for(var i = 0; i < str.length; i++){
+    console.log(string[i])
+}
+
+
+console.log("============");
+for(var i = 0 ; i < 16; i+=8){
+    console.log(i)
+}
+
+
+console.log("============");
+
+
+for(var i = -10; i <= 19; i++){
+    console.log(i)
+}
+
+
+console.log("============");
+
+for (var i = 10; i <= 40; i++){
+    if(i % 2 === 0){
+        console.log(i)
+    }
+}
+
+console.log("============");
+for(var i = 300; i <= 333; i++){
+    if(i % 2 !== 0){
+        console.log(i)
+    }
+}
+
+console.log("============");
+for(var i = 1; i <= 50 ; i++){
+    if((i % 3 === 0) && (i % 5 === 0)){
+        console.log(i)
+    }
+}
+
+console.log("============");
+for (var i = 1; i <= 100; i++) {
+    if (i % 15 === 0){
+        console.log("fizzbuzz")
+    }else if (i % 3 === 0){
+        console.log("fizz")
+    }else if (i % 5 === 0){
+        console.log("buzz");
+    } else {
+        console.log(i)
+    }
+}
+
+
 
 

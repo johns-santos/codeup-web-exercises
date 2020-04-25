@@ -1,29 +1,40 @@
+
+function guestGame(){
 // browser based number guessing game...
 
-
-
 // create secrete number
-var secrectNum = 4;
-// ask user for guess - convert guess to a INT with NUMBER
-var stringGuess  = prompt("Please Guess A Number");
-// - convert guess to a INT with NUMBER
-var guess = Number(stringGuess);
-alert(guess);
+var secrectNum = Math.floor((Math.random() * 10) +1);
+    console.log(secrectNum);
 
-// check guess is right
-if(guess === secrectNum){
-   alert ("You got it right");
+do {
+    var stringGuess = prompt("Guess A Number Between 1 ane 10");
+    var guess = Number(stringGuess);
+
+    if (guess < secrectNum) {
+        alert("Guess is to low");
+    }
+    if (guess > secrectNum) {
+        alert("Guess is too high");
+    }
+    if(guess === secrectNum) {
+        alert("You got it right");
+    }
+}
+while (guess !== secrectNum);
 }
 
-// otherwise check if higher
-else if (guess > secrectNum){
-    alert("Guess is to high")
-}
+guestGame();
 
-// otherwise check if higher
-else {
-    alert("Guess is to low")
-}
+
+
+//             alert("Guess is to high")
+//         }
+// // // otherwise check if higher
+//         else {
+//             alert("Guess is to low")
+//         }
+//     }
+
 
 
 
