@@ -153,24 +153,54 @@ function sing2() {
 setInterval(sing2, 3000);
 */
 
-
-//Generates random strings in two passes and concatenates results to form 1 secure password
+// RANDOM PASSWORD GENERATOR ==========================================================
+//Generates random strings in three passes and concatenates results to form 1 secure password
 function generateP() {
     var pass = '';
     var pass1 = '';
-    var str = 'ABCDEFGHIJKLMNO';
-    var str1 = '0123456789@!#$%&*' + 'abcdefghijklmnopqrstuvwxyz' + 'PQRSTUVWXYZ';
+    var pass2 = '';
+    var str = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+    var str1 = '012345abcdefghijklmnopqrstuvwxyz';
+    var str2 = '@!#$%&*6789@!#$%';
 
     for (i = 1; i <= 2; i++) {
         var char = Math.floor(Math.random()
             * str.length + 1);
         pass += str.charAt(char);
     }
-    for (i = 1; i <= 7; i++) {
+    for (i = 1; i <= 5; i++) {
         var char1 = Math.floor(Math.random()
             * str1.length + 1);
         pass1 += str1.charAt(char1);
     }
-    return pass + pass1;
+    for (i = 1; i <= 2; i++) {
+        var char2 = Math.floor(Math.random()
+            * str2.length + 1);
+        pass2 += str2.charAt(char2);
+    }
+    return pass + pass2 + pass1;
 }
 console.log(generateP());
+// RANDOM PASSWORD GENERATOR ==========================================================
+
+
+
+
+
+
+
+
+
+
+function returnEvens() {
+    for (i = 0; i < 100; i++) {
+        if (i % 5 === 0) {
+            console.log(i);
+        }
+
+    }
+}
+console.log(returnEvens());
+
+
+
