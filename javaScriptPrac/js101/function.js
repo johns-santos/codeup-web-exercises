@@ -187,11 +187,6 @@ console.log(generateP());
 
 
 
-
-
-
-
-
 function returnEvens() {
     for (i = 0; i < 100; i++) {
         if (i % 5 === 0) {
@@ -201,6 +196,22 @@ function returnEvens() {
     }
 }
 console.log(returnEvens());
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
