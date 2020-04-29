@@ -143,3 +143,44 @@ for (var i = 1; i <= 100; i++) {
 
 
 
+console.log('==================');
+console.log('==================');
+console.log('==================');
+
+
+
+var array1 = ['hanna', 'darlene', 'donica', 'monica'];
+// console.log(array1[3]); // 'donica' - index
+// console.log(array1.length);
+// console.log(array1);
+var greeting = "Hello, ";
+
+for(var i = 0; i <= array1.length -1; i++){
+    console.log(greeting + array1[i]);
+}
+
+console.log('==================');
+console.log('==================');
+console.log('==================');
+
+for(var i = array1.length -1; i >= 0; i--){
+    console.log(greeting + array1[i]);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

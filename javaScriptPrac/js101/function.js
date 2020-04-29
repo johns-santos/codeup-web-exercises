@@ -203,15 +203,84 @@ console.log(returnEvens());
 
 
 
+// ===============================
+console.log('===== isUniform Array ========');
+let arr23 = [1, 1, 1, 5];
+let arr44 = [2,2,2,'b',2,2];
+let arr3 = [3,3,3,3,3,3,3];
+
+function isUniform(arr) {
+    var x = arr[0];
+    for (var i = 0; i < arr.length ; i++) {
+        if (arr[i] !== x) {
+            return false;
+        }
+    }
+    return true;
+}
+console.log(isUniform(arr23));
+console.log(isUniform(arr44));
+console.log(isUniform(arr3));
+
+
+
+//
+//
+console.log("=== fruitInBowl === ");
+
+let fruitBowl = ['orange', 'apple', 'pear', 'grapefruit', 'banana'];
+let fruit = 'banana';
+
+function isInBowl(arr) {
+    for (var i = 0; i < arr.length; i++) {
+        if (arr[i] === fruit) {
+            return true;
+        }
+    }
+    return false;
+}
+console.log(isInBowl(fruitBowl));
 
 
 
 
 
 
+// =========================================
+// =========================================
+console.log('========= sumOfArray =========');
+
+let numArray = [5,5,5,5];
+let sum = numArray.reduce(function(a, b) {
+    return a + b;
+}, 0);
+console.log(sum);
+
+
+function sumOfArray(arr) {
+    let total = 0;
+    arr.forEach(function (element) {
+        total += element;
+    });
+    return total;
+}
+
+console.log(sumOfArray(numArray));
 
 
 
+// =========================================
+// =========================================
+console.log('========= MaxOfArray =========');
 
-
-
+let arrayOfNums = [10, 15,8, 3, 50, 77,4, 100, 2, 5];
+function max(arr) {
+    var max = arr[0];
+    for(var i = 1; i < arr.length; i++){
+        if(arr[i] > max){
+            max = arr[i];
+        }
+    }
+    return max;
+}
+console.log(max(arrayOfNums));
