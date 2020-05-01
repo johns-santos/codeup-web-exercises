@@ -104,6 +104,8 @@ var movies = [
     }
     ];
 
+
+
 function promptHasSeenMovie(arr) {
     for (var i = 0; i <= arr.length - 1; i++) {
         var ask = prompt('Have you watched "' + arr[i].name + '"');
@@ -113,6 +115,7 @@ function promptHasSeenMovie(arr) {
     }
 }
 promptHasSeenMovie(movies);
+
 
 
 movies.forEach(function(movie){
