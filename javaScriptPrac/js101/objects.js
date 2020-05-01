@@ -46,10 +46,6 @@ dog.breed = 'lab';
 console.log(dog);
 
 
-
-
-
-
 // Access objects in an ARRAY
 var posts = [
     {
@@ -68,3 +64,65 @@ var posts = [
 // Log second comment in first post
 console.log('===== Log second comment in first post =====')
 console.log(posts[0].comments[1]);
+
+
+var someObject = {
+    friends: [
+        {name: 'Malfoy'},
+        {name: 'Crabe'},
+        {name: 'Goyle'}
+    ],
+    color: 'baby blue',
+    isEvil: true
+};
+console.log(someObject.friends[0]);
+console.log(someObject.friends[0].name);
+
+
+
+
+var movies = [
+    {
+        name: "In Bruges",
+        hasWatched: "true",
+        rating: "5 stars"
+    },
+    {
+        name: "Frozen",
+        hasWatched: "false",
+        rating: "4.5 stars"
+    },
+    {
+        name: "Mad Max Fury Road",
+        hasWatched: "false",
+        rating: "5 stars"
+    },
+    {
+        name: "Les Miserables",
+        hasWatched: "true",
+        rating: "3.5 stars"
+    }
+    ];
+
+function promptHasSeenMovie(arr) {
+    for (var i = 0; i <= arr.length - 1; i++) {
+        var ask = prompt('Have you watched "' + arr[i].name + '"');
+        if (ask === 'yes') {
+            console.log('You have watched "' + arr[i].name + '" - ' + arr[i].rating);
+        } else console.log('You have not watched "' + arr[i].name + '" - ' + arr[i].rating);
+    }
+}
+promptHasSeenMovie(movies);
+
+
+movies.forEach(function(movie){
+    var result = "You have ";
+    if(movie.hasWatched) {
+        result += "watched ";
+    }else {
+        result += "not seen ";
+    }
+    result += "\"" + movie.name + "\" = ";
+    result += movie.rating;
+    console.log(result);
+});
