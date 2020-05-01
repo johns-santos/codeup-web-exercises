@@ -143,6 +143,67 @@ for (var i = 1; i <= 100; i++) {
 
 
 
+// ==================================
+// ==================================
+// ==================================
+console.log('=======findMultipliers=========');
+
+let l = 3;
+let m = 5;
+function findMultipliers(x,y,z) {
+    for (var i = 1; i <= 100; i++){
+        if ((i % l  === 0)&&(i % m  === 0)){
+            console.log(i + ": fizzbuzz")
+        } else if (i % l === 0) {
+            console.log(i + ": fizz")
+        } else if (i % m === 0) {
+            console.log(i + ": buzz");
+        } else {
+            console.log(i)
+        }
+    }
+}
+findMultipliers();
+
+
+
+
+// ==================================
+// ==================================
+// ==================================
+console.log('======= multiplesOf =========');
+
+
+var q = '';
+var s = '';
+
+function multiplesOf(q, s) {
+    for (var i = 1; i <= 100; i++) {
+
+        var output = '';
+
+        if (i % q === 0) {
+            output += 'Fizz'
+        }
+        if (i % s === 0) {
+            output += 'Buzz'
+        }
+        // if (output === '') {
+        //     output = i;
+        // }
+        console.log(output);
+    }
+}
+
+multiplesOf(3, 7);
+// ==================================
+// ==================================
+// ==================================
+
+
+
+
+
 console.log('==================');
 console.log('==================');
 console.log('==================');
@@ -176,6 +237,10 @@ for(var i = array1.length -1; i >= 0; i--){
 
 
 
+
+
+
+multiplesOf(12,24);
 
 
 
