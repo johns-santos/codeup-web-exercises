@@ -2,13 +2,34 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4118a0aa-507e-4dc8-ae71-20d9b219d634" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/js101/game/annoy.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/js101/game/annoy.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/websiteTemplate/htc-mowing.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/websiteTemplate/resources/img/cleanEdging5.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/websiteTemplate/resources/img/cleanFlowerBed.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/websiteTemplate/resources/img/cleanMulch.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/websiteTemplate/resources/img/cleanMulch2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/websiteTemplate/resources/img/cleanMulch4.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/websiteTemplate/resources/img/cleanMulch5.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/websiteTemplate/resources/img/edging.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/websiteTemplate/resources/img/edging2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/websiteTemplate/resources/img/edging3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/websiteTemplate/resources/img/flowerBedding.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/websiteTemplate/resources/img/hortusLogo2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/websiteTemplate/resources/img/hortusLogo3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/websiteTemplate/resources/img/htc-mowing.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/websiteTemplate/resources/img/lawnEdging3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/websiteTemplate/resources/img/leafCleanUp.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/websiteTemplate/resources/img/leaveCleanUp.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/websiteTemplate/resources/img/leaveCleanUp3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/websiteTemplate/resources/img/mower-htc.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/websiteTemplate/resources/img/sidewalkEdging.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/websiteTemplate/resources/img/thickStripe.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/websiteTemplate/resources/img/trimming.jpeg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js101/loops.js" beforeDir="false" afterPath="$PROJECT_DIR$/js101/loops.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/algoDataStructures/problemSolving.js" beforeDir="false" afterPath="$PROJECT_DIR$/algoDataStructures/problemSolving.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js101/jsMethods.js" beforeDir="false" afterPath="$PROJECT_DIR$/js101/jsMethods.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/websiteTemplate/resources/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/websiteTemplate/resources/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/websiteTemplate/resources/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/websiteTemplate/resources/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -18,6 +39,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="JavaScript File" />
         <option value="HTML File" />
       </list>
     </option>
@@ -26,7 +48,9 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="ProjectId" id="1ayhZvK7bH46aNH3oPitprqJloi" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="autoscrollToSource" value="true" />
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -34,6 +58,7 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
@@ -115,11 +140,43 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1587713799869</updated>
-      <workItem from="1587713801333" duration="1650000" />
+      <workItem from="1587713801333" duration="18386000" />
+      <workItem from="1587969630766" duration="3125000" />
+      <workItem from="1588027611986" duration="3680000" />
+      <workItem from="1588129093338" duration="14463000" />
+      <workItem from="1588280217763" duration="14476000" />
+      <workItem from="1588314882991" duration="890000" />
+      <workItem from="1588359229885" duration="23391000" />
+      <workItem from="1588481645295" duration="33591000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="609" y="177" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1588651745091">
+      <screen x="0" y="23" width="1680" height="985" />
+    </state>
+    <state x="609" y="177" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1680.985@0.23.1680.985" timestamp="1588651745091" />
+    <state x="1083" y="304" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1588567297177">
+      <screen x="0" y="23" width="1680" height="985" />
+    </state>
+    <state x="1083" y="304" key="#com.intellij.fileTypes.FileTypeChooser/0.23.1680.985@0.23.1680.985" timestamp="1588567297177" />
+    <state x="825" y="30" key="CommitChangelistDialog2" timestamp="1588745576906">
+      <screen x="0" y="23" width="1680" height="985" />
+    </state>
+    <state x="825" y="30" key="CommitChangelistDialog2/0.23.1680.985@0.23.1680.985" timestamp="1588745576906" />
+    <state x="1066" y="161" width="785" height="889" key="dock-window-1" timestamp="1588438002023">
+      <screen x="0" y="23" width="1680" height="985" />
+    </state>
+    <state x="1066" y="161" width="785" height="889" key="dock-window-1/0.23.1680.985@0.23.1680.985" timestamp="1588438002023" />
+    <state x="1010" y="700" width="670" height="190" key="search.everywhere.popup" timestamp="1588787647148">
+      <screen x="0" y="23" width="1680" height="985" />
+    </state>
+    <state x="1010" y="700" width="670" height="190" key="search.everywhere.popup/0.23.1680.985@0.23.1680.985" timestamp="1588787647148" />
   </component>
 </project>

@@ -74,6 +74,7 @@ SIMPLIFY / SOLVE
 function charCount(str){
     // make object to return at end
     var result = {};
+    // remove all non-letter characters and make lower case.
     var str1 = str.replace(/[^A-Za-z]+/g, '').toLowerCase();
     // loop over string, for each character....
     for(var i = 0; i < str1.length; i++) {
@@ -87,8 +88,29 @@ function charCount(str){
             result[char] = 1;
         }
     }
-    // if character is something else (space, period, etc.) don't do anything
-    return result;
-    // return object at end
+        // return object at end
+        return result;
+
 }
-console.log(charCount("MKLOPI 123878 abc !@#$oplkmjn wedsv"));
+console.log(charCount("ABC 123878 abc !@#$xyz ABC"));
+
+
+
+
+function generatePassword() {
+    var length = 7,
+        charset = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789#!$&*",
+        retValue0 = "";
+        retValue1 = "";
+        // Guarantee first character of password is a LETTER
+    for (var i = 0, m = 53; i < 1; ++i) {
+        retValue0 += charset.charAt(Math.floor(Math.random() * m));
+    }
+    // Generate second part of password from charset
+    for (var i = 0, n = charset.length; i < length; ++i) {
+        retValue1 += charset.charAt(Math.floor(Math.random() * n));
+    }
+    // return password
+    return  retValue0 +  retValue1;
+}
+console.log(generatePassword());
