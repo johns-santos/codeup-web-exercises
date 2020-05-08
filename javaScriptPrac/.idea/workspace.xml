@@ -2,33 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4118a0aa-507e-4dc8-ae71-20d9b219d634" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/websiteTemplate/htc-mowing.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/websiteTemplate/resources/img/cleanEdging5.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/websiteTemplate/resources/img/cleanFlowerBed.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/websiteTemplate/resources/img/cleanMulch.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/websiteTemplate/resources/img/cleanMulch2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/websiteTemplate/resources/img/cleanMulch4.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/websiteTemplate/resources/img/cleanMulch5.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/websiteTemplate/resources/img/edging.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/websiteTemplate/resources/img/edging2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/websiteTemplate/resources/img/edging3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/websiteTemplate/resources/img/flowerBedding.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/websiteTemplate/resources/img/hortusLogo2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/websiteTemplate/resources/img/hortusLogo3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/websiteTemplate/resources/img/htc-mowing.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/websiteTemplate/resources/img/lawnEdging3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/websiteTemplate/resources/img/leafCleanUp.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/websiteTemplate/resources/img/leaveCleanUp.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/websiteTemplate/resources/img/leaveCleanUp3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/websiteTemplate/resources/img/mower-htc.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/websiteTemplate/resources/img/sidewalkEdging.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/websiteTemplate/resources/img/thickStripe.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/websiteTemplate/resources/img/trimming.jpeg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/algoDataStructures/problemSolving.js" beforeDir="false" afterPath="$PROJECT_DIR$/algoDataStructures/problemSolving.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js101/jsMethods.js" beforeDir="false" afterPath="$PROJECT_DIR$/js101/jsMethods.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/websiteTemplate/resources/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/websiteTemplate/resources/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/websiteTemplate/resources/img/cleanEdging5.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/websiteTemplate/resources/img/cleanEdging5.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/websiteTemplate/resources/img/cleanFlowerBed.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/websiteTemplate/resources/img/cleanFlowerBed.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/websiteTemplate/resources/img/leaveCleanUp3.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/websiteTemplate/resources/img/leaveCleanUp3.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/websiteTemplate/resources/img/thickStripe.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/websiteTemplate/resources/img/thickStripe.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/websiteTemplate/resources/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/websiteTemplate/resources/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -147,7 +127,7 @@
       <workItem from="1588280217763" duration="14476000" />
       <workItem from="1588314882991" duration="890000" />
       <workItem from="1588359229885" duration="23391000" />
-      <workItem from="1588481645295" duration="33591000" />
+      <workItem from="1588481645295" duration="40708000" />
     </task>
     <servers />
   </component>
