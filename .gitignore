@@ -1,6 +1,11 @@
 .DS_Store
+websiteTemplate/resources/img/
+img/*
 *.png
 *.jpeg
+.jpg
+.png
+.jpeg
 *.jpg
 .idea/*
 *.iml
