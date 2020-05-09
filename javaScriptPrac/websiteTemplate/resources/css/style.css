@@ -310,4 +310,75 @@ text-align: right;
     margin-top: -15px;
 }
 
+/* -------- SECTIONS PLANS ---------- */
+
+.section-plans {
+    background-color: #fff;
+}
+
+.section-plan-note{
+    text-align: center;
+    margin-top: 5%;
+}
+
+.plan-box {
+    background-color: #faf7f7;
+    border-radius: 5px;
+    border: 2px solid #a9c52f;
+    width: 90%;
+    margin-left: 5%;
+    box-shadow: 0 2px 6px #e3e3e3;
+
+}
+
+.plan-box div {
+    padding: 15px;
+    border-bottom: 1px solid #D0D0D0;
+}
+
+.plan-box div:first-child{
+    /*background-color: #faf7f7;*/
+    background-color: #fcfcfd;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.plan-box div:last-child{
+    border: none;
+}
+
+.plan-price {
+    font-size: 275%;
+    margin-bottom: 10px;
+    font-weight: 100;
+    color:#a9c52f ;
+}
+
+.plan-price span {
+    font-size: 30%;
+    font-weight: 300;
+}
+
+.plan-price-per-service {
+    font-size: 80%;
+}
+
+.plan-box ul{
+    list-style: none;
+}
+
+.plan-list ul li {
+    padding: 5px 0;
+}
+
+.icon-small {
+    color: #a9c52f;
+    padding-right: 5%;
+}
+.icon-small-x {
+    color: lightpink;
+    padding-right: 5%;
+}
+
+
 
