@@ -45,8 +45,10 @@ section{
 .box{
     padding: 1%;
 }
-
+/* ================================== */
 /* ------- HEADING ---------*/
+/* ================================== */
+
 h1,
 h2,
 h3{
@@ -107,7 +109,8 @@ h2:after{
 }
 /* ----- BUTTONS -------*/
 .btn:link,
-.btn:visited {
+.btn:visited,
+#submit {
     display: inline-block;
     padding: 10px 30px; /*top/bottom & left/right*/
     font-weight: 300;
@@ -118,7 +121,7 @@ h2:after{
 }
 
 .btn-full:link,
-.btn-full:visited {
+.btn-full:visited{
     /*background-color:#283739;*/
     border: 1px solid #a9c52f;
     /*border: 1px solid #a9c52f;*/
@@ -128,19 +131,15 @@ h2:after{
 }
 
 .btn-ghost:link,
-.btn-ghost:visited {
+.btn-ghost:visited{
     border: 1px solid #a9c52f;
     transition: background-color 1s;
     color: #fff;
 }
 
-.btn:hover,
-.btn:active {
-    /*background-color: #283739;*/
-}
 
 .btn:hover,
-.btn:active {
+.btn:active{
     border: 1px solid #283739;
     color: #fff;
 }
@@ -153,21 +152,24 @@ h2:after{
     transition: background-color 2s;
 }
 
-#steps-btn{
+#steps-btn,
+#submit{
     color: #a9c52f;
     transition: background-color 1s
 }
 
 #steps-btn:hover,
-#steps-btn:active{
+#steps-btn:active,
+#submit:hover,
+#submit:active{
     border: 1px solid #ffde59;
     color: #fff;
     background-color: #a9c52f;
 }
 
-/* ----------------------------------- */
+/* ================================== */
 /* -------- HEADER  -------- */
-/* ----------------------------------- */
+/* ================================== */
 header {
     background-image: linear-gradient(rgba(0,0,0, 0.9), rgba(0,0,0,0.3)), url(../img/thickStripe.jpg);
     background-size: cover; /*view entire image */
@@ -224,7 +226,9 @@ header {
 
 }
 
+/* ================================== */
 /* -------- lawn-showcase -------- */
+/* ================================== */
 
 .section-lawns{
     padding: 0;
@@ -263,8 +267,10 @@ header {
     transition: transform 0.5s;
 }
 
-
+/* ================================== */
 /* ------ HOW IT WORKS SECTION ------- */
+/* ================================== */
+
 .sections-steps{
     background-color: #faf7f7;
 }
@@ -310,7 +316,9 @@ text-align: right;
     margin-top: -15px;
 }
 
+/* ================================== */
 /* -------- SECTIONS PLANS ---------- */
+/* ================================== */
 
 .section-plans {
     background-color: #fff;
@@ -380,5 +388,30 @@ text-align: right;
     padding-right: 5%;
 }
 
+/* ================================== */
+/* -------- FORM SECTION --------*/
+/* ================================== */
+.section-form{
+    background-color:#faf7f7 ;
+}
+
+.contact-form {
+    width: 60%;
+    margin: 0 auto;
+}
+
+input[type=text],
+input[type=email],
+select,
+textarea {
+    width: 100%;
+    padding: 7px;
+    border-radius: 3px;
+    border: 1px solid #cccccc;
+}
+
+#message{
+    height: 5rem;
+}
 
 
