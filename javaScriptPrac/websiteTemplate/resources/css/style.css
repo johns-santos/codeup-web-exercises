@@ -121,7 +121,9 @@ h2:after{
     font-weight: 300;
     text-decoration: none;
     border-radius: 200px;
-    color: #fff;
+    /*color: #fff;*/
+    color: #FFFFFF;
+    -webkit-transition: background-color 0.2s, border 0.2s, color 0.2s;
     transition: background-color 0.2s;
 }
 
@@ -158,18 +160,21 @@ h2:after{
     transition: background-color 2s;
 }
 
-#steps-btn,
-#submit{
+.steps-btn:link,
+#submit {
     color: #a9c52f;
-    transition: background-color 1s
+    transition: background-color 1s;
+    background-color: #FFFFFF;
 }
 
-#steps-btn:hover,
-#steps-btn:active,
+
+
+.steps-btn:hover,
+.steps-btn:active,
 #submit:hover,
 #submit:active{
     border: 1px solid #ffde59;
-    color: #fff;
+    color: #FFFFFF;
     background-color: #a9c52f;
 }
 
@@ -177,6 +182,7 @@ h2:after{
 /* -------- HEADER  -------- */
 /* ================================== */
 header {
+    background-image: -webkit-linear-gradient(rgba(0,0,0, 0.9), rgba(0,0,0,0.3)), url(../img/thickStripe.jpg);
     background-image: linear-gradient(rgba(0,0,0, 0.9), rgba(0,0,0,0.3)), url(../img/thickStripe.jpg);
     background-size: cover; /*view entire image */
     background-position: center;
@@ -188,6 +194,8 @@ header {
     width: 1140px;
     top: 50%;
     left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
 }
 
@@ -195,9 +203,11 @@ header {
     height: 60px;
     width: auto;
     float: left;
-    padding-top: 10px;
+    padding-top: 5px;
+    margin: 5px;
 }
 
+/* ---- MAIN NAV ---- */
 .main-nav{
     float: right;
     list-style: none;
@@ -206,17 +216,18 @@ header {
 .main-nav li {
     display: inline-block;
     margin-left: 40px;
-    margin-top: 20px;
+    margin-top: 30px;
 }
 
 .main-nav li a:link,
 .main-nav li a:visited {
-    padding: 8px 0;
+    padding: 4px 0;
     color: #fff;
     text-decoration: none;
     text-transform: uppercase;
     font-size: 65%;
     border-bottom: 2px solid transparent;
+    -webkit-transition: border-bottom 0.2s;
     transition: border-bottom-color 2s;
 }
 
@@ -226,9 +237,51 @@ header {
     border-bottom: 2px solid #ffde59;
 }
 
+
+/* Mobile navi */
+.mobile-nav-icon {
+    float: right;
+    margin-top: 30px;
+    cursor: pointer;
+    display: none;
+}
+
+.mobile-nav-icon i {
+    font-size: 200%;
+    color: #fff;
+}
+
+
+/* Sticky navi */
+.sticky {
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding-bottom: 2%;
+    width: 100%;
+    background-color: #283739;
+    box-shadow: 0 2px 2px #a9c52f;
+    z-index: 9999;
+}
+
+.sticky .main-nav { margin-top: 10px; }
+
+.sticky.main-nav li a:link,
+.sticky.main-nav li a:visited {
+    padding: 4px 0;
+    color: #FFFFFF;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 65%;
+    border-bottom: 1px solid transparent;
+}
+
+
+
+
 /* ------ FEATURES ---------- */
 .section-features .long-copy{
-    margin-bottom: 30px;
+    margin-bottom: 20px;
 
 }
 
@@ -264,11 +317,17 @@ header {
 .lawn-photo img{
     opacity: 0.7;
     width: 100%;
+    -webkit-transform: scale(1.15);
+    -ms-transform: scale(1.15);
     transform: scale(1.25);
+    -webkit-transition: -webkit-transform 0.5s, opacity 0.5s;
+    transition: transform 0.5s, opacity 0.5s;
 }
 
 .lawn-photo img:hover{
     opacity: 1;
+    -webkit-transform: scale(1.03);
+    -ms-transform: scale(1.03);
     transform: scale(1.3);
     transition: transform 0.5s;
 }
@@ -426,7 +485,7 @@ textarea {
 /* -------- FOOTER --------*/
 /* ================================== */
 footer {
-    background-color: #333;
+    background-color: #283739;
     border-top: 3px solid #a9c52f;
     font-size: 80%;
 }
@@ -457,6 +516,7 @@ footer {
 .footer-nav:last-child,
 .social-links:last-child{
 margin-right: 0;
+
 }
 
 .footer-nav li  a:link,
@@ -466,7 +526,8 @@ margin-right: 0;
     text-decoration: none;
     border: 0;
     color: #fff;
-    transition: color 0.9s
+    -webkit-transition: color 0.2s;
+    transition: color 0.9s;
 }
 
 .footer-nav li a:hover,
@@ -474,7 +535,10 @@ margin-right: 0;
 .social-links li a:active,
 .social-links li a:hover {
     color: #a9c52f;
+    -webkit-transition: color 0.2s;
     transition: color 0.2s;
+    border-bottom: 1px solid #ffde59
+
 }
 
 .social-links li a:link,
@@ -491,4 +555,26 @@ footer p {
     margin-bottom: 10px;
 }
 
+
+
+
+.js--wp-1,
+.js--wp-2,
+.js--wp-3
+{
+    opacity: 0;
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+}
+
+.js--wp-4 {
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+}
+
+.js--wp-1.animated,
+.js--wp-2.animated,
+.js--wp-3.animated {
+    opacity: 1;
+}
 

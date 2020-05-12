@@ -77,10 +77,11 @@
         }
         .col {
         width: 100%;
+            margin: 0 0 4% 0;
         }
 
-        #steps-btn{
-            margin-left: 25%;
+        .steps-btn{
+            margin-left: 22%;
         }
         #submit{
             margin-left: 30%;
@@ -125,13 +126,27 @@
             margin-bottom: 20px;
         }
 
+        .app-screen{
+            width: 40px;
+        }
+
 }
 
 /* ======================================================== */
 /* ----- iphone 4/5 -  from 0 to 480px ---------*/
 /* ======================================================== */
 @media only screen and (max-width: 480px) {
+    section {
+        padding: 25px 0;
+    }
 
+    .contact-form {
+        width: 100%;
+    }
+
+    .social-links {
+        margin-right: 6%;
+    }
 }
 
 
