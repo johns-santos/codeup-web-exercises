@@ -558,23 +558,27 @@ footer p {
 
 
 
-.js--wp-1,
-.js--wp-2,
-.js--wp-3
-{
+
+/* ================================== */
+/* ------ ANIMATION------- */
+/* ================================== */
+
+
+.row.js--wp-1,
+.js--wp-2{
     opacity: 0;
-    -webkit-animation-duration: 1s;
-    animation-duration: 1s;
+    animation-duration: 2s;
+    -webkit-animation-duration: 2s;
+
 }
 
-.js--wp-4 {
-    -webkit-animation-duration: 1s;
-    animation-duration: 1s;
+.js--wp-3 {
+    -webkit-animation-duration: 3s;
+    animation-duration: 3s;
 }
 
-.js--wp-1.animated,
-.js--wp-2.animated,
-.js--wp-3.animated {
+.row.js--wp-1.animate__fadeIn,
+.js--wp-2.animate__fadeInUp {
     opacity: 1;
 }
 
