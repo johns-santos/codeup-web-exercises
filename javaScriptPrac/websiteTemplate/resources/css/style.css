@@ -240,8 +240,10 @@ header {
 
 /* Mobile navi */
 .mobile-nav-icon {
+    color: #ffff;
+    font-size: 40px;
     float: right;
-    margin-top: 30px;
+    margin-top: 6px;
     cursor: pointer;
     display: none;
 }
@@ -272,13 +274,9 @@ header {
     color: #FFFFFF;
     text-decoration: none;
     text-transform: uppercase;
-    font-size: 65%;
+    font-size: 60%;
     border-bottom: 1px solid transparent;
 }
-
-
-
-
 /* ------ FEATURES ---------- */
 .section-features .long-copy{
     margin-bottom: 20px;
@@ -310,7 +308,6 @@ header {
     width: 100%;
     margin: 0;
     overflow: hidden;
-    /*background-color: #000;*/
     height:200%;
 }
 
@@ -441,18 +438,23 @@ text-align: right;
 }
 
 .plan-list ul li {
-    padding: 3px 0;
+    padding: -30px 0;
 }
 
 .icon-small {
     color: #a9c52f;
-    /*padding-right: 5%;*/
 }
 .icon-small-x {
     color: lightpink;
-    /*padding-right: 4%;*/
+    font-size: 20px;
+
 }
 
+.icon-small-x,
+.icon-small{
+    margin-left: 4%;
+    /*padding-top: 2%;*/
+}
 /* ================================== */
 /* -------- FORM SECTION --------*/
 /* ================================== */
@@ -480,7 +482,6 @@ textarea {
 }
 
 *:focus {outline:none}
-
 /* ================================== */
 /* -------- FOOTER --------*/
 /* ================================== */
@@ -554,16 +555,9 @@ footer p {
     margin-top: 15px;
     margin-bottom: 10px;
 }
-
-
-
-
-
 /* ================================== */
 /* ------ ANIMATION------- */
 /* ================================== */
-
-
 .row.js--wp-1,
 .js--wp-2{
     opacity: 0;
