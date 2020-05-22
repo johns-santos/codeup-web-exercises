@@ -32,3 +32,44 @@ console.log(`${person.name} is ${person.age} and lives in ${person.location}`);
 person.age = 23;
 console.log(`${person.name} is ${person.age} and lives in ${person.location}`);
 
+
+
+// ===================== Add a second book
+let otherBook = {
+    title: 'A Peoples History',
+    author: 'Howard Zinn',
+    pageCount:  723
+};
+
+
+
+// Create a function that accepts an object (books)
+let getSummary =  function(book){
+    console.log(`${book.title} by ${book.author}`)
+};
+
+getSummary(myBook);
+getSummary(otherBook);
+
+
+
+
+// ===== Create a function that accepts an objects and return two strings ==============
+console.log('===============');
+
+let getSummary2 =  function(book){
+    return {
+        summary: `${book.title} by ${book.author}`,
+        pageCountSummary: `${book.title} is ${book.pageCount} pages long`
+    }
+};
+
+let bookSummary = getSummary2(myBook);
+let otherBookSummary = getSummary2(otherBook);
+console.log(bookSummary.pageCountSummary);
+console.log(otherBookSummary.pageCountSummary);
+
+
+// Create a function - takes fahrenheit temp and returns object with all three
+
+
