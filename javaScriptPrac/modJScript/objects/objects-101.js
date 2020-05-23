@@ -1,3 +1,6 @@
+// OBJECTS & PROPERTIES
+
+
 // Create a object using property values (models)
 let myBook = {
     title:   '1984',
