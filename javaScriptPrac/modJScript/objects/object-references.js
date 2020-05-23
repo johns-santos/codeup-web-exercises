@@ -4,14 +4,11 @@ let myAccount = {
     income: 0
 };
 
-
-
 let bellaAccount = {
     name: 'Bella Santos',
     expenses: 0,
     income: 0
 };
-
 
 let addExpense = function (account, amount){
     account.expenses = account.expenses + amount;
@@ -20,9 +17,6 @@ let addExpense = function (account, amount){
 
 addExpense(myAccount, 2.50); // This will reference the object in stored  memory.
 console.log(myAccount); // Now myAccount is changed and updated by addExpense function
-
-
-
 
 console.log('====== Bad Solution/ Will not clear object property=======');
 // Bad solution
@@ -47,12 +41,6 @@ let addExpense3 = function (account, amount){
 };
 addExpense3(myAccount, 2.50); // This will reference the object in stored  memory.
 console.log(myAccount);
-
-
-
-
-
-
 
 
 
