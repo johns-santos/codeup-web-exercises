@@ -28,11 +28,25 @@ console.log(name.trim(2));
 
 
 let  isValidPassword = function (password) {
-    if((password.length >= 8) && (password.includes('password') !== true)){
-    return true;
+    if(password.length >= 8 && password.includes('password') !== true){
+        return true;
+    } else {
+        return false;
     }
-    else return false;
 };
-console.log(isValidPassword('123passwordRFG'));
-console.log(isValidPassword('123PAsswordRFG'));
-console.log(isValidPassword('123testRFG'));
+
+console.log(isValidPassword('asdfp'));
+console.log(isValidPassword('abc123plkMNJ'));
+console.log(isValidPassword('aspassword123wewq'));
+
+
+
+// SHORTER VERSION OF FUNCTION ABOVE
+console.log('=============');
+let  isValidPassword2 = function (password) {
+    return password.length >= 8 && !password.includes('password')
+};
+
+console.log(isValidPassword2('asdfp'));
+console.log(isValidPassword2('abc123plkMNJ'));
+console.log(isValidPassword2('aspassword123wewq'));
