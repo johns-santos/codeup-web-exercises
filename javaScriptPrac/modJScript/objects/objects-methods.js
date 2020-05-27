@@ -1,6 +1,5 @@
 // Add a METHOD property to a object
 
-
 // Can a party of a specified size be seated.
 let restaurant = {
     name : 'Mexcian Manhattan',
@@ -21,8 +20,6 @@ let restaurant = {
 restaurant.seatParty(75);
 console.log(restaurant.guestCount);
 console.log(restaurant.checkAvailability(5));
-
-
 
 restaurant.removeParty(20);
 console.log(restaurant.checkAvailability(19));
