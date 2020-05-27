@@ -18,11 +18,13 @@ let restaurant = {
 
     }
 };
+restaurant.seatParty(75);
+console.log(restaurant.guestCount);
+console.log(restaurant.checkAvailability(5));
 
-restaurant.seatParty(72);
-console.log(restaurant.checkAvailability(4));
-restaurant.removeParty(5);
-console.log(restaurant.checkAvailability(4));
 
-let status = restaurant.checkAvailability(4);
-console.log(status);
+
+restaurant.removeParty(20);
+console.log(restaurant.checkAvailability(19));
+restaurant.seatParty(19);
+console.log(restaurant.guestCount);
