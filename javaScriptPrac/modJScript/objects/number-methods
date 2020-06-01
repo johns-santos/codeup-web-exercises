@@ -1,0 +1,52 @@
+let num = 103.941123;
+
+// make output look like standard currency
+console.log(num.toFixed(2));
+
+// add zero's to end......
+console.log(num.toFixed(10));
+
+// ===================================
+// ========== MATH ===========
+// ===================================
+// round up with Math.round
+roundUp = Math.round(num);
+console.log(roundUp);
+
+ceilNum = Math.ceil(num);
+console.log(ceilNum);
+
+// round down with Math.floor
+roundDown = Math.floor(num);
+console.log(roundDown);
+
+// Generate a random number
+let randomNum = Math.random();
+console.log(randomNum);
+// Generate random num in a range (min - max)
+let min = 0;
+let max =  10;
+let randomNum2 = Math.random() * (max - min + 1);
+console.log(randomNum2);
+// NOW - remove all pass decimal
+let randomNum3 = Math.floor(Math.random() * (max - min + 1)) + min;
+console.log(randomNum3);
+
+
+
+
+
+console.log("======= GUESSING GAME ======== ");
+// ======== CHALLENGE AREA ========  Guessing game
+// take in guess 1 -5
+let guessingGame = function(userGuess){
+    let min1 = 1;
+    let max1 = 5;
+    let randomNum4 = Math.floor(Math.random() * (max1 - min1 + 1)) + min1;
+    console.log(randomNum4);
+    // return true if random num matches guess
+    //  and  false if no match
+    return userGuess === randomNum4;
+};
+console.log(guessingGame(4));
+
