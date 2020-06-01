@@ -33,3 +33,4 @@ const gradeCalc = function (score, totalScore) {
 
 const result = gradeCalc(9, 20);
 console.log(result);
+
