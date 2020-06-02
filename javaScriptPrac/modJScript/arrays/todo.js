@@ -54,11 +54,10 @@ console.log(todo);
 todo.splice( 2, 1);
 console.log(todo);
 
-
 // Add a new item onto the end
-console.log(todo.push('Add new item'));
+todo.push('Add new item');
 console.log(todo);
 
 // Remove the first item from the list
-console.log(todo.shift());
+todo.shift();
 console.log(todo);
