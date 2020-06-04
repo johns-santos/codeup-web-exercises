@@ -31,6 +31,7 @@ todo.shift();
 // console log how many todo you have
 // create a numbered list of items in array
 console.log(`You have ${todo.length} todo's.`);
-todo.forEach(function(item, index){
-    console.log(`${index+1}. ${item}`)
+todo.forEach(function(todo, index){
+    let todoNum = index + 1;
+    console.log(`${todoNum}. ${todo}`)
 });
