@@ -35,3 +35,14 @@ todo.forEach(function(todo, index){
     let todoNum = index + 1;
     console.log(`${todoNum}. ${todo}`)
 });
+
+
+
+
+
+console.log('=== indexOf loops through array and uses triple equal ====')
+console.log(todo);
+console.log(todo.indexOf('Bath the cat'));
+if(false){
+    console.log('Bath the cat is included')
+}

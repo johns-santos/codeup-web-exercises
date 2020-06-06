@@ -62,13 +62,12 @@ const notes2 = [ {},
 ];
 
 console.log(notes2.length);
-console.log(notes2);
 console.log(notes2.indexOf({})); // This will show as -1 because the item is empty
 
 
 // locate index of object
 const index = notes2.findIndex(function (item, index) {
-    console.log(notes2);
+    // console.log(notes2);
     //return index of object based on string match
     return item.title === 'Habbits to work on';
 });
@@ -76,3 +75,39 @@ const index = notes2.findIndex(function (item, index) {
 console.log("====== return index of object based on string match =======");
 console.log(index);
 
+
+
+
+
+
+
+//================================================================================
+console.log("====== use findIndex to locate index of array object =======");
+const notes4 = [
+    {
+        title: 'My next trip',
+        body: 'I would like to go to Spain'
+    },
+    {
+        title: 'Habbits to work on',
+        body: 'Exercise. Eat healthier. Get more sleep.'
+    },
+    {
+        title: 'Office modification',
+        body: 'Get a new office chair. Get a standing desk.'
+    }
+];
+
+
+const findNote = function (notes, noteTitle){
+    const index = notes4.findIndex(function (note, index){
+        // return note.title === noteTitle
+        // CONVERT to lower case to remove case sensitvity
+        return note.title.toLowerCase() === noteTitle.toLowerCase();
+        })
+        return notes4[index]
+}
+
+
+const note = findNote(notes, 'Office MOdification')
+console.log(note)
