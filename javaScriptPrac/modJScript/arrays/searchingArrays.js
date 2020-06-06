@@ -56,20 +56,16 @@ console.log(note2)
 // 3. Create function to remove a todo by text value
 // 4. case insensitive string match to remove item (deleteTodo(todos, 'buy food') 
 
-const todos = [
-    {text: 'Order cat food',
+const todos = [{
+    text: 'Order cat food',
     complete: true
- },
- { text: 'Clean kitchen',
+ },{ text: 'Clean kitchen',
     complete: false
-},
- { text: 'Buy food',
+},{ text: 'Buy food',
 complete: true
-},
- { text: 'Do work',
+},{ text: 'Do work',
 complete: true
-},
- {text: 'Exercise',
+},{text: 'Exercise',
 complete: false}
 ];
 
@@ -79,14 +75,15 @@ console.log(todos);
 
 
 const deleteTodo = function(todos, todoText){
-    const index = todos.findIndex(function (todo, index) {
+    const index = todos.findIndex(function (todo) {
         return todo.text.toLowerCase() === todoText.toLowerCase()
     })
-    
-    todos.splice(index, 1);
-    return todos;
+    if (index > -1) {
+    // DELETE item from array using index found above:
+        todos.splice(index, 1);
+    }
 }
 
 
-const todo = deleteTodo(todos, 'Exercise');
-console.log(todo);
+deleteTodo(todos, 'Clean KITCHEN');
+console.log(todos);
