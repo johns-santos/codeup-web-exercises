@@ -55,12 +55,14 @@ completed: false
 completed: false}
 ];
 
-// If not completed, then list first
+// CHALLENGE -  Sort todo array - If not completed, then list first
 const sortTodos = function(todos) {
     todos.sort(function(a, b) {
-        if(a.completed != 1 && b.completed == 1) {
+        // if(a.completed != 1 && b.completed == 1) {
+            if(!a.completed && b.completed){
             return -1
-        } else if (a.complete == 1 && b.completed != 1){
+        // } else if (a.complete == 1 && b.completed != 1){
+            } else if (!b.completed && a.completed){
             return 1
         } else {
             return 0
