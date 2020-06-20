@@ -1,3 +1,9 @@
+/* ========================================
+-  Expense -> description(string) amount(num)
+- addExpense -> description, amount
+- getAccountSummary -> total up all expenses -> John Santos has $1250 in expenses.
+========================================= */
+
 const account = {
     name: 'John Santos',
     expenses: [],
@@ -35,9 +41,6 @@ const account = {
 /* ===============================
  CHALLENGE ------
 ==================================
- -  Expense -> description(string) amount(num)
- - addExpense -> description, amount
- - getAccountSummary -> total up all expenses -> John Santos has $1250 in expenses.
 
  STEPS
  1. Add income array to account
