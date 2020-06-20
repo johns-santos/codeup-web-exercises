@@ -23,5 +23,15 @@ test.forEach(function(test) {
 
 })
 
+// =============================
+// Add a element to DOM - 3 step process
+// =============================
+const newParagraph = document.createElement('p')
+newParagraph.textContent = 'This is a new element from JavaScript'
+document.querySelector('body').appendChild(newParagraph)
+
+
+
+
 
 
