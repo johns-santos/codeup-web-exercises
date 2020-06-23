@@ -56,6 +56,33 @@ DOM - Document Object Model
     
 // })
 
+const filters = {
+    searchText: ""
+}
+
+// =======================================
+// Upon page refresh render all NOTES
+// also renders only filtered NOTES
+const renderNotes = function (notes, filters) {
+    const filteredNotes = notes.filter(function(note){
+        return note.title.toLowerCase().includes(filters.searchText.toLowerCase())
+    })
+
+    // clear #note element 
+    document.querySelector('#notes').innerHTML = ''
+
+    //Only render notes that match string match
+    filteredNotes.forEach(function(note){
+        const noteEl = document.createElement('p')
+        noteEl.textContent = note.title
+        document.querySelector('#notes').appendChild(noteEl)
+    })
+}
+    
+renderNotes(notes, filters)
+// =======================================
+
+
 
 // Add event for button - once button is press write message to console
 document.querySelector('#addNote-button').addEventListener('click', function (e){
@@ -69,6 +96,20 @@ document.querySelector('#removeNote-button').addEventListener('click', function(
     document.querySelectorAll('.note').forEach(function(note){
         note.remove() 
     })
+})
+
+// Search notes - using input allows to track every character change
+document.querySelector('#search-text').addEventListener('input', function(e){
+    filters.searchText = e.target.value
+    renderNotes(notes, filters)
+})
+
+
+
+// Input for new todo
+document.querySelector('#add-note').addEventListener('input', function(e){
+    console.log(e.target.value)
+
 })
 
 // ======== COMPLEX SELECTORS - MULTIPLE (tag+class+id) ============
