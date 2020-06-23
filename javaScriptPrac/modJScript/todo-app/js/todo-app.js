@@ -53,3 +53,14 @@ todos.forEach(function (todo) {
     p.textContent = todo.text
     document.querySelector('body').appendChild(p)
 })
+
+
+// Add event for button - once button is press write message to console
+document.querySelector('#addTodo-button').addEventListener('click', function (e){
+    e.console = console.log('New todo has been added')
+
+})
+
+document.querySelector('#removeTodo-button').addEventListener('click', function(){
+    console.log('todo has been deleted');
+})
