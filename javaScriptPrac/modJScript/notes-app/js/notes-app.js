@@ -1,7 +1,25 @@
+
+
+
+const notes = [
+    {
+        title: 'My next trip',
+        body: 'I would like to go to Spain'
+    },
+    {
+        title: 'Habbits to work on',
+        body: 'Exercise. Eat healthier. Get more sleep.'
+    },
+    {
+        title: 'Office modification',
+        body: 'Get a new office chair. Get a standing desk.'
+    }
+];
+
+
 /* ==========
 DOM - Document Object Model
 ============ */
-
 
 const p = document.querySelector('p');
 // console.log(p);
