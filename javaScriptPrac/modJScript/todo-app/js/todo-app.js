@@ -14,45 +14,39 @@ completed: false}
 ];
 
 
-// const h = document.querySelector('h1');
-// console.log(h);
+const filters = {
+    searchText: ""
+}
 
+const renderTodos = function (todos, filters) {
+    const filteredTodos = todos.filter(function (todo){
+        // case insensitive search
+        return todo.text.toLowerCase().includes(filters.searchText.toLowerCase())
+    })
 
-// // ========================================
-// // Select all p elements and remove them from 
-// // the list if they contain the word "the"
-// // =========================================
-// const paragraph = document.querySelectorAll('p');
-
-// paragraph.forEach(function(paragraph){
-//     if(paragraph.textContent.includes('the')) {
-//         paragraph.remove()
-//     }
-// })
-
-
-
-// CHALLENGE
-// 1. You have 2 todos left (p element)
-// 2. Add a p for each todo above (use text value)
-
-// create a const that returns sum of incomplete todos
-const incompleteTodos =  todos.filter(function (todo){
+const incompleteTodos =  filteredTodos.filter(function (todo){
     return !todo.completed
 })
 
-// create a 'h2' element that is appended to body (You have ${incompleteTodos.length} todos left`)
+// clear div when search input is entered
+document.querySelector('#todos').innerHTML = "";
+
+
 const summary = document.createElement('h2')
 summary.textContent = `You have ${incompleteTodos.length} todos left`
-document.querySelector('body').appendChild(summary)
+document.querySelector("#todos").appendChild(summary)
 
 
 // create a forEach loop that creates a p element for each todo
-todos.forEach(function (todo) {
+filteredTodos.forEach(function (todo) {
     const p = document.createElement('p')
     p.textContent = todo.text
-    document.querySelector('body').appendChild(p)
+    document.querySelector('#todos').appendChild(p)
 })
+
+}
+
+renderTodos(todos, filters)
 
 
 // Add event for button - once button is press write message to console
@@ -60,10 +54,12 @@ document.querySelector('#addTodo-button').addEventListener('click', function (e)
     e.console = console.log('New todo has been added')
 })
 
-document.querySelector('#removeTodo-button').addEventListener('click', function(){
-    console.log('todo has been deleted');
-})
-
 document.querySelector('#add-todo').addEventListener('input', function(e){
     console.log(e.target.value);
+})
+
+document.querySelector('#search-text')
+.addEventListener('input', function(e){
+    filters.searchText = e.target.value;
+    renderTodos(todos, filters);
 })
