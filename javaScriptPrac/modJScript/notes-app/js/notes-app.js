@@ -85,18 +85,11 @@ renderNotes(notes, filters)
 
 
 // Add event for button - once button is press write message to console
-document.querySelector('#addNote-button').addEventListener('click', function (e){
+document.querySelector('#add-note').addEventListener('click', function (e){
     e.console = console.log('New note has been added')
 
 })
 
-document.querySelector('#removeNote-button').addEventListener('click', function(){
-    console.log('A note has been deleted');
-    // remove all note(s) by class
-    document.querySelectorAll('.note').forEach(function(note){
-        note.remove() 
-    })
-})
 
 // Search notes - using input allows to track every character change
 document.querySelector('#search-text').addEventListener('input', function(e){
@@ -112,8 +105,8 @@ document.querySelector('#add-note').addEventListener('input', function(e){
 
 })
 
-// ======== COMPLEX SELECTORS - MULTIPLE (tag+class+id) ============
-// - p#order (p element with ID of order)
-// - button.inventory (button element with class of inventory)
-// - h#title.application (h element with ID of title and class of application)
-// ================================================================
+document.querySelector('#name-form').addEventListener('submit', function(e){
+    e.preventDefault()
+    console.log(e.target.elements.firstName.value);
+
+})
