@@ -63,3 +63,14 @@ document.querySelector('#search-text')
     filters.searchText = e.target.value;
     renderTodos(todos, filters);
 })
+
+
+
+
+
+// CHALLENGE
+//1. Create a form with a single input for todo text
+//2. Setup an submit handler and cancel the default action
+//3. Add a new item to the todos array with that text data (completed value false)
+//4. Rerender the application
+//5. Clear the input field value
