@@ -49,23 +49,12 @@ filteredTodos.forEach(function (todo) {
 renderTodos(todos, filters)
 
 
-// Add event for button - once button is press write message to console
-document.querySelector('#addTodo-button').addEventListener('click', function (e){
-    e.console = console.log('New todo has been added')
-})
-
-document.querySelector('#add-todo').addEventListener('input', function(e){
-    console.log(e.target.value);
-})
-
+// Todo Search input
 document.querySelector('#search-text')
 .addEventListener('input', function(e){
     filters.searchText = e.target.value;
     renderTodos(todos, filters);
 })
-
-
-
 
 
 // CHALLENGE
@@ -74,3 +63,21 @@ document.querySelector('#search-text')
 //3. Add a new item to the todos array with that text data (completed value false)
 //4. Rerender the application
 //5. Clear the input field value
+document.querySelector('#new-todo').addEventListener('submit', function (e){
+    e.preventDefault()
+     todos.push({
+         text: e.target.elements.text.value,
+         completed: false
+     })
+     renderTodos(todos, filters)
+     e.target.elements.text.value = ""
+  
+})
+
+
+
+
+
+
+
+
