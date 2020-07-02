@@ -105,8 +105,7 @@ document.querySelector('#add-note').addEventListener('input', function(e){
 
 })
 
-document.querySelector('#name-form').addEventListener('submit', function(e){
-    e.preventDefault()
-    console.log(e.target.elements.firstName.value);
-
+document.querySelector('#checkbox1').addEventListener('change', function(e) {
+    // "checked" return boolean value for checkbox
+    console.log(e.target.checked)
 })

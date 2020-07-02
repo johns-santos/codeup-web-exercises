@@ -15,14 +15,28 @@ completed: false}
 
 
 const filters = {
-    searchText: ""
+    searchText: "",
+    hideCompleted: false
 }
 
 const renderTodos = function (todos, filters) {
-    const filteredTodos = todos.filter(function (todo){
+    // use "let" as filteredTodos will be altered
+    let filteredTodos = todos.filter(function (todo){
         // case insensitive search
         return todo.text.toLowerCase().includes(filters.searchText.toLowerCase())
     })
+
+
+    // altering "filteredTodos" further
+    filteredTodos = filteredTodos.filter(function (todo) {
+        return !filters.hideCompleted || !todo.completed
+        // if(filters.hideCompleted){
+        //     return !todo.completed
+        // } else {
+        //     return true
+        // }
+    })
+
 
 const incompleteTodos =  filteredTodos.filter(function (todo){
     return !todo.completed
@@ -75,7 +89,15 @@ document.querySelector('#new-todo').addEventListener('submit', function (e){
 })
 
 
+// 1. Createa checkbox setup event listner -> "Hide completed"
+// 2. Create a new hideCompleted filter (default false) - added to existing filter up above
+// 3. Update hideCompleted and rerender list on checkbox change
+// 4. Setup renderTodos to remove completed items - added above by modifying "filteredTodos"
+document.querySelector('#hide-completed').addEventListener('change', function(e){
+    filters.hideCompleted = e.target.checked
+    renderTodos(todos, filters)
 
+})
 
 
 
