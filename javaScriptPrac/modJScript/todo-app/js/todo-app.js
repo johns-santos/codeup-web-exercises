@@ -28,13 +28,12 @@ const renderTodos = function (todos, filters) {
 
 
     // altering "filteredTodos" further
-    filteredTodos = filteredTodos.filter(function (todo) {
-        return !filters.hideCompleted || !todo.completed
-        // if(filters.hideCompleted){
-        //     return !todo.completed
-        // } else {
-        //     return true
-        // }
+    filteredTodos = filteredTodos.filter(function (todo) {    
+        if(filters.hideCompleted){
+            return !todo.completed
+        } else {
+            return true
+        }
     })
 
 
