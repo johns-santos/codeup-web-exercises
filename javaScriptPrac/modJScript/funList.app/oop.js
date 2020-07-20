@@ -6,12 +6,12 @@ console.log('Hello, my name is Monica. My favorite color is red')
 
 // Create a variable with name and color properties. Then add varialbe.properties to log statement
 // ====================================================================
-var person = {
+var moniSanMiguel = {
   name: 'Monica',
   favColor: 'red'
 }
 console.log(
-  `Hello, my name is ${person.name} and my favorite color is ${person.favColor}.`
+  `Hello, my name is ${moniSanMiguel .name} and my favorite color is ${moniSanMiguel .favColor}.`
 )
 // ====================================================================
 
@@ -37,7 +37,7 @@ monica.greet()
 
 // OOP - Object Orientated Programimng
 // ===========================================================
-function Person01 (fullName, favColor) {
+function Person (fullName, favColor) {
   this.name = fullName,
     this.color = favColor,
     this.greet = function () {
@@ -45,9 +45,9 @@ function Person01 (fullName, favColor) {
     }
 }
 
-var moni = new Person01('Monica SanMiguel', 'red')
+var moni = new Person('Monica SanMiguel', 'red')
 moni.greet()
 
-var jon = new Person01('John Santos', 'blue')
+var jon = new Person('John Santos', 'blue')
 jon.greet()
 // ===========================================================
