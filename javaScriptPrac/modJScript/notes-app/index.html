@@ -13,21 +13,23 @@
     <h1>Notes App</h1>
     <h2>Take notes and never forget</h2>
 
-    <div>
+  
       <input id="search-text" type="text" placeholder="Search Text" />
-    </div>
+
+      <select id="filter-by">
+        <option value="byEdited">Sort by last edited</option>
+        <option value="byCreated">Sort by recently created</option>
+        <option value='alphabetical'>Sort by alphabetically</option>
+      </select>
+
+
 
     <div id="notes"></div>
 
     <button id="create-note">Create Note</button>
-    <label>
-      <input id="for-fun" type="checkbox" /> Check Me For Fun
-    </label>
+   
 
-    <form action="" id="name-form">
-      <input type="text" placeholder="First Name" name="firstName" />
-      <button>Submit</button>
-    </form>
+   
 
     <!-- Scripts -->
     <script type="text/javascript" src="js/notes-app.js"></script>

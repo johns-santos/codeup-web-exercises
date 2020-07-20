@@ -56,15 +56,6 @@ document.querySelector('#search-text').addEventListener('input', function(e){
 })
 
 
-// ====================== FORM ======================
-
-document.querySelector('#name-form').addEventListener('submit', function (e) {
-    e.preventDefault() 
-    console.log(e.target.elements.firstName.value)
-
-})
-
-document.querySelector('#for-fun').addEventListener('change', function (e) {
-    // checkbox uses CHECKED to grab input
-    console.log(e.target.checked)
+document.querySelector('#filter-by').addEventListener('change', function (e){
+    console.log(e.target.value)
 })
