@@ -1,32 +1,20 @@
 
-const notes = [
-    {
-        title: 'My next trip',
-        body: 'I would like to go to Spain'
-    },
-    {
-        title: 'Habbits to work on',
-        body: 'Exercise. Eat healthier. Get more sleep.'
-    },
-    {
-        title: 'Office modification',
-        body: 'Get a new office chair. Get a standing desk.'
-    },
-    {
-        title: 'Pay off credit cards',
-        body: 'My goal is to pay off credit cards by Nov 2020.'
-    },
-    {
-        title: 'Lose 30lbs.',
-        body: 'Lose 30lbs by December 2020.'
-    }
-];
+let notes = []
 
 const filters = {
     searchText: ''
 }
 
+// Check for existing saved data
+const notesJSON = localStorage.getItem('notes')
+
+if (notesJSON !== null) {
+    notes = JSON.parse(notesJSON)
+}
+
+// =========================================
 // //CRUD - Create, Read, Update, Delete, 
+// =========================================
 // // CREATE
 // localStorage.setItem('location', 'San Antonio')
 // //READ
@@ -51,9 +39,11 @@ const filters = {
 
 // JSON is only a string. JSON parse is used after reading data.
 // ======================================
-const userJSON = localStorage.getItem('user');
-const user = JSON.parse(userJSON);
-console.log(`${user.name} is ${user.age}`)
+// const userJSON = localStorage.getItem('user');
+// const user = JSON.parse(userJSON);
+// console.log(`${user.name} is ${user.age}`)
+
+
 
 // =======================================
 // Upon page refresh render all NOTES
@@ -69,7 +59,14 @@ const renderNotes = function (notes, filters) {
     //Only render notes that match string match
     filteredNotes.forEach(function (note){
         const noteEl = document.createElement('p')
-        noteEl.textContent = note.title
+
+if(note.title.length > 0) {
+    noteEl.textContent = note.title
+} else {
+    noteEl.textContent = 'Unnamed note'
+}
+
+        // noteEl.textContent = note.title
         document.querySelector('#notes').appendChild(noteEl)
     })
 }
@@ -77,6 +74,14 @@ const renderNotes = function (notes, filters) {
 renderNotes(notes, filters)
 // =======================================
 
+document.querySelector('#create-note').addEventListener('click', function(e){
+    notes.push({
+        title: '',
+        body: ''
+    })
+    localStorage.setItem('notes', JSON.stringify(notes))
+    renderNotes(notes, filters)
+})
 
 // Search notes - using input allows to track every character change
 document.querySelector('#search-text').addEventListener('input', function(e){
