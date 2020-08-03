@@ -26,6 +26,35 @@ const filters = {
     searchText: ''
 }
 
+// //CRUD - Create, Read, Update, Delete, 
+// // CREATE
+// localStorage.setItem('location', 'San Antonio')
+// //READ
+// localStorage.getItem('location')
+// // Console READ
+// console.log(localStorage.getItem('location'))
+// //DELETE
+// localStorage.removeItem('location');
+// localStorage.clear();
+
+// const user = {
+//     name: 'John',
+//     age: 43
+// }
+// //Convert object into STRING
+// // JSON parse is used before writing data
+// ======================================
+// const userJSON = JSON.stringify(user)
+// console.log(userJSON);
+// localStorage.setItem('user', userJSON);
+
+
+// JSON is only a string. JSON parse is used after reading data.
+// ======================================
+const userJSON = localStorage.getItem('user');
+const user = JSON.parse(userJSON);
+console.log(`${user.name} is ${user.age}`)
+
 // =======================================
 // Upon page refresh render all NOTES
 // also renders only filtered NOTES
